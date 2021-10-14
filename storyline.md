@@ -4,8 +4,8 @@
 *(Adult version)*
 
 The wind whistles through the trees, creepy crawlies scurry around the undergrowth, a wolf howls in the distance.  
-Under the full moon, in the depths of the forest, a human like creature looks around. Not sure of how it got here, not sure where 'here' even is!  
-It knows its hands are cold, in fact everything is cold, down to its blood and bones. I knows one more thing, its name...
+Under the full moon, in the depths of the forest, a human-like creature looks around. Not sure of how it got here, not sure where 'here' even is!  
+It knows its hands are cold, in fact everything is cold, down to its blood and bones. It knows one more thing, its name...
 
 - USER ENTERS NAME
 
@@ -23,16 +23,16 @@ With this daunting realisation, {name} set off in search of some succulent grey 
     plunged through {name}'s soft flesh with a squelch. Undeterred, they  
     continued.) As the edge of the forest grew nearer, a large, industrial  
     building loomed ahead. {name} approached, a tattered sign read "CI Chemical  
-    Laboratory". The remnance of an orange circular logo glimmered in the  
+    Laboratory". The remnants of an orange circular logo glimmered in the  
     moonlight.  
 
-    {name} clambered over some old barrels toward a slightly open door. Thick brambles propping it open, they pried it open with a loud creak. Inside, down a dark and eery corridor, {name} came to a dimly lit room. Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room there were three pristeen glass flasks...
+    {name} clambered over some old barrels toward a slightly open door. Thick brambles propping it open, they pried it open with a loud creak. Inside, down a dark and eery corridor, {name} came to a dimly lit room. Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room, there stood three pristine glass flasks...
 
     - DRINK OR COLLECT?
       - DRINK  
         {name} groaned as they lurched toward the table. The rats in the corner  
         scuttled away into the cracks in the walls. A bright purple liquid  
-        glowed in the first flask; a deep, blood red broth sat bubbling in the  
+        glowed in the first flask; a deep, blood-red broth sat bubbling in the  
         second; and a shimmering blue goo gurgled in the third. {name} reached  
         forward, tentatively selecting a drink...
 
@@ -41,7 +41,7 @@ With this daunting realisation, {name} set off in search of some succulent grey 
           smell still worked, they would have been overcome with a putrid odour  
           of stale blood, sulphur and a hint of petrol.) Hoping for the best,  
           {name} poured the mixture down their throat. [It gurgled as it reached  
-          their stomach. {name} was overcome with drowziness, their eyes grew  
+          their stomach. {name} was overcome with drowsiness, their eyes grew  
           heavy and they slumped to the floor...??GAME OVER??] ({name} wretched  
           as the liquid bubbled ferociously, their insides burned. It was a  
           mistake. Their stomach churned, heat exploded within them, and then...  
@@ -64,7 +64,7 @@ With this daunting realisation, {name} set off in search of some succulent grey 
           they brought it to their mouth. Slowly, {name} began to sip from the  
           flask. A cool sensation flowed down their throat, into their belly and  
           beyond. Followed by a tingling and warmth. The hunger began to fade,  
-          their hands felt human again...{name} was cured! (YAY) [Pain seered  
+          their hands felt human again...{name} was cured! (YAY) [Pain seared  
           from their foot, but the pain was welcomed...{name} knew they were  
           human once again!]
 
