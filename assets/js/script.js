@@ -15,10 +15,10 @@ twoAudio.loop = true;
 function whichMusic() { // Decide which audio to play depending on which page they're on
 
     if (music === "on") {
-        if (onePage.classList.contains("hide") && twoPage.classList.contains("hide")) {
+        if (onePage.classList.contains("hide")) {
             oneAudio.play();
             twoAudio.pause();
-        } else if (twoPage.classList.contains("hide") && onePage.classList.contains("hide")) {
+        } else if (twoPage.classList.contains("hide")) {
             oneAudio.pause();
             twoAudio.play();
         } else {
