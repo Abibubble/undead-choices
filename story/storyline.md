@@ -72,7 +72,20 @@ With this daunting realisation, {name} set off in search of some succulent grey 
 
   - HEAD TO ZOMBIE KING OR NOT
     - TO ZOMBIE KING
+      - HELP ZOMBIE KING OR NOT
+        - HELP
+          - HAVE CHEMICALS?
+            - YES
+              - COLOUR?
+                - BLUE
+                - RED
+                - PURPLE
+            - NO  
+              Return to right choices.
+        - DON'T HELP
+          - DEATH
     - REFUSE
+      - DEATH
 
 USER SAYS YES
 {name} grabbed the snowman and began tearing into its head. {name} was thankful that they couldn’t taste it, the texture was bad enough! But wait, something was wrong. {name} tried to think. Why wasn’t this right?
