@@ -51,17 +51,29 @@ With this daunting realisation, {name} set off in search of some succulent grey 
 
   - LEFT  
 
-Lumbering on through the tall trees, {name} felt a chill as they approached a clearing. Stood in the middle, 10ft tall, a snowman leered toward {name}.  
-"Mmmrrroohahg" it groaned, "Mmmm I am Brian....zombie o'greedy!"  
-As the snowman murmered an introduction, {name} could see this was no ordinary snowman. (Beneath a dark pair of sunglasses, glowing red eyes could be seen. Green goo oozed from its neck, one stick of an arm was broken half way. The top of his head had melted away, exposing a pulsating mass of blue gunk - was that a brain?) This was a zombie snowman! Should {name} try and feed on this creatures brains...
+    Lumbering on through the tall trees, {name} felt a chill as they approached a clearing. Stood in the middle, 10ft tall, a snowman leered toward {name}.  
+    "Mmmrrroohahg" it groaned, "Mmmm I am Brian....zombie o'greedy!"  
+    As the snowman murmered an introduction, {name} could see this was no ordinary snowman. (Beneath a dark pair of sunglasses, glowing red eyes could be seen. Green goo oozed from its neck, one stick of an arm was broken half way. The top of his head had melted away, exposing a pulsating mass of blue gunk - was that a brain?) This was a zombie snowman! Should {name} try and feed on this creatures brains...
 
-  - FEED  
-    Stood on the edge of the clearing, {name} beckoned the snowman over to them.
-    Brian rolled forward toward. Its lower body section seemingly separate, like a wheel, allowing him to stay upright. As he slowed to a stop, {name} clambered up the nearest tree. Crawling along a branch, when Brian stood just below, {name} dropped onto his head. As {name} tried to take a bite into the snowman's head, Brian roared in anger! [He flung {name} to the ground and rolled on top of them.  
-    "For your crime against me, you will remain under me, forever!" Brian bellowed...  
-    {name} was never seen again ??GAME OVER??] (He flung {name} to the ground, leaning over them, green goo dripping on top of {name}'s head. Brian grinned an evil grin,  
-    "I am Brian, zombie O'Greedy! I will not be eaten by a puny human zombie...I will feast upon you!" he roared. And with that, he ripped poor {name} limb from limb as he devoured their soft, fleshy carcass. ??GAME OVER??)
-  - DON'T FEED
+  - FEED OR DON'T FEED
+    - FEED  
+      Stood on the edge of the clearing, {name} beckoned the snowman over to them.
+      Brian rolled forward toward. Its lower body section seemingly separate, like a wheel, allowing him to stay upright. As he slowed to a stop, {name} clambered up the nearest tree. Crawling along a branch, when Brian stood just below, {name} dropped onto his head. As {name} tried to take a bite into the snowman's head, they were very glad their sense of taste had failed. Brian roared in anger! [He flung {name} to the ground and rolled on top of them.  
+      "For your crime against me, you will remain under me, forever!" Brian bellowed...  
+      {name} was never seen again ??GAME OVER??] (He flung {name} to the ground, leaning over them, green goo dripping on top of {name}'s head. Brian grinned an evil grin,  
+      "I am Brian, zombie O'Greedy! I will not be eaten by a puny human zombie...I will feast upon you!" he roared. And with that, he ripped poor {name} limb from limb as he devoured their soft, fleshy carcass. ??GAME OVER??)
+
+    - DON'T FEED  
+      Using what is left of their logic, {name} decides it best not to take on a 10ft snowman zombie and greets Brian instead.  
+      "Hello, I am {name}," {name} calls out, "I mean you no harm, can you help me?"  
+      An eery howl can be heard in the distance. Brian trundles toward {name},  
+      "You look pale," Brian groans, "You must be one of Toby's creeps...he is the king of all zombies!! I hear he is looking for the cure, perhaps you can help him"  
+      The giant snowman waves an arm vaguely to the south, "Head that way, you will find him soon enough."
+
+  - HEAD TO ZOMBIE KING OR NOT
+    - TO ZOMBIE KING
+    - REFUSE
+
 USER SAYS YES
 {name} grabbed the snowman and began tearing into its head. {name} was thankful that they couldn’t taste it, the texture was bad enough! But wait, something was wrong. {name} tried to think. Why wasn’t this right?
 CLICK
