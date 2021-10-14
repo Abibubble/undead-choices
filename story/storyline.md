@@ -29,7 +29,7 @@ With this daunting realisation, {name} set off in search of some succulent grey 
   - DRINK OR COLLECT?
   *Add clues throughout story to show which drink to collect. Riddle or hidden letters? BLUE riband chocolate bar?*
   - DRINK  
-    {name} groaned as they lurched toward the table. The rats in the corner scuttled away into the cracks in the walls. A bright purple liquid glowed in the first flask; a deep, blood-red broth sat bubbling in the second; and a shimmering blue goo gurgled in the third. *As* {name} reached forward *, the chocolate bar wrapper fell from their pocket as they* tentatively selecting a drink...
+    {name} groaned as they lurched toward the table. The rats in the corner scuttled away into the cracks in the walls. A bright purple liquid glowed in the first flask; a deep, blood-red broth sat bubbling in the second; and a shimmering blue goo gurgled in the third. *As* {name} reached forward *, the chocolate bar wrapper fell from their pocket as they* tentatively selecting*ed* a drink...
 
     - RED  
       {name} lifted the bubbling broth to their lips. (If their sense of smell still worked, they would have been overcome with a putrid odour of stale blood, sulphur and a hint of petrol.) Hoping for the best, {name} poured the mixture down their throat. [It gurgled as it reached their stomach. {name} was overcome with drowsiness, their eyes grew heavy and they slumped to the floor...??GAME OVER??] ({name} wretched as the liquid bubbled ferociously, their insides burned. It was a mistake. Their stomach churned, heat exploded within them, and then... BANG. {name}'s gooey insides exploded all over the room...??GAME OVER??)
