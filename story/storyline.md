@@ -22,9 +22,9 @@ With this daunting realisation, {name} set off in search of some succulent grey 
 
 - CHOOSE RIGHT OR LEFT
 - RIGHT  
-  {name} ambled through the forest, their feet heavy and clumsy. They stepped heavily on a branch, breaking it with a loud CRACK. (The splintered stake plunged through {name}'s soft flesh with a squelch. Undeterred, they continued.) As the edge of the forest grew nearer, a large, industrial building loomed ahead. {name} approached, a tattered sign read "CI Chemical Laboratory". The remnants of an orange circular logo glimmered in the moonlight.  
+  {name} ambled through the forest, their feet heavy and clumsy. They stepped heavily on a branch, breaking it with a loud CRACK. (The splintered stake plunged through {name}'s soft flesh with a squelch. [*{name} looked down to see a packet of maltesers too, obliterated in their red packaging. They wouldn't be any good.*] Undeterred, they continued.) As the edge of the forest grew nearer, a large, industrial building loomed ahead. {name} approached, a tattered sign read "CI Chemical Laboratory". The remnants of an orange circular logo glimmered in the moonlight.  
 
-  {name} clambered over some old barrels toward a slightly open door. Thick brambles propping it open, they pried it open with a loud creak. Inside, down a dark and eery corridor, {name} came to a dimly lit room. Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room, there stood three pristine glass flasks...
+  {name} clambered over some old barrels toward a slightly open door. *A tatty heart shaped box lay on the floor. It appeared to have a Twirl inside it, the purple wrapper just sticking out. No need for more chocolate!* Thick brambles grew into the door frame, {name} pried it open with a loud creak. Inside, down a dark and eery corridor, {name} came to a dimly lit room. Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room, there stood three pristine glass flasks...
 
   - DRINK OR COLLECT?
   *Add clues throughout story to show which drink to collect. Riddle or hidden letters? BLUE riband chocolate bar?*
