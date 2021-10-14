@@ -3,3 +3,33 @@
 .hide {
     display: none;
 }
+
+
+body {
+}
+main {
+    background-color: #662266;
+    padding: 1rem .5rem;
+}
+#border {
+    border: 2rem solid;
+    border-left: none;
+    border-right: none;
+    height: calc(100vh - 2rem);
+    padding: 1rem;
+    border-image-source: url(../img/border.png);
+    border-image-slice: 33%;
+    border-image-repeat: round;
+}
+
+div:not(#border) {
+    background: url(../img/background1.webp) no-repeat center center / cover;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+    #border {
+        border-width: 5rem;
+    }
+}
