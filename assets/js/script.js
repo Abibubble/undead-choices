@@ -2,37 +2,42 @@
 
 // ---------------------------------------------------------------- Audio variables
 
-let music = "off"; // Start with audio off, autoplay is super bad
-const oneAudio = new Audio('assets/audio/1.mp3'); // Set the audio files to variables
-const twoAudio = new Audio('assets/audio/2.mp3');
+let music = false; // Start with audio off, autoplay is super bad
+
+const audioFile = { // Set audio files within object
+    // possibly add each sub category of audio to nested object
+    // would allow iterating through to add attributes (eg loop)
+    one: new Audio('assets/audio/1.mp3'),
+    two: new Audio('assets/audio/2.mp3'),
+}
 const audioButton = document.getElementById("audio"); // Select the audio on/off button
 
 // ---------------------------------------------------------------- Toggle
 
-oneAudio.loop = true; // Loops the audio
-twoAudio.loop = true;
+audioFile.one.loop = true; // Loops the audio
+audioFile.two.loop = true;
 
 function whichMusic() { // Decide which audio to play depending on which page they're on
 
-    if (music === "on") {
-        if (onePage.classList.contains("hide") && twoPage.classList.contains("hide")) {
-            oneAudio.play();
-            twoAudio.pause();
-        } else if (twoPage.classList.contains("hide") && onePage.classList.contains("hide")) {
-            oneAudio.pause();
-            twoAudio.play();
+    if (music) {
+        if (onePage.classList.contains("hide")) {
+            audioFile.one.pause();
+            audioFile.two.play();
+        } else if (twoPage.classList.contains("hide")) {
+            audioFile.one.play();
+            audioFile.two.pause();
         } else {
-            oneAudio.play();
-            twoAudio.pause();
+            audioFile.one.play();
+            audioFile.two.pause();
         }
     } else {
-        oneAudio.pause();
-        twoAudio.pause();
+        audioFile.one.pause();
+        audioFile.two.pause();
     }
 }
 
 function checkAudioButtons() { // Changes the text of the button once clicked
-    if (music === "on") {
+    if (music) {
         audioButton.innerHTML = `<i class="fas fa-volume-mute"></i><br>Audio off`;
     } else {
         audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Audio on`;
@@ -40,10 +45,10 @@ function checkAudioButtons() { // Changes the text of the button once clicked
 }
 
 function toggleMusic() { // So that the user can toggle the music off or on
-    if (music === "off") {
-        music = "on";
+    if (music) {
+        music = false;
     } else {
-        music = "off";
+        music = true;
     }
     checkAudioButtons();
     whichMusic();
