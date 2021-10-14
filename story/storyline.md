@@ -16,7 +16,7 @@ It knows its hands are cold, in fact everything is cold, down to its blood and b
   - GIRL
   - NONEDESCRIPT
 
-A chocolate bar fell out of their pocket. Overcome with hunger, they tried to eat it...but it did nothing for them. {name} wanted something different, something new...something...human! BRAINS!  
+A *BLUE Riband* chocolate bar fell out of their pocket. Overcome with hunger, they tried to eat it...but it did nothing for them. {name} wanted something different, something new...something...human! BRAINS!  
 {name} stumbled forward as they realised what they had become, they were... A zombie!  
 With this daunting realisation, {name} set off in search of some succulent grey matter to feed on...  
 
@@ -27,8 +27,9 @@ With this daunting realisation, {name} set off in search of some succulent grey 
   {name} clambered over some old barrels toward a slightly open door. Thick brambles propping it open, they pried it open with a loud creak. Inside, down a dark and eery corridor, {name} came to a dimly lit room. Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room, there stood three pristine glass flasks...
 
   - DRINK OR COLLECT?
+  *Add clues throughout story to show which drink to collect. Riddle or hidden letters? BLUE riband chocolate bar?*
   - DRINK  
-    {name} groaned as they lurched toward the table. The rats in the corner scuttled away into the cracks in the walls. A bright purple liquid glowed in the first flask; a deep, blood-red broth sat bubbling in the second; and a shimmering blue goo gurgled in the third. {name} reached forward, tentatively selecting a drink...
+    {name} groaned as they lurched toward the table. The rats in the corner scuttled away into the cracks in the walls. A bright purple liquid glowed in the first flask; a deep, blood-red broth sat bubbling in the second; and a shimmering blue goo gurgled in the third. *As* {name} reached forward *, the chocolate bar wrapper fell from their pocket as they* tentatively selecting a drink...
 
     - RED  
       {name} lifted the bubbling broth to their lips. (If their sense of smell still worked, they would have been overcome with a putrid odour of stale blood, sulphur and a hint of petrol.) Hoping for the best, {name} poured the mixture down their throat. [It gurgled as it reached their stomach. {name} was overcome with drowsiness, their eyes grew heavy and they slumped to the floor...??GAME OVER??] ({name} wretched as the liquid bubbled ferociously, their insides burned. It was a mistake. Their stomach churned, heat exploded within them, and then... BANG. {name}'s gooey insides exploded all over the room...??GAME OVER??)
@@ -101,7 +102,7 @@ With this daunting realisation, {name} set off in search of some succulent grey 
 
       - NO  
         {name} shuffled their feet awkwardly, looking down at the floor.  
-        "I have not, I will go back through the forest and find this cure foor us both"  they declared and headed off back to where they began. RIGHT
+        "I have not, I will go back through the forest and find this cure for us both"  they declared and headed off back to where they began. RIGHT
 
         - DRINK OR COLLECT?
         - DRINK  
