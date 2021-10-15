@@ -14,8 +14,6 @@ body {
     color: #fe5404;
     text-align: center;
     font-family: 'Neucha', cursive;
-    font-size: 2rem;
-    font-style: italic;
 }
 
 /* ------------------------------------------------------- Utilities */
@@ -28,9 +26,12 @@ body {
 
 header {
     height: 4rem;
-    font-size: 3rem;
     font-family: 'Finger Paint', cursive;
     text-shadow: #ff8c00 .1rem .1rem;
+}
+
+h1{ 
+    font-size: 3rem;
 }
 
 footer {
@@ -69,6 +70,8 @@ footer {
     animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 .image-holder {
