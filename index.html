@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,51 +29,79 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Local script -->
-    <script src="assets/js/script.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
 
     <title></title>
 </head>
 
 <body>
 <header>
-
+    Undead Choices!
 </header>
 
 <main>
-
-</main>
-
-
-
-<div class="progress">
-            <div class="progress-bar" id="progress-bar">
-
-            <div class="progress-bar-image">
-                <img src="assets/img/hand.gif" alt="" id="progress-image"> <!-- 0 - 90%-->
+    <section class="age-modal">
+        <div class="overlay"></div>
+        <div class="modal-grid">
+            <div class="modal-text">
+                <h2>
+                    This story can contain mature content.<br>
+                    Would you like the child-friendly version?
+                </h2>
             </div>
+            <button type="button" class="modal-btn modal-child-btn">
+                Child-friendly, please!
+            </button>
+            <button type="button" class="modal-btn modal-adult-btn">
+                Psshhh, I'm the bravest around!
+            </button>
+        </div>
+    </section>
+    <section id="border">
+        <section class="page first">
+            <div class="image-holder">
+                Place Holder
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
+                laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
+                dicta asperiores accusantium.
+            </p>
+            <!-- <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime doloribus facilis soluta, quo totam harum velit, voluptatum sit, doloremque ut quod quae id magnam commodi accusantium tenetur veniam at!
+            </p> -->
+        </section>
+        <!-- <div class="page second"></div>
+        <div class="page third"></div> -->
+    </section>
+        <div class="progress">
+            <div class="progress" id="progress">
+                <div class="progress-bar" id="progress-bar">
+
+                    <div class="progress-bar-image">
+                        <img src="assets/img/hand.gif" alt="" id="progress-image"> <!-- 0 - 90%-->
+                    </div>
+                </div>
+            </div>
+            <div class="win-loose">
+                <img id="tombstone" src="assets/img/tombstone.png" alt=""
+                     style="position:absolute; left:80%; top: 19vh; width: 100px; height: auto;z-index: 10;">
+                <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart"
+                     style="position:absolute; left:82%; top: 17vh; width: 100px; height: auto;z-index: 10;">
             </div>
         </div>
 
-
+</main>
 
 <footer>
     <p>Copyright &copy; Team 8 <span id="copyright"></span></p>
 </footer>
+<!-- Local script -->
+<script src="assets/js/script.js"></script>
 </body>
+
 </html>
