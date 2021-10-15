@@ -24,6 +24,7 @@ body {
     display: none;
 }
 
+
 /* ------------------------------------------------------- Header / Footer */
 
 header {
@@ -179,13 +180,29 @@ main {
     font-family: 'Finger Paint', cursive;
 }
 
-/* ---------------- place-holder waiting for @alexandergrib */
-#progress-container {
-    margin: 0 auto;
-    width: 90%;
-    height: 2rem;
-    background-color: #fff;
-    border-radius: .5rem;
-    top: -8rem;
-    position: relative;
+
+#progress {
+    position: absolute;
+    bottom: 1vh;
+    left: 5vw;
+    width: 80vw;
+    height: 3rem;
+    border: 1px solid black;
+    background-color: #ffc106;
+    border-radius: 1.5rem;
+}
+
+#progress-bar {
+    width: 70%;
+    height: inherit;
+    background-color: #272727;
+    border-radius: 1.5rem;
+}
+
+#progress-image {
+    top: -1px;
+    border-radius: 1.75rem;
+    width: 4rem;
+    position: absolute;
+    left: 30%;
 }
