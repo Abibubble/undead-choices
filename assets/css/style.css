@@ -17,13 +17,13 @@ main {
     border-right: none;
     height: calc(100vh - 2rem);
     padding: 1rem;
-    border-image-source: url(../img/border.png);
+    border-image-source: url(../img/pumpkin-border.png);
     border-image-slice: 33%;
     border-image-repeat: round;
 }
 
-div:not(#border) {
-    background: url(../img/background1.webp) no-repeat center center / cover;
+.page {
+    background: url(../img/forest-bg-1.webp) no-repeat center center / cover;
     height: 100%;
     border-radius: 2rem;
 }
