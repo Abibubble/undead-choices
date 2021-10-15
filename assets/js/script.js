@@ -72,8 +72,17 @@ function copyrightYear() {
 copyrightYear();
 
 //-------------update progress bar
-
-
+var number = 0;
+let progressBar = document.getElementById("progress-bar");
 function updateProgressBar(number){
-
+    progressBar.style.width = String(number+7) + "%";
 }
+
+
+//Use this function to update progress bar
+let handPosition = document.getElementById("progress-image")
+function updateHandPosition(number){
+    handPosition.style.left = String(number) + "%";
+    updateProgressBar(number);
+}
+updateHandPosition(0);
