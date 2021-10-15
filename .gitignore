@@ -7,6 +7,6 @@ __pycache__/
 node_modules/
 .github/
 .vscode/settings.json
-.vscode/
+
 .idea
 
