@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Neucha&display=swap');
-/* ------------------------------------------------------- Utilities */
 
-.hide {
-    display: none;
-}
+/* ------------------------------------------------------- Resets */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #000000;
     overflow: hidden;
     color: #fe5404;
     text-align: center;
 }
+
+/* ------------------------------------------------------- Utilities */
+
+.hide {
+    display: none;
+}
+
+/* ------------------------------------------------------- Header / Footer */
+
 header {
     height: 4rem;
     font-size: 3rem;
     font-family: 'Finger Paint', cursive;
     text-shadow: #ff8c00 .1rem .1rem;
 }
+
 footer {
     height: 3rem;
     font-size: 2rem;
@@ -29,6 +38,7 @@ footer {
 }
 
 /* ---------------------------------------------------- Page Animation */
+
 @keyframes flip-page {
     0% {
         transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
@@ -44,7 +54,8 @@ footer {
     }
 }
 
-/* ---------------------------------------------------- Pages Styling */
+/* ---------------------------------------------------- Pages */
+
 .page {
     position: absolute;
     width: calc(100vw - 3rem);
@@ -56,22 +67,26 @@ footer {
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
 }
+
 .page.first {
     background: url(../img/forest-bg-1.webp) no-repeat center center / cover;
     /* todo delay to be removed animation applied in JS */
     animation-delay: 4s;
 }
+
 .page.second {
     background: url(../img/mock1.jpg) no-repeat center center / cover;
     animation-delay: 8s;
 }
 
-/* --------------------------------------------- General Styling */
+/* --------------------------------------------- General */
+
 main {
     height: calc(100vh - 7rem);
     background-color: #3e2a57;
     padding: 1rem .5rem;
 }
+
 #border {
     border: 5rem solid;
     border-left: none;
@@ -81,4 +96,67 @@ main {
     border-image-source: url(../img/pumpkin-border.png);
     border-image-slice: 33%;
     border-image-repeat: round;
+}
+
+/* ---------------------------------------------------- Modal */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "button1 button2";
+    background: url("../img/pumpkin_modulo.png") no-repeat center center;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 10;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px #000;
+    border-radius: 50px;
+    font-family: 'Finger Paint', cursive;
+}
+
+.modal-text {
+    grid-area: header;
+    width: 75%;
+    margin: auto;
+    margin-top: 25px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.modal-child-btn {
+    grid-area: button1;
+    background-color: #ff8c00;
+}
+
+.modal-adult-btn {
+    grid-area: button2;
+    background-color: red;
+}
+
+.modal-btn {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #000;
+    border: 0;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    margin: auto;
+    font-family: 'Finger Paint', cursive;
 }
