@@ -6,5 +6,5 @@ __pycache__/
 *.py[cod]
 node_modules/
 .github/
-.vscode/
+.vscode/settings.json
 .idea/
