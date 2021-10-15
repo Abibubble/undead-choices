@@ -72,8 +72,12 @@ function copyrightYear() {
 copyrightYear();
 
 //-------------update progress bar
-
-
-function updateProgressBar(number){
-
+let progress = 4;
+let increment = 0;
+const progressBar = document.getElementById("progress-bar");
+function updateProgressBar(incr){
+    progress = progress + incr;
+    progressBar.style.width = `${String(progress)}%`;
 }
+
+updateProgressBar(increment);

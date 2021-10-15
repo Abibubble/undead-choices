@@ -208,7 +208,7 @@ main {
 
 #progress-bar {
     position: relative;
-    width: 70%;
+    width: 0%;
     height: inherit;
     background-color: #272727;
     border-radius: 1.5rem;
