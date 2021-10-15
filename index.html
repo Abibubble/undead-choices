@@ -45,8 +45,10 @@
 </header>
 
 <main>
-    <section id="age-modal">
-        <div class="overlay"></div>
+    <section id="age-modal" class="hide">
+        <div class="overlay">
+            <!-- empty -->
+        </div>
         <div class="modal-grid">
             <div class="modal-text">
                 <h2>
@@ -76,26 +78,18 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime doloribus facilis soluta, quo totam harum velit, voluptatum sit, doloremque ut quod quae id magnam commodi accusantium tenetur veniam at!
             </p> -->
         </section>
-        <!-- <div class="page second"></div>
-        <div class="page third"></div> -->
-    </section>
-    <div class="progress">
-        <div class="progress" id="progress">
-            <div class="progress-bar" id="progress-bar">
-
-                <div class="progress-bar-image">
-                    <img src="assets/img/hand.gif" alt="" id="progress-image"> <!-- 0 - 90%-->
+        <div id="progress-container">
+            <div id="progress">
+                <div id="progress-bar">
+                    <img src="assets/img/hand.gif" alt="progress" id="progress-image"> <!-- 0 - 90%-->
+                </div>
+                <div class="win-loose">
+                    <img id="tombstone" src="assets/img/tombstone.png" alt="">
+                    <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart">
                 </div>
             </div>
         </div>
-        <div class="win-loose">
-            <img id="tombstone" src="assets/img/tombstone.png" alt=""
-                 style="position:absolute; left:80%; bottom: 0.5vh; width: 100px; height: auto;z-index: 10;">
-            <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart"
-                 style="position:absolute; left:78%; bottom: 0; width: 100px; height: auto;z-index: 10;">
-        </div>
-    </div>
-    </div>
+    </section>
 </main>
 
 <footer>

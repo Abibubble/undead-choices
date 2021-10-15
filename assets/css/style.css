@@ -14,8 +14,6 @@ body {
     color: #fe5404;
     text-align: center;
     font-family: 'Neucha', cursive;
-    font-size: 2rem;
-    font-style: italic;
 }
 
 /* ------------------------------------------------------- Utilities */
@@ -29,9 +27,12 @@ body {
 
 header {
     height: 4rem;
-    font-size: 3rem;
     font-family: 'Finger Paint', cursive;
     text-shadow: #ff8c00 .1rem .1rem;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 footer {
@@ -47,12 +48,15 @@ footer {
     0% {
         transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
     }
+
     20% {
         transform: translate(96.5%, 0) rotate3d(0, 3, 0.1, 155deg);
     }
+
     40% {
         transform: translate(85%, 0) rotate3d(0, 3, 0.4, 125deg);
     }
+
     50% {
         transform: translate(80%, 0) rotate3d(0, 4, 1, 105deg);
     }
@@ -61,7 +65,7 @@ footer {
 /* ---------------------------------------------------- Pages */
 
 .page {
-    position: absolute;
+    position: relative;
     width: calc(100vw - 3rem);
     height: calc(100vh - 20rem);
     border-radius: 2rem;
@@ -70,10 +74,12 @@ footer {
     animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 .image-holder {
-    margin: 2rem auto;
+    margin: 0 auto 2rem;
     height: 21rem;
     width: 50%;
     background-color: #6600ff55;
@@ -115,6 +121,7 @@ main {
     border-image-source: url(../img/pumpkin-border.png);
     border-image-slice: 33%;
     border-image-repeat: round;
+    position: relative;
 }
 
 /* ---------------------------------------------------- Modal */
@@ -125,7 +132,7 @@ main {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -180,19 +187,27 @@ main {
     font-family: 'Finger Paint', cursive;
 }
 
+/* ------------------------------ Progress Bar */
+
+#progress-container {
+    position: relative;
+    top: -4rem;
+    height: 3rem;
+}
 
 #progress {
-    position: absolute;
-    bottom: 1vh;
-    left: 5vw;
+    position: relative;
+    left: 50%;
+    height: inherit;
+    transform: translateX(-50%);
     width: 80vw;
-    height: 3rem;
     border: 1px solid black;
     background-color: #ffc106;
     border-radius: 1.5rem;
 }
 
 #progress-bar {
+    position: relative;
     width: 0%;
     height: inherit;
     background-color: #272727;
@@ -202,7 +217,32 @@ main {
 #progress-image {
     top: -1px;
     border-radius: 1.75rem;
+    right: 0;
     width: 4rem;
     position: absolute;
-    left: 0%;
+}
+
+.win-loose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: inherit;
+}
+
+.win-loose img {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    z-index: 10;
+}
+
+#tombstone {
+    bottom: -0.2rem;
+    right: -4.7rem;
+}
+
+#heart {
+    bottom: -0.6rem;
+    right: -2.1rem;
 }
