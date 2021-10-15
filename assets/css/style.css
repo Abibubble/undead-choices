@@ -14,8 +14,6 @@ body {
     color: #fe5404;
     text-align: center;
     font-family: 'Neucha', cursive;
-    font-size: 2rem;
-    font-style: italic;
 }
 
 /* ------------------------------------------------------- Utilities */
@@ -69,6 +67,8 @@ footer {
     animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 .image-holder {
