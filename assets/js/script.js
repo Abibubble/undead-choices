@@ -70,3 +70,10 @@ function copyrightYear() {
 }
 
 copyrightYear();
+
+//-------------update progress bar
+
+
+function updateProgressBar(number){
+
+}
