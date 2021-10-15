@@ -1,8 +1,50 @@
+function capitalise(string) {
+    string.toLowerCase();
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+let user_name = "name";
+user_name = capitalise(user_name);
+let pronoun_their = "their";
+let pronoun_them = "them";
+let pronoun_they = "they";
+let adult = false;
+
+function startStory() {
+    document.getElementById("story-text").innerText = story.begin;
+}
+
+function checkAge(age) {
+    if (age == "adult") {
+        adult = true;
+    } else {
+        adult = false;
+    }
+    document.getElementById("age-modal").classList.add("hide");
+    startStory();
+}
+
+function checkAvatar(avatar) {
+    if (avatar == "boy") {
+        pronoun_their = "his";
+        pronoun_them = "him";
+        pronoun_they = "he";
+    } else if (avatar == "girl") {
+        pronoun_their = "her";
+        pronoun_them = "them";
+        pronoun_they = "she";
+    } else {
+        pronoun_their = "their";
+        pronoun_them = "them";
+        pronoun_they = "they";
+    }
+}
+
 const story = {
     "begin": "The wind whistles through the trees, creepy crawlies scurry around the undergrowth, a wolf howls in the distance.",
     "moon": "Under the full moon, in the depths of the forest, a human-like creature looks around. Not sure of how it got here, not sure where 'here' even is!",
     "name": "It knows its hands are cold, in fact, everything is cold, down to its blood and bones. It knows one more thing - its name...",
-    "avatar": `${user_name} hunched down. Staring into a murky puddle, ${user_pronoun} reflection can just about be seen...`,
+    "avatar": `${user_name} hunched down. Staring into a murky puddle, ${pronoun_their} reflection can just about be seen...`,
     "riband": `A blue Riband chocolate bar fell out of ${pronoun_their} pocket. Overcome with hunger, ${pronoun_they} tried to eat it... but it did nothing for ${pronoun_them}. ${user_name} wanted something different, something new... something... human! BRAINS!`,
     "zombie": `${user_name} stumbled forward as ${pronoun_they} realised what ${pronoun_they} had become, ${pronoun_they} were... A zombie! With this daunting realisation, ${user_name} set off in search of some succulent grey matter to feed on...`,
     "east": `${user_name} headed west, ambling through the forest, ${pronoun_their} feet heavy and clumsy. ${pronoun_they} stepped heavily on a branch, breaking it with a loud CRACK.`,
