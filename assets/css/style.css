@@ -27,9 +27,12 @@ body {
 
 header {
     height: 4rem;
-    font-size: 3rem;
     font-family: 'Finger Paint', cursive;
     text-shadow: #ff8c00 .1rem .1rem;
+}
+
+h1{ 
+    font-size: 3rem;
 }
 
 footer {
