@@ -188,13 +188,15 @@ main {
     width: 80vw;
     height: 3rem;
     border: 1px solid black;
-    border-radius: 1rem;
     background-color: #ffc106;
+    border-radius: 1.5rem;
 }
 
 #progress-bar {
     width: 70%;
+    height: inherit;
     background-color: #272727;
+    border-radius: 1.5rem;
 }
 
 #progress-image {
