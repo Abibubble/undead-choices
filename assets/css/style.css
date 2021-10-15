@@ -193,7 +193,7 @@ main {
 }
 
 #progress-bar {
-    width: 70%;
+    width: 0%;
     height: inherit;
     background-color: #272727;
     border-radius: 1.5rem;
@@ -204,5 +204,5 @@ main {
     border-radius: 1.75rem;
     width: 4rem;
     position: absolute;
-    left: 30%;
+    left: 0%;
 }
