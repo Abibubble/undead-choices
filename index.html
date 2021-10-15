@@ -23,10 +23,10 @@
     <meta name="twitter:image" content="">
     <meta name="twitter:image:alt" content="The site on a variety of devices">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">-->
+    <!--    <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">-->
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Local script -->
@@ -67,7 +67,7 @@
     <section id="border">
         <section class="page first">
             <div class="image-holder">
-                Place Holder
+                <canvas id="canvas1"></canvas>
             </div>
             <p id="story-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
@@ -78,6 +78,30 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime doloribus facilis soluta, quo totam harum velit, voluptatum sit, doloremque ut quod quae id magnam commodi accusantium tenetur veniam at!
             </p> -->
         </section>
+
+        <div class='play-button'>
+            <button class='playBut'>
+
+                                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+                <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                     x="0px" y="0px" width="53.7px" height="53.7px" viewBox="0 0 213.7 213.7"
+                     enable-background="new 0 0 213.7 213.7"
+                     xml:space="preserve">
+
+                    <polygon class='triangle' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
+                             stroke-linejoin="round"
+                             stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/>
+
+                    <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
+                    </svg>
+
+
+            </button>
+            <span>Play</span>
+        </div>
         <div id="progress-container">
             <div id="progress">
                 <div id="progress-bar">
@@ -97,5 +121,8 @@
 </footer>
 <!-- Local script -->
 <script src="assets/js/script.js"></script>
+<script src="assets/js/canvas.js"></script>
+
+
 </body>
 </html>

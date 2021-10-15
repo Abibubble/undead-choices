@@ -18,6 +18,7 @@ const audioFile = { // Set audio files within object
         moan: new Audio('assets/audio/zombie-moan.mp3'),
     },
 }
+
 const audioButton = document.getElementById("audio"); // Select the audio on/off button
 
 // ---------------------------------------------------------------- Toggle
@@ -72,12 +73,11 @@ function copyrightYear() {
 copyrightYear();
 
 //-------------update progress bar
-let progress = 4;
-let increment = 0;
+
+
 const progressBar = document.getElementById("progress-bar");
-function updateProgressBar(incr){
-    progress = progress + incr;
-    progressBar.style.width = `${String(progress)}%`;
+function updateProgressBar(progress){
+   progressBar.style.width = `${String(progress)}%`;
 }
 
-updateProgressBar(increment);
+updateProgressBar(4);
