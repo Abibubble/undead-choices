@@ -29,22 +29,23 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome -->
+    <!-- Local script -->
+        <script src="assets/js/story.js"></script>
+        <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <title></title>
 </head>
 
 <body>
 <header>
-    Undead Choices!
+    <h1>Undead Choices!</h1>
 </header>
 
 <main>
-    <section class="age-modal">
+    <section id="age-modal">
         <div class="overlay"></div>
         <div class="modal-grid">
             <div class="modal-text">
@@ -53,10 +54,10 @@
                     Would you like the child-friendly version?
                 </h2>
             </div>
-            <button type="button" class="modal-btn modal-child-btn">
+            <button type="button" class="modal-btn modal-child-btn" onclick="checkAge('child');">
                 Child-friendly, please!
             </button>
-            <button type="button" class="modal-btn modal-adult-btn">
+            <button type="button" class="modal-btn modal-adult-btn" onclick="checkAge('adult');">
                 Psshhh, I'm the bravest around!
             </button>
         </div>
@@ -66,7 +67,7 @@
             <div class="image-holder">
                 Place Holder
             </div>
-            <p>
+            <p id="story-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
                 laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
                 dicta asperiores accusantium.
@@ -87,15 +88,8 @@
                     </div>
                 </div>
             </div>
-            <div class="win-loose">
-                <img id="tombstone" src="assets/img/tombstone.png" alt=""
-                     style="position:absolute; left:80%; top: 19vh; width: 100px; height: auto;z-index: 10;">
-                <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart"
-                     style="position:absolute; left:82%; top: 17vh; width: 100px; height: auto;z-index: 10;">
-            </div>
         </div>
-
-</main>
+        </main>
 
 <footer>
     <p>Copyright &copy; Team 8 <span id="copyright"></span></p>
@@ -103,5 +97,4 @@
 <!-- Local script -->
 <script src="assets/js/script.js"></script>
 </body>
-
 </html>
