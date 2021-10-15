@@ -13,6 +13,9 @@ body {
     overflow: hidden;
     color: #fe5404;
     text-align: center;
+    font-family: 'Neucha', cursive;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 /* ------------------------------------------------------- Utilities */
@@ -62,10 +65,25 @@ footer {
     height: calc(100vh - 20rem);
     border-radius: 2rem;
     /* todo animation-name to be applied in JS */
-    animation-name: flip-page;
+    /* animation-name: flip-page; */
     animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
+}
+
+.image-holder {
+    margin: 2rem auto;
+    height: 21rem;
+    width: 50%;
+    background-color: #6600ff55;
+}
+
+.page p {
+    border-radius: 2rem;
+    background-color: #00000077;
+    padding: .5rem;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .page.first {
@@ -159,4 +177,15 @@ main {
     text-align: center;
     margin: auto;
     font-family: 'Finger Paint', cursive;
+}
+
+/* ---------------- place-holder waiting for @alexandergrib */
+#progress-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    top: -8rem;
+    position: relative;
 }
