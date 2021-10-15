@@ -5,36 +5,41 @@
 let music = false; // Start with audio off, autoplay is super bad
 
 const audioFile = { // Set audio files within object
-    // possibly add each sub category of audio to nested object
-    // would allow iterating through to add attributes (eg loop)
-    one: new Audio('assets/audio/1.mp3'),
-    two: new Audio('assets/audio/2.mp3'),
+    // todo would allow iterating through to add attributes (eg loop) I CANT GET THIS TO WORK :'(
+    bubbles: new Audio('assets/audio/boiling-bubbles.mp3'),
+    drink: new Audio('assets/audio/drinking-water.mp3'),
+    largeHorde: new Audio('assets/audio/large-horde.mp3'),
+    smallHorde: new Audio('assets/audio/small-horde.mp3'),
+    puddle: new Audio('assets/audio/step-puddle.mp3'),
+    windy: new Audio('assets/audio/windy-trees.mp3'),
+    zombie: {
+        bite: new Audio('assets/audio/zombie-biting.mp3'),
+        hiss: new Audio('assets/audio/zombie-hiss.mp3'),
+        moan: new Audio('assets/audio/zombie-moan.mp3'),
+    },
 }
 const audioButton = document.getElementById("audio"); // Select the audio on/off button
 
 // ---------------------------------------------------------------- Toggle
 
-audioFile.one.loop = true; // Loops the audio
-audioFile.two.loop = true;
-
-function whichMusic() { // Decide which audio to play depending on which page they're on
-
-    if (music) {
-        if (onePage.classList.contains("hide")) {
-            audioFile.one.pause();
-            audioFile.two.play();
-        } else if (twoPage.classList.contains("hide")) {
-            audioFile.one.play();
-            audioFile.two.pause();
-        } else {
-            audioFile.one.play();
-            audioFile.two.pause();
-        }
-    } else {
-        audioFile.one.pause();
-        audioFile.two.pause();
-    }
-}
+// function whichMusic() { // Decide which audio to play depending on which page they're on
+// commented out until decision made on audio for pages etc.
+//     if (music) {
+//         if (onePage.classList.contains("hide")) {
+//             audioFile.one.pause();
+//             audioFile.two.play();
+//         } else if (twoPage.classList.contains("hide")) {
+//             audioFile.one.play();
+//             audioFile.two.pause();
+//         } else {
+//             audioFile.one.play();
+//             audioFile.two.pause();
+//         }
+//     } else {
+//         audioFile.one.pause();
+//         audioFile.two.pause();
+//     }
+// }
 
 function checkAudioButtons() { // Changes the text of the button once clicked
     if (music) {
