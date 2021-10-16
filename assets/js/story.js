@@ -43,7 +43,7 @@ document.getElementById("username-btn").addEventListener("click", function () {
 
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
-    flipPage(background);
+    flipPage(background.labOutside);
     userInputRequired = false;
     story = new Story(); // generate story with new name
     nextPage();
@@ -525,9 +525,6 @@ function checkInputs() {
         showCharacter();
     }
 }
-
-// create background object to hold all backgrounds
-let background = "url(assets/img/background/mock1.jpg)";
 
 /**
  * clears page and flips next page on top.
