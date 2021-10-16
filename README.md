@@ -130,6 +130,8 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 * Animated character avatars.
 * Story change depending on the age preference chosen.
 * Multiple story endings.
+* Background audio that changes depending on the section of story that the user is on.
+* Sound effects that play when the user is reading the relevant page.
 
 ### Audio
 
@@ -144,6 +146,9 @@ This project was created for the Code Institute Halloween Hackathon in October 2
   * Zombie hiss audio for zombie attacks.
   * Zombie moan audio for when zombies speak.
   * Page turning audio for when the user turns the page.
+* Two different background audios have been used:
+  * Gentle eerie audio, for the majority of the story.
+  * Dramatic music for when the zombie horde arrives.
 
 [Back to Top](#title)
 
@@ -451,7 +456,6 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 
 ### Code
 
-* [Animated play audio button](https://codemyui.com/play-button-in-pure-css/).
 * [How to make the pumpkin border responsive](https://www.youtube.com/watch?v=vnODfFJTLGg).
 
 ### Content
@@ -467,12 +471,16 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Heart icon in progress bar](https://www.pngwing.com/en/free-png-zkxld/download).
 * [Pumpkin border](https://ibb.co/Kz1ww7k).
 * [Forest background image](https://unsplash.com/photos/hvrpOmuMrAI).
-* [All sound effects were found here](https://www.fesliyanstudios.com/royalty-free-sound-effects-download/zombie-174).
 * [Gravestone image in progress bar](https://www.clipartmax.com/middle/m2i8d3A0m2A0Z5b1_rip-gravestone-grave-cartoon/).
 * [Pumpkins image on the modals](https://www.pexels.com/photo/two-jack-o-lantern-lamps-619418/).
 * [Universal healthcare image in the progress bar](https://pixabay.com/illustrations/universal-health-care-3d-transparent-1095124/).
 * [All of the potions](https://pixabay.com/illustrations/potions-bottles-magic-herbalist-6003024/).
 * [Animated severed hand gif](https://cdn.dribbble.com/users/287797/screenshots/5480635/hand.gif).
+* [Orc image, used for the zombie king](https://craftpix.net/freebies/2d-fantasy-orcs-free-sprite-sheets/?fb_comment_id=1293261850727869_1413728585347861).
+* [Snowman sprite used for the Brian character](https://craftpix.net/freebies/xmas-snowball-sprite/).
+* [All sound effects were found here](https://www.fesliyanstudios.com/royalty-free-sound-effects-download/zombie-174).
+* [Background audio for the general story](https://www.bensound.com/royalty-free-music/track/ofelias-dream).
+* [Background audio when the zombie hordes arrive](https://www.bensound.com/royalty-free-music/track/evolution-epic-nature).
 
 ### Acknowledgements
 
