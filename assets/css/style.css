@@ -96,6 +96,74 @@ footer {
     background-color: #6600ff55;
 }
 
+
+.static-image .girl {
+    position: absolute;
+    left: 40%;
+    top: 4rem;
+    width: 135px;
+    height: 169px;
+    background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .girl:hover,
+.static-image .girl:focus {
+    width: 126px;
+    height: 169px;
+    background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
+}
+
+.static-image .boy {
+    position: absolute;
+    left: 53%;
+    top: 4rem;
+    width: 89px;
+    height: 183px;
+    background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .boy:hover,
+.static-image .boy:focus {
+    width: 88px;
+    height: 189px;
+    background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+.static-image .man {
+    position: absolute;
+    left: 53%;
+    top: 4rem;
+    width: 105px;
+    height: 181px;
+    background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .man:hover,
+.static-image .man:focus {
+    width: 110px;
+    height: 179px;
+    background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+.static-image .woman {
+    position: absolute;
+    left: 40%;
+    top: 4rem;
+    width: 110px;
+    height: 183px;
+    background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .woman:hover,
+.static-image .woman:focus {
+    width: 133px;
+    height: 210px;
+    background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
+}
+
+
 #paragraph-container {
     background-color: #00000088;
     height: 11rem;
