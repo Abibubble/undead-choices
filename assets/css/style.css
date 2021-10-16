@@ -21,6 +21,10 @@ body {
 .hide {
     display: none;
 }
+.scale-0 {
+    transform: scale(0);
+    z-index: -1;
+}
 
 
 /* ------------------------------------------------------- Header / Footer */
@@ -80,17 +84,33 @@ footer {
 
 .image-holder {
     margin: 0 auto 2rem;
-    height: 21rem;
+    height: 19rem;
     width: 50%;
     background-color: #6600ff55;
 }
 
-.page p {
-    border-radius: 2rem;
-    background-color: #00000077;
-    padding: .5rem;
+#paragraph-container {
+    background-color: #00000088;
+    height: 11rem;
     width: 70%;
-    margin: 0 auto;
+    border-radius: 2rem;
+    margin: -1.5rem auto;
+    padding: .5rem;
+    position: relative;
+}
+.paragraph-holder {
+    height: 10rem;
+    position: absolute;
+    display: table;
+    /* may need to change this for mobiles to allow scrolling through text? */
+    /* overflow-y: scroll; */
+}
+.page p {
+    display: table-cell;
+    vertical-align: middle;
+    /* use for sound effects in JS? */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+    transition: transform 2s;
 }
 
 .page.first {
