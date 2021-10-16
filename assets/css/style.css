@@ -22,6 +22,15 @@ body {
     display: none;
 }
 
+.btn {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #000;
+    border: 0;
+    text-align: center;
+    font-family: 'Finger Paint', cursive;
+    background-color: #ff8c00;
+    color: black;
+}
 
 /* ------------------------------------------------------- Header / Footer */
 
@@ -104,7 +113,7 @@ footer {
     animation-delay: 8s;
 }
 
-/* --------------------------------------------- General */
+/* ---------------------------------------------------- General */
 
 main {
     height: calc(100vh - 7rem);
@@ -187,7 +196,7 @@ main {
     font-family: 'Finger Paint', cursive;
 }
 
-/* ------------------------------ Progress Bar */
+/* ----------------------------------------------------  Progress Bar */
 
 #progress-container {
     position: relative;
@@ -252,63 +261,117 @@ main {
     height: 400px;
 }
 
+/* ----------------------------------------------------  User name input */
 
+.user-name-input-grid {
+    position: relative;
+    bottom: 13%;
+    display: grid;
+    width: 30%;
+    margin: auto;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "input btn";
+    grid-gap: 20px;
+    height: 40px;
+}
+
+.username-btn {
+    grid-area: btn;
+}
+
+.username-input {
+    grid-area: input;
+    border-radius: 20px;
+    padding: 10px;
+}
 
 /*--------------*/
+
 .play-button {
-	 width: 214px;
-	 text-align: center;
+	width: 214px;
+	text-align: center;
     position: fixed;
     top:15vh;
-left: 1%;
+    left: 1%;
 }
+
  .circle {
-	 stroke: #f8aa28;
-	 stroke-dasharray: 650;
-	 stroke-dashoffset: 650;
-	 -webkit-transition: all 0.5s ease-in-out;
-	 opacity: 0.3;
+	stroke: #f8aa28;
+	stroke-dasharray: 650;
+	stroke-dashoffset: 650;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	opacity: 0.3;
 }
- .playBut {
-	/* border: 1px solid red;
-	*/
-     text-align: center;
-     display: inline-block;
-     -webkit-transition: all 0.5s ease;
-     background-color: #f5deb300;
-     border: none;
+
+.playBut {
+	/* border: 1px solid red; */
+    text-align: center;
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: #f5deb300;
+    border: none;
 }
- .playBut .triangle {
-	 -webkit-transition: all 0.7s ease-in-out;
-	 stroke-dasharray: 240;
-	 stroke-dashoffset: 480;
-	 stroke: #000;
-	 transform: translateY(0);
+
+.playBut .triangle {
+	-webkit-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+	stroke-dasharray: 240;
+	stroke-dashoffset: 480;
+	stroke: #000;
+	transform: translateY(0);
 }
- .playBut:hover .triangle {
-	 stroke-dashoffset: 0;
-	 opacity: 1;
-	 stroke: #f8aa28;
-	 animation: nudge 0.7s ease-in-out;
+
+.playBut:hover .triangle {
+	stroke-dashoffset: 0;
+	opacity: 1;
+	stroke: #f8aa28;
+	animation: nudge 0.7s ease-in-out;
 }
- @keyframes nudge {
-	 0% {
-		 transform: translateX(0);
+
+@keyframes nudge {
+	0% {
+		transform: translateX(0);
 	}
-	 30% {
-		 transform: translateX(-5px);
+	30% {
+		transform: translateX(-5px);
 	}
-	 50% {
-		 transform: translateX(5px);
+	50% {
+		transform: translateX(5px);
 	}
-	 70% {
-		 transform: translateX(-2px);
+	70% {
+		transform: translateX(-2px);
 	}
-	 100% {
-		 transform: translateX(0);
+	100% {
+		transform: translateX(0);
 	}
 }
- .playBut:hover .circle {
-	 stroke-dashoffset: 0;
-	 opacity: 1;
+
+.playBut:hover .circle {
+	stroke-dashoffset: 0;
+	opacity: 1;
+}
+
+/* ----------------------------------------------------  Media queries */
+
+@media screen and (max-width: 1140px) {
+    .user-name-input-grid {
+        bottom: 11%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .user-name-input-grid {
+        bottom: 11%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .user-name-input-grid {
+        bottom: 11%;
+        width: 85%;
+    }
 }
