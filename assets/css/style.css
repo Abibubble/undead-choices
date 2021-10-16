@@ -249,6 +249,7 @@ footer {
 .paragraph-holder {
     padding: .5rem 1.5rem;
     height: 10rem;
+    width: 100%;
     position: absolute;
     display: table;
     /* may need to change this for mobiles to allow scrolling through text? */
