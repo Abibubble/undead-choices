@@ -83,11 +83,11 @@
             <section class="page current">
                 <div class="image-holder">
                     <div class="static-image">
-                        <div class="girl hide" id="girl"></div>
-                        <div class="boy hide" id="boy"></div>
-                        <div class="man hide" id="man"></div>
-                        <div class="woman hide" id="woman"></div>
-                        <div class="candy hide" id="candy"></div>
+                        <div class="avatars girl hide" id="girl"></div>
+                        <div class="avatars boy hide" id="boy"></div>
+                        <div class="avatars man hide" id="man"></div>
+                        <div class="avatars woman hide" id="woman"></div>
+                        <div class="avatars candy hide" id="candy"></div>
                     </div>
                     <!-- Girl -->
                     <img src="assets/img/girl_walk.gif" alt="A walking zombie girl" id="girl_walk" class="walking-zombie hide">
@@ -107,9 +107,11 @@
                         </p>
                     </div>
                 </div>
-                <button id="previous-btn">Previous</button>
-                <button id="next-btn">Next</button>
-                <button id="next-page">Next Page</button>
+                <div class="next-prev-button-container">
+                    <button id="previous-btn" class="btn page-btn"><i class="fas fa-lg fa-hand-point-left"></i> Previous</button>
+                    <button id="next-btn" class="btn page-btn">Next <i class="fas fa-lg fa-hand-point-right"></i></button>
+                    <button id="next-page" class="btn page-btn">Next Page <i class="fas fa-lg fa-hand-point-right"></i></button>
+                </div>
             </section>
             <div class="page waiting"></div>
 
@@ -119,8 +121,8 @@
             </div>
 
             <!-- Play button from https://codemyui.com/play-button-in-pure-css/ -->
-            <div class='play-button'>
-                <button class='playBut'>
+            <div class='play-button' >
+                <button class='playBut' id="audio">
                     <svg version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"

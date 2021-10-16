@@ -36,6 +36,7 @@ button {
 	box-shadow: 2px 2px 2px #000;
 	border: 0;
 	text-align: center;
+    padding: 5px;
 	font-family: 'Finger Paint', cursive;
 	background-color: #ff8c00;
 	color: black;
@@ -149,6 +150,32 @@ footer {
 	animation-delay: 8s;
 }
 
+.page-btn {
+    padding: 10px;
+    vertical-align: middle;
+    position: absolute;
+    top: -82%;
+}
+
+.next-prev-button-container {
+    position: absolute;
+    top: 23%;
+    left: 0;
+    width: 100%;
+}
+
+#previous-btn {
+    left: 14%;
+}
+
+#next-btn {
+    right: 17%;
+}
+
+#next-page {
+    right: 13.5%;
+}
+
 /* ---------------------------------------------------- General */
 
 main {
@@ -178,7 +205,7 @@ main {
 	left: 0;
 	position: fixed;
 	background: rgba(0, 0, 0, 0.5);
-	z-index: 1;
+	z-index: 5;
 }
 
 .modal-grid {
