@@ -76,26 +76,23 @@ copyrightYear();
 
 
 const progressBar = document.getElementById("progress-bar");
-function updateProgressBar(progress){
+
+function updateProgressBar(progress) {
     progressBar.style.width = `${String(progress)}%`;
 }
 
 updateProgressBar(4);
 
 
-
 //------------------------------characters
 let spider = document.getElementsByClassName("little-spider")[0];
 let spiderWeb = document.getElementById("spider-web");
-let girl = document.getElementById("girl");
-let boy = document.getElementById("boy");
-let man = document.getElementById("man");
-let woman = document.getElementById("woman");
 
 
-function moveSpider(){
-    spider.style.height = `57rem`
-    setTimeout(function(){
+
+function moveSpider() {
+    spider.style.height = `74vh`
+    setTimeout(function () {
         spiderWeb.style.backgroundColor = "#faebd700";
 
     }, 10000);

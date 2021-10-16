@@ -9,7 +9,7 @@ let userName = "Zebedee";
 
 // -------------------------------------------------------------------------------------------------- Game Choices
 
-// -------------------------------------------------------------------- User setup
+// -------------------------------------------------------------------- Age setup
 
 function checkAge() {
     age = this.id;
@@ -20,6 +20,8 @@ document.querySelectorAll(".modal-btn").forEach(btn => {
     btn.addEventListener("click", checkAge);
 });
 
+// -------------------------------------------------------------------- User name / Brian modal
+
 function capitalise(string) {
     string.toLowerCase();
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -29,6 +31,9 @@ const userNameInput = document.getElementById("user-name-input-section");
 document.getElementById("username-btn").addEventListener("click", function () {
     userName = document.getElementById("username-input").value;
     userName = capitalise(userName);
+    if (userName === "Brian") {
+        document.getElementById("brian-modal").classList.remove("hide");
+    }
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     userInputRequired = false;
@@ -36,6 +41,12 @@ document.getElementById("username-btn").addEventListener("click", function () {
     populateStoryText();
     userInputRequired = true; // needed for avatar selection
 });
+
+document.getElementById("close-brian-modal").addEventListener("click", function () {
+    document.getElementById("brian-modal").classList.add("hide");
+});
+
+// -------------------------------------------------------------------- Avatar setup
 
 function checkAvatar(avatar) {
     if (avatar == "boy") {
@@ -404,3 +415,84 @@ populateStoryText();
 - possibly have next paragraph loaded ready for transition?
 - can be checked against length of paragraph array.
 */
+
+
+//----------------------------------------------------------------character animation
+
+let girl = document.getElementById("girl");
+let boy = document.getElementById("boy");
+let man = document.getElementById("man");
+let woman = document.getElementById("woman");
+let candy = document.getElementById("candy");
+let girlWalk = document.getElementById("girl_walk");
+let boyWalk = document.getElementById("boy_walk");
+let manWalk = document.getElementById("man_walk");
+let womanWalk = document.getElementById("woman_walk");
+
+girl.addEventListener("click", function () {
+    animateWalkingOff("girl");
+});
+boy.addEventListener("click", function () {
+    animateWalkingOff("boy");
+});
+man.addEventListener("click", function () {
+    animateWalkingOff("man");
+});
+woman.addEventListener("click", function () {
+    animateWalkingOff("woman");
+});
+candy.addEventListener("click", function () {
+    animateWalkingOff(age);
+});
+
+function showCharacter() {
+    if (age === "child") {
+        girl.classList.remove("hide");
+        boy.classList.remove("hide");
+        candy.classList.remove("hide");
+    } else if (age === "adult") {
+        man.classList.remove("hide");
+        woman.classList.remove("hide");
+        candy.classList.remove("hide");
+    }
+}
+
+// set gender = "boy"/
+
+function animateWalkingOff(name) {
+    if (name === "boy") {
+        girl.classList.add("hide");
+        candy.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+    } else if (name === "girl") {
+        boy.classList.add("hide");
+        candy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    } else if (name === "man") {
+        woman.classList.add("hide");
+        candy.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+    } else if (name === "woman") {
+        man.classList.add("hide");
+        candy.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+    } else if (age === "child") {
+        girl.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+        boy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    } else if (age === "adult") {
+        woman.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+        man.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+    }
+}
