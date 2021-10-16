@@ -389,10 +389,12 @@ let girl = document.getElementById("girl");
 let boy = document.getElementById("boy");
 let man = document.getElementById("man");
 let woman = document.getElementById("woman");
+let candy = document.getElementById("candy");
 let girlWalk = document.getElementById("girl_walk");
 let boyWalk = document.getElementById("boy_walk");
 let manWalk = document.getElementById("man_walk");
 let womanWalk = document.getElementById("woman_walk");
+
 
 
 
@@ -408,15 +410,19 @@ man.addEventListener("click", function() {
 woman.addEventListener("click", function() {
   animateWalkingOff("woman");
 });
-
+candy.addEventListener("click", function() {
+  animateWalkingOff(age);
+});
 
 function showCharacter(){
     if (age === "child"){
         girl.classList.remove("hide");
         boy.classList.remove("hide");
+        candy.classList.remove("hide");
     }else if (age === "adult"){
         man.classList.remove("hide");
         woman.classList.remove("hide");
+        candy.classList.remove("hide");
     }
 }
 
