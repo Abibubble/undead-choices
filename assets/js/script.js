@@ -20,63 +20,62 @@ const audioFile = { // Set audio files within object
         moan: new Audio('assets/audio/zombie-moan.mp3'),
     },
 }
+
 function playSoundEffect(which) {
     if (which === 'bubbles') {
         audioFile.bubbles.play();
-    }else if (which === 'drink') {
+    } else if (which === 'drink') {
         audioFile.drink.play();
-    }else if (which === 'largeHorde') {
+    } else if (which === 'largeHorde') {
         audioFile.largeHorde.play();
-    }else if (which === 'smallHorde') {
+    } else if (which === 'smallHorde') {
         audioFile.smallHorde.play();
-    }else if (which === 'puddle') {
+    } else if (which === 'puddle') {
         audioFile.puddle.play();
-    }else if (which === 'windy') {
+    } else if (which === 'windy') {
         audioFile.windy.play();
-    }else if (which === 'background') {
+    } else if (which === 'background') {
         audioFile.backgroundIntense.pause();
         audioFile.background.play();
-    }else if (which === 'backgroundIntense') {
+    } else if (which === 'backgroundIntense') {
         audioFile.background.pause();
         audioFile.backgroundIntense.play();
-    }else if (which === 'bite') {
+    } else if (which === 'bite') {
         audioFile.zombie.bite.play();
-    }else if (which === 'hiss') {
+    } else if (which === 'hiss') {
         audioFile.zombie.hiss.play();
-    }else if (which === 'moan') {
+    } else if (which === 'moan') {
         audioFile.zombie.moan.play();
     }
 }
 
-
 function pauseSoundEffect(which){
     if (which === 'bubbles') {
         audioFile.bubbles.pause();
-    }else if (which === 'drink') {
+    } else if (which === 'drink') {
         audioFile.drink.pause();
-    }else if (which === 'largeHorde') {
+    } else if (which === 'largeHorde') {
         audioFile.largeHorde.pause();
-    }else if (which === 'smallHorde') {
+    } else if (which === 'smallHorde') {
         audioFile.smallHorde.pause();
-    }else if (which === 'puddle') {
+    } else if (which === 'puddle') {
         audioFile.puddle.pause();
-    }else if (which === 'windy') {
+    } else if (which === 'windy') {
         audioFile.windy.pause();
-    }else if (which === 'background') {
+    } else if (which === 'background') {
         // audioFile.backgroundIntense.pause();
         audioFile.background.pause();
-    }else if (which === 'backgroundIntense') {
+    } else if (which === 'backgroundIntense') {
         // audioFile.background.pause();
         audioFile.backgroundIntense.pause();
-    }else if (which === 'bite') {
+    } else if (which === 'bite') {
         audioFile.zombie.bite.pause();
-    }else if (which === 'hiss') {
+    } else if (which === 'hiss') {
         audioFile.zombie.hiss.pause();
-    }else if (which === 'moan') {
+    } else if (which === 'moan') {
         audioFile.zombie.moan.pause();
     }
 }
-
 
 // ---------------------------------------------------------------- Toggle audio
 
