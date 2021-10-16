@@ -72,7 +72,7 @@ function copyrightYear() {
 
 copyrightYear();
 
-//-------------update progress bar
+// -------------------------------------------------------------------- Update progress bar
 
 
 const progressBar = document.getElementById("progress-bar");
