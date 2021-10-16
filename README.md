@@ -471,6 +471,9 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Pumpkin border](https://ibb.co/Kz1ww7k).
 * [Forest background image](https://unsplash.com/photos/hvrpOmuMrAI).
 * [All sound effects were found here](https://www.fesliyanstudios.com/royalty-free-sound-effects-download/zombie-174).
+* [Gravestone image in progress bar](https://www.clipartmax.com/middle/m2i8d3A0m2A0Z5b1_rip-gravestone-grave-cartoon/).
+* [Pumpkins image on the modals](https://www.pexels.com/photo/two-jack-o-lantern-lamps-619418/).
+* [Cured human image in the progress bar](https://pixabay.com/illustrations/man-dna-spiral-biology-merge-2125123/).
 
 ### Acknowledgements
 
