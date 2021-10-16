@@ -19,40 +19,18 @@ const audioFile = { // Set audio files within object
     },
 }
 
-const audioButton = document.getElementById("audio"); // Select the audio on/off button
+// ---------------------------------------------------------------- Toggle audio
+
+const audioButton = document.getElementById("audio-btn"); // Toggle the audio on/off button
+
 audioButton.addEventListener("click", function () {
     if (music) {
-        music = false;
-
-        audioButton.innerHTML = `<svg version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                        x="0px" y="0px" width="53.7px" height="53.7px" viewBox="0 0 213.7 213.7"
-                        enable-background="new 0 0 213.7 213.7"
-                        xml:space="preserve">
-                        <title>An animated play audio button</title>
-                        <polygon class='triangle' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/>
-                        <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
-                    </svg>`
-
-
+        audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br>Toggle audio`;
     } else {
-        music = true;
-
-        audioButton.innerHTML = `<svg viewBox="0 0 213.7 213.7" xmlns="http://www.w3.org/2000/svg">
-          <circle class="circle" id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
-          <rect x="115.32" y="62.5" width="19.074" height="86.6" style=""/>
-          <rect x="73.5" y="62.5" width="19.074" height="86.6" style=""/>
-        </svg>`
-
-
+        audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Toggle audio`;
     }
-    checkAudioButtons()
+    music = !music;
 });
-// ---------------------------------------------------------------- Toggle
 
 // function whichMusic() { // Decide which audio to play depending on which page they're on
 // commented out until decision made on audio for pages etc.
@@ -73,22 +51,6 @@ audioButton.addEventListener("click", function () {
 //     }
 // }
 
-function checkAudioButtons() { // Changes the text of the button once clicked
-    if (music) {
-        // audioButton.innerHTML = `<i class="fas fa-volume-mute"></i><br>Audio off`;
-        console.log("music on");
-    } else {
-        // audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Audio on`;
-        console.log("music off");
-    }
-}
-
-function toggleMusic() { // So that the user can toggle the music off or on
-    music = !music;
-    checkAudioButtons();
-    whichMusic();
-}
-
 // -------------------------------------------------------------------------------------------------- Misc
 
 // -------------------------------------------------------------------- Copyright
@@ -103,7 +65,6 @@ copyrightYear();
 
 // -------------------------------------------------------------------- Update progress bar
 
-
 const progressBar = document.getElementById("progress-bar");
 
 function updateProgressBar(progress) {
@@ -112,11 +73,10 @@ function updateProgressBar(progress) {
 
 updateProgressBar(4);
 
+// -------------------------------------------------------------------- Characters
 
-//------------------------------characters
 let spider = document.getElementsByClassName("little-spider")[0];
 let spiderWeb = document.getElementById("spider-web");
-
 
 function moveSpider() {
     spider.style.height = `74vh`
@@ -125,4 +85,3 @@ function moveSpider() {
 
     }, 10000);
 }
-

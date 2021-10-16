@@ -150,6 +150,8 @@ footer {
 	animation-delay: 8s;
 }
 
+/* ---------------------------------------------------- Previous / Next buttons */
+
 .page-btn {
     padding: 10px;
     vertical-align: middle;
@@ -174,6 +176,14 @@ footer {
 
 #next-page {
     right: 13.5%;
+}
+
+/* ---------------------------------------------------- Audio button */
+
+.audio-container {
+    position: absolute;
+    top: 5%;
+    left: 3%;
 }
 
 /* ---------------------------------------------------- General */
