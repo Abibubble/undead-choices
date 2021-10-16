@@ -20,6 +20,7 @@ body {
 .hide {
 	display: none;
 }
+
 .scale-0 {
     transform: scale(0);
 }
@@ -96,8 +97,7 @@ footer {
     background-color: #6600ff55;
 }
 
-
-#girl_walk{
+#girl_walk {
     position: relative;
     width: 125px;
     height: 201px;
@@ -106,17 +106,19 @@ footer {
     animation-duration: 15s;
     animation-timing-function: ease;
 }
+
 @keyframes walkoff {
     0% {
         visibility: visible;
     }
+  
     100% {
         left: 100vw;
     }
 
 }
 
-#boy_walk{
+#boy_walk {
     position: relative;
     width: 116px;
     height: 195px;
@@ -126,8 +128,7 @@ footer {
     animation-timing-function: ease;
 }
 
-
-#woman_walk{
+#woman_walk {
     position: relative;
     width: 128px;
     height: 215px;
@@ -137,7 +138,7 @@ footer {
     animation-timing-function: ease;
 }
 
-#man_walk{
+#man_walk {
     position: relative;
     width: 100px;
     height: 189px;
@@ -146,7 +147,6 @@ footer {
     animation-duration: 15s;
     animation-timing-function: ease;
 }
-
 
 .static-image .girl {
     position: absolute;
@@ -180,7 +180,6 @@ footer {
     background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
 }
 
-
 .static-image .man {
     position: absolute;
     left: 53%;
@@ -196,7 +195,6 @@ footer {
     height: 179px;
     background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
 }
-
 
 .static-image .woman {
     position: absolute;
@@ -214,7 +212,6 @@ footer {
     background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
 }
 
-
 #paragraph-container {
     background-color: #00000088;
     height: 11rem;
@@ -223,6 +220,7 @@ footer {
     margin: -1.5rem auto;
     position: relative;
 }
+
 .paragraph-holder {
     padding: .5rem 1.5rem;
     height: 10rem;
@@ -332,6 +330,7 @@ main {
 	border-radius: 10px;
 	box-shadow: 2px 2px 2px #000;
 	border: 0;
+    padding: 0 5px;
 	width: 60%;
 	height: 50%;
 	text-align: center;
@@ -537,6 +536,16 @@ main {
         bottom: 11%;
         width: 50%;
     }
+
+    .modal-grid {
+        width: 60%;
+        height: 50%;
+        left: 20%;
+    }
+    
+    .modal-text {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -544,11 +553,31 @@ main {
         bottom: 11%;
         width: 70%;
     }
+
+    .modal-grid {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+    }
+    
+    .modal-text {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
         bottom: 11%;
         width: 85%;
+    }
+
+    .modal-grid {
+        width: 90%;
+        height: 70%;
+        left: 5%;
+    }
+    
+    .modal-text {
+        width: 90%;
     }
 }
