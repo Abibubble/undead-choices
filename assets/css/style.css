@@ -85,6 +85,85 @@ footer {
     background-color: #6600ff55;
 }
 
+.image-holder img{
+    position: relative;
+    left: 0%;
+    width: 200px;
+    height: auto;
+}
+.image-holder{
+/*    */
+}
+
+.static-image .girl{
+    position: absolute;
+    left: 25%;
+    top: 8rem;
+    width: 135px;
+    height: 169px;
+    background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .girl:hover,
+.static-image .girl:focus{
+    width: 126px;
+    height: 169px;
+    background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+
+.static-image .boy{
+    position: absolute;
+    left: 40%;
+    top: 5rem;
+    width: 89px;
+    height: 183px;
+    background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .boy:hover,
+.static-image .boy:focus{
+    width: 88px;
+    height: 189px;
+    background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+.static-image .man{
+    position: absolute;
+    left: 53%;
+    top: 4rem;
+    width: 105px;
+    height: 181px;
+    background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .man:hover,
+.static-image .man:focus{
+    width: 110px;
+    height: 179px;
+    background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+.static-image .woman{
+    position: absolute;
+    left: 65%;
+    top: 7rem;
+    width: 110px;
+    height: 183px;
+    background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .woman:hover,
+.static-image .woman:focus{
+
+    width: 133px;
+    height: 210px;
+    background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
+}
+
 .page p {
     border-radius: 2rem;
     background-color: #00000077;
@@ -248,14 +327,10 @@ main {
     right: -2.1rem;
 }
 
-#canvas1{
-    width: 400px;
-    height: 400px;
-}
 
 
 
-/*--------------*/
+/*----play button----------*/
 .play-button {
 	 width: 214px;
 	 text-align: center;
@@ -292,6 +367,43 @@ main {
 	 stroke: #f8aa28;
 	 animation: nudge 0.7s ease-in-out;
 }
+
+
+ /*--spider*/
+.little-spider{
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 57rem;
+}
+
+.spider-web{
+    position: relative;
+    /* left: -24px; */
+    width: 2px;
+    height: 6rem;
+    background-color: #faebd700;
+    flex-grow: 2;
+}
+
+.spider-container{
+    width: 50px;
+    height: 1px;
+}
+
+#spider{
+    top: 5rem;
+    width: 50px;
+    height: auto;
+}
+
+
+
+
  @keyframes nudge {
 	 0% {
 		 transform: translateX(0);
