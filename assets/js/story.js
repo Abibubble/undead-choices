@@ -34,6 +34,11 @@ document.getElementById("username-btn").addEventListener("click", function () {
     if (userName === "Brian") {
         document.getElementById("brian-modal").classList.remove("hide");
     }
+
+    if (userName === "" || userName === " ") {
+        userName = "Jimmy";
+    }
+
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     userInputRequired = false;
