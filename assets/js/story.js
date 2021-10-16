@@ -53,6 +53,10 @@ const choicesMade = {
         kingSeen: `cave`,
         kingNotSeen: `room`
     },
+    collectDrink: {
+        kingSeen: `finally making ${pronoun_their} way back to Toby and his horde.`,
+        kingNotSeen:  `coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
+    }
     // purpleDrinkResult
 }
 
@@ -93,10 +97,26 @@ const ageInserts = {
         adult: `Green goo dripped on top of ${user_name}'s head. Brian grinned an evil grin. 'I am Brian, zombie O'Greedy! I will not be eaten by a puny human zombie... I will feast upon you!' he roared. And with that, he ripped poor ${user_name} limb from limb as he devoured ${pronoun_their} soft, fleshy carcass.`,
         child:`'For your crime against me, you will remain under me, forever!' Brian bellowed, as he rolled his body on top of ${user_name}... ${user_name} was never seen again`,
     },
+    northNorth2: {
+        adult: `Toby, the King of Zombies, watched from a distant hilltop as ${user_name} walked into the trees. He sighed, resigned to losing another potential helper.`,
+        child: `Many years went by. Many moons shone bright over that forest. Many tales were told of ${user_name} in the surrounding towns.`
+    },
+    northNorth3: {
+        adult: `He picked up the Porter's X2 RayGun that lay on the ground beside him and passed it to a very large zombie. 'Take ${pronoun_them} out' he declared. The zombie nodded, aimed, and fired. 'BOOM! Headshot!' the zombie laughed.`,
+        child: `Some say footsteps can be heard in the North, but ${user_name} was never seen again...`
+    },
     southSouth2: {
         adult: ` Another was using its own bloody finger to paint on the cave wall.`,
         child: "",
     },
+    dontHelpdontHelp2: {
+        adult: `A bathtub sat over a fire, brown liquid frothing inside. 'To the coffee bath!' Toby cried.`,
+        child: `The zombies stopped their circles and closed in around ${user_name}.`,
+    },
+    dontHelpdontHelp3: {
+        adult: `The zombies stopped ${pronoun_their} circles and grabbed hold of ${user_name}, carrying ${pronoun_them} to the bath. ${pronoun_they} threw ${pronoun_them} in and jeered and groaned as ${user_name}'s mushy body melted in the hot coffee pot.`,
+        child: `The zombies trapped ${user_name}, ${pronoun_they} couldn't move. They picked ${pronoun_them} up and carried ${pronoun_them} to the back of the cave, never to be seen again...`,
+    }
 }
 
 
@@ -163,7 +183,9 @@ const story = {
         // save color of drink
         // has drink boolean true
         return: `${user_name} headed back toward the entrance of the laboratory. ${pronoun_they} stowed the flask inside a pocket of ${pronoun_their} jacket for safekeeping.${ageInserts.collectReturn[age]}`,
-        back: `${user_name} trudged slowly back into the forest, coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
+        back: `${user_name} trudged slowly back into the forest, ${choicesMade.collectDrink[[zombieKingVisited]]}`,
+        // west
+        // if zombieKingSeen --> story.yes.potions1
     },
     // west
     west1: {
@@ -191,8 +213,8 @@ const story = {
     // search for the king or not (south or north)
     north: {
         north1: `${user_name} didn't like the sound of a zombie king. ${pronoun_they} took ${pronoun_their} chances and turned to the trees and walked on... and on... and on...`,
-        north2: `Toby, the King of Zombies, watched from a distant hilltop as ${user_name} walked into the trees. He sighed, resigned to losing another potential helper.`,
-        north3: `He picked up the Porter's X2 RayGun that lay on the ground beside him and passed it to a very large zombie. 'Take ${pronoun_them} out' he declared. The zombie nodded, aimed, and fired. 'BOOM! Headshot!' the zombie laughed.`,
+        north2: `${ageInserts.northNorth2[age]}`,
+        north3: `${ageInserts.northNorth3[age]}`,
         // dead
     },
     south: {
@@ -200,38 +222,52 @@ const story = {
         south2: `The glow of a firey torch illuminated the cave entrance. A horde of zombies marched mindlessly in circles. A couple of zombies sat off to one side, boiling something in a pan.${ageInserts.southSouth2[age]}`,
         toby: `'Welcome, ${user_name}, I am Toby... King of the Zombies!' a loud and powerful voice echoed, 'I am fed up with these imbeciles, look at those two trying to make rice! What use is that to our kind? Especially when it's so burnt?!'`,
         toby2: `${user_name} saw a grand-looking figure gesturing to the couple by the cave entrance. His eyes were piercing ice white, his stocky frame looked less squidgy than the other zombies. A regal necklace surrounded his collar and a jewelled crown sat atop his head.`,
-        toby3: `Truly, he is the King. ${user_name} groaned as ${pronoun_they} walked toward this mighty zombie. 'How did you know my name?' ${user_name} asked with a quivering, croaky voice.`,
-        toby4: `'I know all zombies!' Toby replies, 'Now... Are you here to help me?'`,
-    }
+        toby3: `Truly, he was the King. ${user_name} groaned as ${pronoun_they} walked toward this mighty zombie. 'How did you know my name?' ${user_name} asked with a quivering, croaky voice.`,
+        toby4: `'I know all zombies!' Toby replied, 'Now... Are you here to help me?'`,
+    },
     // help or don't help
-    
-    // "help-1": `'I will help you,' ${user_name} said, sounding more confident than anticipated, 'Brian said you are searching for a cure?'.`,
-    // "help-2": `'Yes, I heard of a witch who made us this way,' Toby glared menacingly out toward the dark night, 'She wouldn't be foolish enough to infect us all without a backup plan. Have you found any potions on your travels?'`,
-    // "has-potions": `${user_name} reached inside ${pronoun_their} jacket, pulling out the flask from the laboratory. 'Yes,' ${pronoun_they} announced, 'Are you sure this is the cure?'.`,
-    // "has-potions-2": `Toby laughed, a deep and booming laugh, 'Well, it is you that will take the first drink, so you're going to find out!'`,
-    // "has-potions-3": `'Well, what are you waiting for?' Toby looked on in suspense, waiting for ${user_name} to drink from the flask.`,
-    // "toby-blue-1": `Knowing there is no other choice, no way to avoid this fate, ${user_name} raises the flask to ${pronoun_their} lips, closes ${pronoun_their} eyes, and swigs a mouthful.`,
-    // "toby-blue-2": `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again...${user_name} was cured!`,
-    // "toby-blue-3": `${pronoun_they} passed the drink to Toby and waited for him to drink to his health. The warm blood rushed to his cheeks as he shared the cure around the others.`,
-    // "toby-blue-4": `${user_name} and Toby left the cave, leading the other former zombies out into the light, clear-headed and focused, ${pronoun_they} found ${pronoun_their} way back to civilisation. Back to humanity.`,
-    // "toby-red-1": `Knowing there is no other choice, no way to avoid this fate, ${user_name} lifted the bubbling broth to ${pronoun_their} lips.`,
-    // "a-toby-red-2": `If ${pronoun_their} sense of smell still worked, ${pronoun_they} would have been overcome with a putrid odour of stale blood, sulphur, and a hint of petrol.`,
-    // "toby-red-3": `Hoping for the best, ${user_name} poured the mixture down ${pronoun_their} throat.`,
-    // "k-toby-red-4": `It gurgled as it reached ${pronoun_their} stomach. ${user_name} was overcome with drowsiness, ${pronoun_their} eyes grew heavy and ${pronoun_they} slumped to the floor.`,
-    // "a-toby-red-4": `${user_name} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${pronoun_their} stomach churned, heat exploded within ${pronoun_them}, and then...`,
-    // "a-toby-red-5" : `BANG! ${user_name}'s gooey insides exploded all over the cave`,
-    // "toby-purple": `Knowing there is no other choice, no way to avoid this fate, ${user_name} raised the glowing liquid, gazing at its beautiful colour. Closing ${pronoun_their} eyes, ${user_name} tilted ${pronoun_their} head back and downed the strange concoction in one large gulp.`,
-    // "toby-purple-2": `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${user_name} didn't care.`,
-    // "toby-purple-3": `${pronoun_they} were absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
-    // "toby-purple-4": `The torchlight eventually dimmed, the sound of zombies stomping around and around finally silenced, and ${user_name} was never seen again.`,
-    // "no-potions": `${user_name} shuffled ${pronoun_their} feet awkwardly, looking down at the floor. 'I have not, I will go back through the forest and find this cure for us both' ${pronoun_they} declared, and headed off back to where ${pronoun_they} began.`,
-    // "back-2": `${user_name} trudged slowly back into the forest, finally making ${pronoun_their} way back to Toby and his horde.`,
-    // "no-help": `Not knowing what this could lead to, ${user_name} tried to decline. As ${pronoun_they} turned to leave the cave, Toby called to his zombie followers, 'Don't let ${user_name} leave. For this act against us all, we shall get our revenge.'`,
-    // "k-no-help-2": `He pointed to the back of the cave. The zombies stopped ${pronoun_their} circles and picked ${user_name} up, carrying ${pronoun_them} to the back of the cave, never to be seen again...`,
-    // "a-no-help-2": `He pointed to the back of the cave. A bathtub sat over a fire, brown liquid frothing inside. 'To the coffee bath!' Toby cried.`,
-    // "a-no-help-3": `The zombies stopped ${pronoun_their} circles and grabbed hold of ${user_name}, carrying ${pronoun_them} to the bath. ${pronoun_they} threw ${pronoun_them} in and jeered and groaned as ${user_name}'s mushy body melted in the hot coffee pot.`,
-    // "k-refuse": `${user_name} didn't like the sound of a zombie king. ${pronoun_they} took ${pronoun_their} chances and turned to the trees and walked on... and on... and on... Never to be seen again.`,
-    
+    // help
+    help: {
+        help1: `'I will help you,' ${user_name} said, sounding more confident than anticipated, 'Brian said you are searching for a cure?'.`,
+        help2: `'Yes, I heard of a witch who made us this way,' Toby glared menacingly out toward the dark night, 'She wouldn't be foolish enough to infect us all without a backup plan. Have you found any potions on your travels?'`,
+    },
+    // check has drink
+    // has drink
+    yes: {
+        potions1: `${user_name} reached inside ${pronoun_their} jacket, pulling out the flask from the laboratory. 'Yes,' ${pronoun_they} announced, 'Are you sure this is the cure?'.`,
+        potions2: `Toby laughed, a deep and booming laugh, 'Well, it is you that will take the first drink, so you're going to find out!'`,
+        potions3: `'Well, what are you waiting for?' Toby looked on in suspense, waiting for ${user_name} to drink from the flask.`,
+    },
+    blue: {
+        blue1: `Knowing there was no other choice, no way to avoid this fate, ${user_name} raised the flask to ${pronoun_their} lips, closed ${pronoun_their} eyes, and swigged a mouthful.`,
+        blue2: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again...${user_name} was cured!`,
+        blue3: `${pronoun_they} passed the drink to Toby and waited for him to drink to his health. The warm blood rushed to Toby's cheeks as he shared the cure around the others.`,
+        blue4: `${user_name} and Toby left the cave, leading the other former zombies out into the light, clear-headed and focused, they found their way back to civilisation. Back to humanity.`,
+        // win - yay!
+    },
+    red: {
+        red1: `Knowing there was no other choice, no way to avoid this fate, ${user_name} lifted the bubbling broth to ${pronoun_their} lips.`,
+        red2: `If ${pronoun_their} sense of smell still worked, ${ageInserts.redDrinkSmell[age]}`,
+        red3: `Hoping for the best, ${user_name} poured the mixture down ${pronoun_their} throat.`,
+        red4: `${ageInserts.redDrinkResult[age]}`,
+        // dead
+    },
+    purple: {
+        purple1: `Knowing there was no other choice, no way to avoid this fate, ${user_name} raised the glowing liquid, gazing at its beautiful colour. Closing ${pronoun_their} eyes, ${user_name} tilted ${pronoun_their} head back and downed the strange concoction in one large gulp.`,
+        purple2:  `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${user_name} didn't care.`,
+        purple3: `${pronoun_they} were absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
+        purple4: `The torchlight eventually dimmed, the sound of zombies stomping around and around finally silenced, and ${user_name} was never seen again.`,
+        // end ... yay??
+    },
+    no: {
+        no1: `${user_name} shuffled ${pronoun_their} feet awkwardly, looking down at the floor. 'I have not, I will go back through the forest and find this cure for us both' ${pronoun_they} declared, and headed off back to where ${pronoun_they} began.`,
+        // east
+    },
+    dontHelp: {
+        dontHelp1: `Not knowing what this could lead to, ${user_name} tried to decline. As ${pronoun_they} turned to leave the cave, Toby called to his zombie followers, 'Don't let ${user_name} leave. For this act against us all, we shall get our revenge.'`,
+        dontHelp2: `He pointed to the back of the cave. ${ageInserts.dontHelpdontHelp2[age]}`,
+        dontHelp3: `${ageInserts.dontHelpdontHelp3[age]}`,
+    },    
 }
 
 
