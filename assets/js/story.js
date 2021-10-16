@@ -25,10 +25,11 @@ function capitalise(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-document.getElementById("username-btn").addEventListener("click", function() {
+document.getElementById("username-btn").addEventListener("click", function () {
     userName = document.getElementById("username-input").value;
     userName = capitalise(userName);
 });
+
 
 function checkAvatar(avatar) {
     if (avatar == "boy") {
@@ -46,15 +47,6 @@ function checkAvatar(avatar) {
     }
 }
 
-
-//----------------------------------------------------------------character animation
-let girl = document.getElementById("girl");
-let boy = document.getElementById("boy");
-let man = document.getElementById("man");
-let woman = document.getElementById("woman");
-
-
-
 // -------------------------------------------------------------------- In-game choices
 
 const choicesMade = {
@@ -64,7 +56,7 @@ const choicesMade = {
     },
     collectDrink: {
         kingSeen: `finally making ${pronoun_their} way back to Toby and his horde.`,
-        kingNotSeen:  `coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
+        kingNotSeen: `coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
     }
     // purpleDrinkResult
 }
@@ -83,7 +75,7 @@ const ageInserts = {
         child: `${pronoun_they} would have fainted from the foul smell.`,
     },
     redDrinkResult: {
-        adult:  `${userName} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${pronoun_their} stomach churned, heat exploded within ${pronoun_them}, and then... BANG. ${userName}'s gooey insides exploded all over the ${choicesMade.redDrinkresult[zombieKingVisited]}!`,
+        adult: `${userName} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${pronoun_their} stomach churned, heat exploded within ${pronoun_them}, and then... BANG. ${userName}'s gooey insides exploded all over the ${choicesMade.redDrinkresult[zombieKingVisited]}!`,
         child: `It gurgled as it reached ${pronoun_their} stomach. ${userName} was overcome with drowsiness, ${pronoun_their} eyes grew heavy and ${pronoun_they} slumped to the floor...`,
     },
     blueDrinkResult: {
@@ -104,7 +96,7 @@ const ageInserts = {
     },
     feedFeed4: {
         adult: `Green goo dripped on top of ${userName}'s head. Brian grinned an evil grin. 'I am Brian, zombie O'Greedy! I will not be eaten by a puny human zombie... I will feast upon you!' he roared. And with that, he ripped poor ${userName} limb from limb as he devoured ${pronoun_their} soft, fleshy carcass.`,
-        child:`'For your crime against me, you will remain under me, forever!' Brian bellowed, as he rolled his body on top of ${userName}... ${userName} was never seen again`,
+        child: `'For your crime against me, you will remain under me, forever!' Brian bellowed, as he rolled his body on top of ${userName}... ${userName} was never seen again`,
     },
     northNorth2: {
         adult: `Toby, the King of Zombies, watched from a distant hilltop as ${userName} walked into the trees. He sighed, resigned to losing another potential helper.`,
@@ -218,7 +210,7 @@ const story = {
         noFeed1: `Using what was left of ${pronoun_their} logic, ${userName} decided it best not to take on a 10ft snowman zombie and greeted Brian instead.`,
         noFeed2: `'Hello, I am ${userName},' ${userName} called out, 'I mean you no harm, can you help me?'. An eery howl was heard in the distance. Brian trundled toward ${pronoun_them}.`,
         noFeed3: `'You look pale,' Brian groaned, 'You must be one of Toby's creeps... He is the king of all zombies!! I hear he is looking for the cure, perhaps you can help him.'.`,
-        noFeed4:  `The giant snowman waved an arm vaguely to the south, 'Head that way, you will find him soon enough.'`,
+        noFeed4: `The giant snowman waved an arm vaguely to the south, 'Head that way, you will find him soon enough.'`,
     },
     // search for the king or not (south or north)
     north: {
@@ -264,7 +256,7 @@ const story = {
     },
     purple: {
         purple1: `Knowing there was no other choice, no way to avoid this fate, ${userName} raised the glowing liquid, gazing at its beautiful colour. Closing ${pronoun_their} eyes, ${userName} tilted ${pronoun_their} head back and downed the strange concoction in one large gulp.`,
-        purple2:  `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${userName} didn't care.`,
+        purple2: `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${userName} didn't care.`,
         purple3: `${pronoun_they} were absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
         purple4: `The torchlight eventually dimmed, the sound of zombies stomping around and around finally silenced, and ${userName} was never seen again.`,
         // end ... yay??
@@ -277,7 +269,7 @@ const story = {
         dontHelp1: `Not knowing what this could lead to, ${userName} tried to decline. As ${pronoun_they} turned to leave the cave, Toby called to his zombie followers, 'Don't let ${userName} leave. For this act against us all, we shall get our revenge.'`,
         dontHelp2: `He pointed to the back of the cave. ${ageInserts.dontHelpdontHelp2[age]}`,
         dontHelp3: `${ageInserts.dontHelpdontHelp3[age]}`,
-    },    
+    },
 }
 
 
@@ -380,3 +372,51 @@ function nextPage() {
 - possibly have next paragraph loaded ready for transition?
 - can be checked against length of paragraph array.
 */
+
+
+//----------------------------------------------------------------character animation
+let girl = document.getElementById("girl");
+let boy = document.getElementById("boy");
+let man = document.getElementById("man");
+let woman = document.getElementById("woman");
+let girlWalk = document.getElementById("girl_walk");
+let boyWalk = document.getElementById("boy_walk");
+let manWalk = document.getElementById("man_walk");
+let womanWalk = document.getElementById("woman_walk");
+
+
+
+
+function animateWalkingOff(name) {
+    if (name === "boy") {
+        girl.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+    } else if (name === "girl") {
+        boy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    } else if (name === "man") {
+        woman.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+    }else if (name === "woman") {
+        man.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+    } else if (age === "child") {
+        girl.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+        boy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    }else if (age === "adult") {
+        woman.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+        man.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+        }
+}
