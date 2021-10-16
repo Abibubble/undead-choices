@@ -54,19 +54,19 @@ footer {
 
 @keyframes flip-page {
     0% {
-    transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
+        transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
     }
 
     20% {
-    transform: translate(96.5%, 0) rotate3d(0, 3, 0.1, 155deg);
+        transform: translate(96.5%, 0) rotate3d(0, 3, 0.1, 155deg);
     }
 
     40% {
-    transform: translate(85%, 0) rotate3d(0, 3, 0.4, 125deg);
+        transform: translate(85%, 0) rotate3d(0, 3, 0.4, 125deg);
     }
 
     50% {
-    transform: translate(80%, 0) rotate3d(0, 4, 1, 105deg);
+        transform: translate(80%, 0) rotate3d(0, 4, 1, 105deg);
     }
 }
 
@@ -260,11 +260,6 @@ main {
 	right: -2.1rem;
 }
 
-#canvas1 {
-	width: 400px;
-	height: 400px;
-}
-
 /* ----------------------------------------------------  User name input */
 
 .user-name-input-grid {
@@ -400,21 +395,21 @@ main {
 
 @media screen and (max-width: 1140px) {
     .user-name-input-grid {
-    bottom: 11%;
-    width: 50%;
+        bottom: 11%;
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .user-name-input-grid {
-    bottom: 11%;
-    width: 70%;
+        bottom: 11%;
+        width: 70%;
     }
 }
 
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
-    bottom: 11%;
-    width: 85%;
+        bottom: 11%;
+        width: 85%;
     }
 }
