@@ -360,7 +360,7 @@ main {
 	width: 214px;
 	text-align: center;
     position: absolute;
-    top:1rem;
+    top: 1rem;
     left: -1rem;
 }
 
@@ -384,8 +384,8 @@ main {
 }
 
 .playBut .triangle {
-	transition: all 0.7s ease-in-out;
-	-webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
 	stroke-dasharray: 240;
 	stroke-dashoffset: 480;
 	stroke: #000;
@@ -448,7 +448,7 @@ main {
 	70% {
 		transform: translateX(-2px);
 	}
-    
+        
 	100% {
 	    transform: translateX(0);
 	}
