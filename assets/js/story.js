@@ -57,13 +57,6 @@ function checkAvatar(avatar) {
     }
 }
 
-// -------------------------------------------------------------------- Character animation
-
-let girl = document.getElementById("girl");
-let boy = document.getElementById("boy");
-let man = document.getElementById("man");
-let woman = document.getElementById("woman");
-
 // -------------------------------------------------------------------- In-game choices
 
 const choicesMade = {
