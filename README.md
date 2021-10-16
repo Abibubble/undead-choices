@@ -105,9 +105,9 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 
 ### Typography
 
-* The main font used is [Neucha from Google Fonts](https://fonts.google.com/specimen/Neucha?query=Neucha).
-* This font has been used to link the story aspect with the Halloween theme.
-* It's a rough font, similar to clumpy handwriting, which matches the zombie theme nicely.
+* The main fonts used are [Neucha](https://fonts.google.com/specimen/Neucha?query=Neucha) and [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger+paint) from Google Fonts.
+* These fonts have been used to link the story aspect with the Halloween theme.
+* They are rough fonts, similar to clumpy handwriting, which match the zombie theme nicely.
 
 ### Imagery
 
