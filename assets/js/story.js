@@ -9,7 +9,7 @@ let userName;
 
 // -------------------------------------------------------------------------------------------------- Game Choices
 
-// -------------------------------------------------------------------- User setup
+// -------------------------------------------------------------------- Age setup
 
 function checkAge() {
     age = this.id;
@@ -20,6 +20,8 @@ document.querySelectorAll(".modal-btn").forEach(btn => {
     btn.addEventListener("click", checkAge);
 });
 
+// -------------------------------------------------------------------- User name / Brian modal
+
 function capitalise(string) {
     string.toLowerCase();
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -28,7 +30,16 @@ function capitalise(string) {
 document.getElementById("username-btn").addEventListener("click", function() {
     userName = document.getElementById("username-input").value;
     userName = capitalise(userName);
+    if (userName === "Brian") {
+        document.getElementById("brian-modal").classList.remove("hide");
+    }
 });
+
+document.getElementById("close-brian-modal").addEventListener("click", function() {
+    document.getElementById("brian-modal").classList.add("hide");
+});
+
+// -------------------------------------------------------------------- Avatar setup
 
 function checkAvatar(avatar) {
     if (avatar == "boy") {
@@ -46,14 +57,12 @@ function checkAvatar(avatar) {
     }
 }
 
+// -------------------------------------------------------------------- Character animation
 
-//----------------------------------------------------------------character animation
 let girl = document.getElementById("girl");
 let boy = document.getElementById("boy");
 let man = document.getElementById("man");
 let woman = document.getElementById("woman");
-
-
 
 // -------------------------------------------------------------------- In-game choices
 
