@@ -403,6 +403,31 @@ let womanWalk = document.getElementById("woman_walk");
 
 
 
+girl.addEventListener("click", function() {
+  animateWalkingOff("girl");
+});
+boy.addEventListener("click", function() {
+  animateWalkingOff("boy");
+});
+man.addEventListener("click", function() {
+  animateWalkingOff("man");
+});
+woman.addEventListener("click", function() {
+  animateWalkingOff("woman");
+});
+
+
+function showCharacter(){
+    if (age === "child"){
+        girl.classList.remove("hide");
+        boy.classList.remove("hide");
+    }else if (age === "adult"){
+        man.classList.remove("hide");
+        woman.classList.remove("hide");
+    }
+}
+
+// set gender = "boy"/
 
 function animateWalkingOff(name) {
     if (name === "boy") {

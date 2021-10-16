@@ -106,6 +106,7 @@ footer {
     left: 0vw;
     animation-duration: 15s;
     animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 @keyframes walkoff {
@@ -127,6 +128,7 @@ footer {
     left: 0vw;
     animation-duration: 15s;
     animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 #woman_walk {
@@ -137,6 +139,7 @@ footer {
     left: 0vw;
     animation-duration: 15s;
     animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 #man_walk {
@@ -147,6 +150,7 @@ footer {
     left: 2vw;
     animation-duration: 15s;
     animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .static-image .girl {
