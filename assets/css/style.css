@@ -212,6 +212,7 @@ main {
     height: inherit;
     background-color: #272727;
     border-radius: 1.5rem;
+    transition: width 3s;
 }
 
 #progress-image {
@@ -258,9 +259,9 @@ main {
 .play-button {
 	 width: 214px;
 	 text-align: center;
-    position: fixed;
-    top:15vh;
-left: 1%;
+     position: absolute;
+     top:1rem;
+     left: -1rem;
 }
  .circle {
 	 stroke: #f8aa28;
