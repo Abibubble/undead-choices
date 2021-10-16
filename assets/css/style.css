@@ -23,7 +23,6 @@ body {
 }
 .scale-0 {
     transform: scale(0);
-    z-index: -1;
 }
 
 
@@ -95,16 +94,17 @@ footer {
     width: 70%;
     border-radius: 2rem;
     margin: -1.5rem auto;
-    padding: .5rem;
     position: relative;
 }
 .paragraph-holder {
+    padding: .5rem 1.5rem;
     height: 10rem;
     position: absolute;
     display: table;
     /* may need to change this for mobiles to allow scrolling through text? */
     /* overflow-y: scroll; */
 }
+
 .page p {
     display: table-cell;
     vertical-align: middle;
@@ -123,7 +123,10 @@ footer {
     background: url(../img/mock1.jpg) no-repeat center center / cover;
     animation-delay: 8s;
 }
-
+button {
+    position: relative;
+    z-index: 50;
+}
 /* --------------------------------------------- General */
 
 main {

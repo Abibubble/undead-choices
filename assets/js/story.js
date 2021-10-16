@@ -3,13 +3,25 @@ function capitalise(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-let user_name = "name";
+function checkAvatar(avatar) {
+    if (avatar == "boy") {
+        pronoun_their = "his";
+        pronoun_them = "him";
+        pronoun_they = "he";
+    } else if (avatar == "girl") {
+        pronoun_their = "her";
+        pronoun_them = "them";
+        pronoun_they = "she";
+    } else {
+        pronoun_their = "their";
+        pronoun_them = "them";
+        pronoun_they = "they";
+    }
+}
+
+let user_name = "zebedee";
 user_name = capitalise(user_name);
-let pronoun_their = "their";
-let pronoun_them = "them";
-let pronoun_they = "they";
-let adult = false;
-let zombieKingVisited = "kingNotSeen";
+checkAvatar();
 
 // ! commented out for simplicity of testing
 // function startStory() {
@@ -26,27 +38,16 @@ let zombieKingVisited = "kingNotSeen";
 //     startStory();
 // }
 
+let adult = false;
+let age = "child";
+
 if (adult) {
     age = "adult";
 } else {
     age = "child";
 }
 
-function checkAvatar(avatar) {
-    if (avatar == "boy") {
-        pronoun_their = "his";
-        pronoun_them = "him";
-        pronoun_they = "he";
-    } else if (avatar == "girl") {
-        pronoun_their = "her";
-        pronoun_them = "them";
-        pronoun_they = "she";
-    } else {
-        pronoun_their = "their";
-        pronoun_them = "them";
-        pronoun_they = "they";
-    }
-}
+let zombieKingVisited = "kingNotSeen";
 
 const choicesMade = {
     redDrinkresult: {
@@ -271,10 +272,83 @@ const story = {
 }
 
 
-// ! tested and working. Needs applying properly, but forms basics of logic.
-// ! uncomment and test with different name, running checkAvatar(boy/girl) and adult = true :)
-// const pages = Array.from(Object.keys(story));
+// story control
 
+const pages = Array.from(Object.keys(story));
+let pageNumber = 1;
+let paraNumber = 1;
+
+// paragraph control
+const storyText = document.getElementById("story-text");
+const nextBtn = document.getElementById("next-btn");
+const previousBtn = document.getElementById("previous-btn");
+const pageBtn = document.getElementById("next-page");
+
+/**
+ * Array of paragraphs from current page
+ * @returns Array of paragraphs
+ */
+function getParas() {
+    return paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+}
+
+/** Modifies story text and hides/shows buttons */
+function populateStoryText() {
+    getParas();
+    storyText.innerText = story[pages[pageNumber - 1]][paras[paraNumber - 1]];
+    if (paraNumber >= paras.length) {
+        nextBtn.classList.add("hide");
+        pageBtn.classList.remove("hide");
+    } else {
+        nextBtn.classList.remove("hide");
+        pageBtn.classList.add("hide");
+    }
+    if (paraNumber >= 2) {
+        previousBtn.classList.remove("hide");
+    } else {
+        previousBtn.classList.add("hide");
+    }
+}
+
+/**
+ * moves to next paragraph
+ */
+function nextPara() {
+    storyText.classList.add("scale-0");
+    setTimeout(() => {
+        paraNumber++;
+        populateStoryText();
+        storyText.classList.remove("scale-0");
+    }, 1500);
+}
+
+/**
+ * moves to previous paragraph
+ */
+function previousPara() {
+    storyText.classList.add("scale-0");
+    setTimeout(() => {
+        paraNumber--;
+        populateStoryText();
+        storyText.classList.remove("scale-0");
+    }, 1500);
+}
+
+nextBtn.addEventListener("click", nextPara);
+previousBtn.addEventListener("click", previousPara);
+
+populateStoryText();
+
+// page control
+pageBtn.addEventListener("click", nextPage());
+
+function nextPage() {
+    console.log("NEXT PAGE");
+}
+
+// function startStory() {
+//         document.getElementById("story-text").innerText = story.begin;
+// }
 // for (let i = 0; i < pages.length; i++) {
 //     const paras = Array.from(Object.keys(story[pages[i]]));
 //     console.log(paras);
