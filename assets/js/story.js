@@ -38,7 +38,8 @@ document.getElementById("username-btn").addEventListener("click", function () {
     userNameInput.children[1].classList.add("hide");
     userInputRequired = false;
     story = new Story(); // generate story with new name
-    populateStoryText();
+    nextPage();
+    // populateStoryText();
     userInputRequired = true; // needed for avatar selection
 });
 
@@ -49,11 +50,11 @@ document.getElementById("close-brian-modal").addEventListener("click", function 
 // -------------------------------------------------------------------- Avatar setup
 
 function checkAvatar(avatar) {
-    if (avatar == "boy") {
+    if (avatar === "boy" || avatar === "man") {
         pronoun_their = "his";
         pronoun_them = "him";
         pronoun_they = "he";
-    } else if (avatar == "girl") {
+    } else if (avatar === "girl" || avatar === "woman") {
         pronoun_their = "her";
         pronoun_them = "them";
         pronoun_they = "she";
@@ -64,77 +65,185 @@ function checkAvatar(avatar) {
     }
 }
 
-// -------------------------------------------------------------------- In-game choices
+//----------------------------------------------------------------character animation
 
-const choicesMade = {
-    redDrinkresult: {
-        kingSeen: `cave`,
-        kingNotSeen: `room`
-    },
-    collectDrink: {
-        kingSeen: `finally making ${pronoun_their} way back to Toby and his horde.`,
-        kingNotSeen: `coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
+let girl = document.getElementById("girl");
+let boy = document.getElementById("boy");
+let man = document.getElementById("man");
+let woman = document.getElementById("woman");
+let candy = document.getElementById("candy");
+let girlWalk = document.getElementById("girl_walk");
+let boyWalk = document.getElementById("boy_walk");
+let manWalk = document.getElementById("man_walk");
+let womanWalk = document.getElementById("woman_walk");
+
+girl.addEventListener("click", function () {
+    character = "girl";
+    animateWalkingOff(character);
+    story = new Story();
+    ageInserts = new AgeInserts();
+    setTimeout(nextPage, 8500);
+});
+boy.addEventListener("click", function () {
+    character = "boy";
+    animateWalkingOff(character);
+    story = new Story();
+    ageInserts = new AgeInserts();
+    setTimeout(nextPage, 8500);
+});
+man.addEventListener("click", function () {
+    character = "man";
+    animateWalkingOff(character);
+    story = new Story();
+    ageInserts = new AgeInserts();
+    setTimeout(nextPage, 8500);
+});
+woman.addEventListener("click", function () {
+    character = "woman";
+    animateWalkingOff(character);
+    story = new Story();
+    ageInserts = new AgeInserts();
+    setTimeout(nextPage, 8500);
+});
+candy.addEventListener("click", function () {
+    character = "candy";
+    animateWalkingOff();
+    story = new Story();
+    ageInserts = new AgeInserts();
+    setTimeout(nextPage, 8500);
+});
+
+function showCharacter() {
+    if (age === "child") {
+        girl.classList.remove("hide");
+        boy.classList.remove("hide");
+        candy.classList.remove("hide");
+    } else if (age === "adult") {
+        man.classList.remove("hide");
+        woman.classList.remove("hide");
+        candy.classList.remove("hide");
     }
-    // purpleDrinkResult
 }
 
-const ageInserts = {
-    eastOneMalteasers: {
+// set gender = "boy"/
+
+function animateWalkingOff(name) {
+    if (name) {
+        // walk off candy
+    }
+    if (name === "boy") {
+        girl.classList.add("hide");
+        candy.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+    } else if (name === "girl") {
+        boy.classList.add("hide");
+        candy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    } else if (name === "man") {
+        woman.classList.add("hide");
+        candy.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+    } else if (name === "woman") {
+        man.classList.add("hide");
+        candy.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+    } else if (age === "child") {
+        girl.classList.add("hide");
+        girlWalk.classList.remove("hide");
+        girlWalk.style.animationName = "walkoff";
+        boy.classList.add("hide");
+        boyWalk.classList.remove("hide");
+        boyWalk.style.animationName = "walkoff";
+    } else if (age === "adult") {
+        woman.classList.add("hide");
+        womanWalk.classList.remove("hide");
+        womanWalk.style.animationName = "walkoff";
+        man.classList.add("hide");
+        manWalk.classList.remove("hide");
+        manWalk.style.animationName = "walkoff";
+    }
+    checkAvatar(name);
+}
+
+// -------------------------------------------------------------------- In-game choices
+
+class ChoicesMade {
+    constructor() {
+    this.redDrinkresult = {
+        kingSeen: `cave`,
+        kingNotSeen: `room`
+    };
+    this.collectDrink = {
+        kingSeen: `finally making ${pronoun_their} way back to Toby and his horde.`,
+        kingNotSeen: `coming back to where ${pronoun_they} began ${pronoun_their} journey.`,
+    };
+    // purpleDrinkResult
+}
+}
+
+class AgeInserts {
+    constructor() {
+    this.eastOneMalteasers = {
         adult: `The splintered stake plunged through ${userName}'s soft flesh with a squelch. `,
         child: "",
-    },
-    drinkSelectDrink: {
+    };
+    this.drinkSelectDrink = {
         adult: `${pronoun_they} reached forward, and`,
         child: `As ${pronoun_they} reached forward, the chocolate bar wrapper fell from ${pronoun_their} pocket as ${pronoun_they}`,
-    },
-    redDrinkSmell: {
+    };
+    this.redDrinkSmell = {
         adult: `${pronoun_they} would have been overcome with a putrid odour of stale blood, sulphur, and a hint of petrol.`,
         child: `${pronoun_they} would have fainted from the foul smell.`,
-    },
-    redDrinkResult: {
+    };
+    this.redDrinkResult = {
         adult: `${userName} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${pronoun_their} stomach churned, heat exploded within ${pronoun_them}, and then... BANG. ${userName}'s gooey insides exploded all over the ${choicesMade.redDrinkresult[zombieKingVisited]}!`,
         child: `It gurgled as it reached ${pronoun_their} stomach. ${userName} was overcome with drowsiness, ${pronoun_their} eyes grew heavy and ${pronoun_they} slumped to the floor...`,
-    },
-    blueDrinkResult: {
+    };
+    this.blueDrinkResult = {
         adult: `Pain seared from ${pronoun_their} foot, but the pain was welcomed... `,
         child: "",
-    },
-    collectDrink: {
+    };
+    this.collectDrink = {
         adult: `${userName} reached forward to collect a concoction and continued on their quest...`,
         child: `As ${userName} reached forward to collect a concoction, the chocolate wrapper fell from ${pronoun_their} pocket. They selected a potion and continued on their quest...`,
-    },
-    collectReturn: {
+    };
+    this.collectReturn = {
         adult: ` It was pressed a little too tightly against ${pronoun_their} body, ${pronoun_they} heard a rib crack under the extra pressure. Oh well...`,
         child: "",
-    },
-    westOneBrian2: {
+    };
+    this.westOneBrian2 = {
         adult: `Green goo oozed from its neck, one stick of an arm was broken halfway. The top of his head had melted away, exposing a pulsating mass of blue gunk - was that a brain?`,
         child: `This truly was no ordinary snowman at all!`,
-    },
-    feedFeed4: {
+    };
+    this.feedFeed4 = {
         adult: `Green goo dripped on top of ${userName}'s head. Brian grinned an evil grin. 'I am Brian, zombie O'Greedy! I will not be eaten by a puny human zombie... I will feast upon you!' he roared. And with that, he ripped poor ${userName} limb from limb as he devoured ${pronoun_their} soft, fleshy carcass.`,
         child: `'For your crime against me, you will remain under me, forever!' Brian bellowed, as he rolled his body on top of ${userName}... ${userName} was never seen again`,
-    },
-    northNorth2: {
+    };
+    this.northNorth2 = {
         adult: `Toby, the King of Zombies, watched from a distant hilltop as ${userName} walked into the trees. He sighed, resigned to losing another potential helper.`,
         child: `Many years went by. Many moons shone bright over that forest. Many tales were told of ${userName} in the surrounding towns.`
-    },
-    northNorth3: {
+    };
+    this.northNorth3 = {
         adult: `He picked up the Porter's X2 RayGun that lay on the ground beside him and passed it to a very large zombie. 'Take ${pronoun_them} out' he declared. The zombie nodded, aimed, and fired. 'BOOM! Headshot!' the zombie laughed.`,
         child: `Some say footsteps can be heard in the North, but ${userName} was never seen again...`
-    },
-    southSouth2: {
+    };
+    this.southSouth2 = {
         adult: ` Another was using its own bloody finger to paint on the cave wall.`,
         child: "",
-    },
-    dontHelpdontHelp2: {
+    };
+    this.dontHelpdontHelp2 = {
         adult: `A bathtub sat over a fire, brown liquid frothing inside. 'To the coffee bath!' Toby cried.`,
         child: `The zombies stopped their circles and closed in around ${userName}.`,
-    },
-    dontHelpdontHelp3: {
+    };
+    this.dontHelpdontHelp3 = {
         adult: `The zombies stopped ${pronoun_their} circles and grabbed hold of ${userName}, carrying ${pronoun_them} to the bath. ${pronoun_they} threw ${pronoun_them} in and jeered and groaned as ${userName}'s mushy body melted in the hot coffee pot.`,
         child: `The zombies trapped ${userName}, ${pronoun_they} couldn't move. They picked ${pronoun_them} up and carried ${pronoun_them} to the back of the cave, never to be seen again...`,
-    }
+    };
+}
 }
 
 // -------------------------------------------------------------------- Storyline
@@ -293,7 +402,10 @@ class Story {
 
 
 // story control
+let choicesMade = new ChoicesMade();
+let ageInserts = new AgeInserts();
 let story = new Story();
+
 const pages = Array.from(Object.keys(story));
 let pageNumber = 1;
 let paraNumber = 1;
@@ -372,6 +484,7 @@ function nextPage() {
     pageNumber++;
     paraNumber = 1;
     populateStoryText();
+    checkInputs();
 }
 
 /**
@@ -385,6 +498,10 @@ function checkInputs() {
     } else {
         userNameInput.children[0].classList.add("hide");
         userNameInput.children[1].classList.add("hide");
+    }
+    if (pageNumber === 2) {
+        pageBtn.classList.add("hide");
+        showCharacter();
     }
 }
 
@@ -415,84 +532,3 @@ populateStoryText();
 - possibly have next paragraph loaded ready for transition?
 - can be checked against length of paragraph array.
 */
-
-
-//----------------------------------------------------------------character animation
-
-let girl = document.getElementById("girl");
-let boy = document.getElementById("boy");
-let man = document.getElementById("man");
-let woman = document.getElementById("woman");
-let candy = document.getElementById("candy");
-let girlWalk = document.getElementById("girl_walk");
-let boyWalk = document.getElementById("boy_walk");
-let manWalk = document.getElementById("man_walk");
-let womanWalk = document.getElementById("woman_walk");
-
-girl.addEventListener("click", function () {
-    animateWalkingOff("girl");
-});
-boy.addEventListener("click", function () {
-    animateWalkingOff("boy");
-});
-man.addEventListener("click", function () {
-    animateWalkingOff("man");
-});
-woman.addEventListener("click", function () {
-    animateWalkingOff("woman");
-});
-candy.addEventListener("click", function () {
-    animateWalkingOff(age);
-});
-
-function showCharacter() {
-    if (age === "child") {
-        girl.classList.remove("hide");
-        boy.classList.remove("hide");
-        candy.classList.remove("hide");
-    } else if (age === "adult") {
-        man.classList.remove("hide");
-        woman.classList.remove("hide");
-        candy.classList.remove("hide");
-    }
-}
-
-// set gender = "boy"/
-
-function animateWalkingOff(name) {
-    if (name === "boy") {
-        girl.classList.add("hide");
-        candy.classList.add("hide");
-        girlWalk.classList.remove("hide");
-        girlWalk.style.animationName = "walkoff";
-    } else if (name === "girl") {
-        boy.classList.add("hide");
-        candy.classList.add("hide");
-        boyWalk.classList.remove("hide");
-        boyWalk.style.animationName = "walkoff";
-    } else if (name === "man") {
-        woman.classList.add("hide");
-        candy.classList.add("hide");
-        womanWalk.classList.remove("hide");
-        womanWalk.style.animationName = "walkoff";
-    } else if (name === "woman") {
-        man.classList.add("hide");
-        candy.classList.add("hide");
-        manWalk.classList.remove("hide");
-        manWalk.style.animationName = "walkoff";
-    } else if (age === "child") {
-        girl.classList.add("hide");
-        girlWalk.classList.remove("hide");
-        girlWalk.style.animationName = "walkoff";
-        boy.classList.add("hide");
-        boyWalk.classList.remove("hide");
-        boyWalk.style.animationName = "walkoff";
-    } else if (age === "adult") {
-        woman.classList.add("hide");
-        womanWalk.classList.remove("hide");
-        womanWalk.style.animationName = "walkoff";
-        man.classList.add("hide");
-        manWalk.classList.remove("hide");
-        manWalk.style.animationName = "walkoff";
-    }
-}
