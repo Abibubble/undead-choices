@@ -92,7 +92,7 @@ footer {
 	animation-duration: 2s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: backwards;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-style: italic;
 }
 
@@ -107,8 +107,8 @@ footer {
 
 #paragraph-container {
     background-color: #00000088;
-    height: 11rem;
-    width: 70%;
+    height: 9rem;
+    width: 80%;
     border-radius: 2rem;
     margin: -1.5rem auto;
     position: relative;
@@ -310,7 +310,7 @@ main {
 #progress-image {
 	top: -1px;
 	border-radius: 1.75rem;
-	right: 0;
+	right: -23px;
 	width: 4rem;
 	position: absolute;
     height: inherit;
@@ -352,7 +352,7 @@ main {
 
 .user-name-input-grid {
 	position: relative;
-	bottom: 13%;
+	bottom: 41%;
 	display: grid;
 	width: 30%;
 	margin: auto;
@@ -427,9 +427,6 @@ main {
 }
 
 .static-image .girl {
-    position: absolute;
-    left: 40%;
-    top: 4rem;
     width: 135px;
     height: 169px;
     background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
@@ -442,10 +439,14 @@ main {
     background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
 }
 
+.static-image .man,
 .static-image .boy {
     position: absolute;
-    left: 53%;
+    left: 61%;
     top: 4rem;
+}
+
+.static-image .boy {
     width: 89px;
     height: 183px;
     background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
@@ -459,9 +460,6 @@ main {
 }
 
 .static-image .man {
-    position: absolute;
-    left: 53%;
-    top: 4rem;
     width: 105px;
     height: 181px;
     background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
@@ -474,10 +472,14 @@ main {
     background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
 }
 
-.static-image .woman {
+.static-image .woman,
+.static-image .girl {
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 4rem;
+}
+
+.static-image .woman {
     width: 110px;
     height: 183px;
     background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
@@ -492,7 +494,7 @@ main {
 
 .static-image .candy {
     position: absolute;
-    left: 27%;
+    left: 30%;
     top: 4rem;
     width: 105px;
     height: 243px;
@@ -563,6 +565,7 @@ main {
     align-items: center;
     height: 0.1vh;
     transition: all 15s;
+    z-index: 3;
 }
 
 .spider-web {
@@ -584,6 +587,7 @@ main {
     top: 5rem;
     width: 50px;
     height: auto;
+    z-index: 3;
 }
 
 @keyframes nudge {
@@ -617,7 +621,6 @@ main {
 
 @media screen and (max-width: 1140px) {
     .user-name-input-grid {
-        bottom: 11%;
         width: 50%;
     }
 
@@ -632,9 +635,46 @@ main {
     }
 }
 
+@media screen and (max-width: 992px) {
+    #next-btn {
+        right: 10%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 8%;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .image-holder {
+        width: 60%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 63%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 41%;
+    }
+
+    .static-image .candy {
+        left: 21%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .user-name-input-grid {
-        bottom: 11%;
         width: 70%;
     }
 
@@ -649,19 +689,200 @@ main {
     }
 }
 
+@media screen and (max-width: 680px) {
+    #next-btn {
+        right: 8%;
+    }
+
+    #next-page {
+        right: 2%;
+    }
+
+    #previous-btn {
+        left: 3%;
+    }
+
+    .page, footer {
+        font-size: 1.4rem;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 59%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 39%;
+    }
+}
+
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
-        bottom: 11%;
+        bottom: 49%;
         width: 85%;
     }
 
-    .modal-grid {
-        width: 90%;
-        height: 70%;
-        left: 5%;
+    .modal-grid h2 {
+        font-size: 1.3rem;
     }
     
     .modal-text {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page {
+        height: calc(100vh - 17rem);
+        font-size: 1rem;
+    }
+
+    .image-holder {
+        height: 18rem;
+        width: 80%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 65%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 36%;
+    }
+
+    .static-image .candy {
+        left: 12%;
+        top: 2.5rem;
+    }
+
+    .paragraph-holder {
+        padding: 0 1rem;
+        height: 9rem;
+    }
+
+    #border {
+        border-width: 3rem;
+    }
+
+    .next-prev-button-container {
+        top: 84%;
+    }
+
+    #next-btn {
+        right: 10%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 8%;
+    }
+
+    .audio-container {
+        top: 82%;
+        left: 41%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .image-holder, #paragraph-container {
+        margin: auto;
+        width: 90%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 67%;
+    }
+
+    .static-image .candy {
+        left: 6%;
+    }
+
+    .audio-container {
+        left: 46%;
+    }
+
+    .page-btn .fas {
+        display: none;
+    }
+
+    #next-btn {
+        right: 7%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 5%;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    #progress-image {
+        right: -38px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .page {
+        font-size: 0.8rem;
+    }
+    
+    .static-image .man,
+    .static-image .boy {
+        left: 64%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 33%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .audio-container {
+        left: 43%;
+    }
+
+    .avatars {
+        transform: scale(0.8);
+    }
+
+    .modal-grid h2 {
+        font-size: 1.1rem;
+    }
+
+    .modal-btn {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .static-image .man,
+    .static-image .boy {
+        left: 59%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 27%;
+    }
+
+    .static-image .candy {
+        left: 2%;
     }
 }
