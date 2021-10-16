@@ -217,6 +217,26 @@ footer {
     background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
 }
 
+
+
+.static-image .candy {
+    position: absolute;
+    left: 27%;
+    top: 4rem;
+    width: 105px;
+    height: 243px;
+    background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .candy:hover,
+.static-image .candy:focus {
+    width: 137px;
+    height: 234px;
+    background: url(../img/candy_idle_frame1.png) no-repeat center center / cover;
+}
+
+
+
 #paragraph-container {
     background-color: #00000088;
     height: 11rem;
