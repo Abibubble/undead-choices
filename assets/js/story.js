@@ -485,7 +485,7 @@ function previousPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
-        previousBtn.classList.aremovedd("hide");
+        previousBtn.classList.remove("hide");
         pageBtn.classList.remove("hide");
         nextBtn.classList.remove("hide");
     }, 1500);
