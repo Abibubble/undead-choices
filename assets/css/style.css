@@ -75,7 +75,7 @@ footer {
     }
 }
 
-/* ---------------------------------------------------- Pages */
+/* ---------------------------------------------------- Page */
 
 .page {
 	position: relative;
@@ -90,6 +90,8 @@ footer {
 	font-size: 2rem;
 	font-style: italic;
 }
+
+/* ---------------------------------------------------- Avatars */
 
 .image-holder {
     margin: 0 auto 2rem;
@@ -117,7 +119,6 @@ footer {
     100% {
         left: 100vw;
     }
-
 }
 
 #boy_walk {
@@ -217,8 +218,6 @@ footer {
     background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
 }
 
-
-
 .static-image .candy {
     position: absolute;
     left: 27%;
@@ -235,7 +234,7 @@ footer {
     background: url(../img/candy_idle_frame1.png) no-repeat center center / cover;
 }
 
-
+/* ---------------------------------------------------- Page contents */
 
 #paragraph-container {
     background-color: #00000088;
@@ -349,7 +348,7 @@ main {
 
 .modal-adult-btn {
 	grid-area: button2;
-	background-color: red;
+	background-color: #fe5404;
 }
 
 .modal-btn {
@@ -469,7 +468,7 @@ main {
 }
 
 .circle {
-    stroke: #f8aa28;
+    stroke: #ff8c00;
     stroke-dasharray: 650;
     stroke-dashoffset: 650;
     transition: all 0.5s ease-in-out;
@@ -499,7 +498,7 @@ main {
 .playBut:hover .triangle {
     stroke-dashoffset: 0;
     opacity: 1;
-    stroke: #f8aa28;
+    stroke: #ff8c00;
     animation: nudge 0.7s ease-in-out;
 }
 
