@@ -461,9 +461,15 @@ function populateStoryText() {
 function nextPara() {
     storyText.classList.add("scale-0");
     paraNumber++;
+    previousBtn.classList.add("hide");
+    pageBtn.classList.add("hide");
+    nextBtn.classList.add("hide");
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
+        previousBtn.classList.aremovedd("hide");
+        pageBtn.classList.remove("hide");
+        nextBtn.classList.remove("hide");
     }, 1500);
 }
 
@@ -473,9 +479,15 @@ function nextPara() {
 function previousPara() {
     storyText.classList.add("scale-0");
     paraNumber--;
+    previousBtn.classList.add("hide");
+    pageBtn.classList.add("hide");
+    nextBtn.classList.add("hide");
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
+        previousBtn.classList.aremovedd("hide");
+        pageBtn.classList.remove("hide");
+        nextBtn.classList.remove("hide");
     }, 1500);
     checkInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
