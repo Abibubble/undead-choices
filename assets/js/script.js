@@ -13,7 +13,7 @@ const audioFile = { // Set audio files within object
     puddle: new Audio('assets/audio/step-puddle.mp3'),
     windy: new Audio('assets/audio/windy-trees.mp3'),
     background: new Audio('assets/audio/low_bensound-ofeliasdream.mp3'),
-    backgroundIntence: new Audio('assets/audio/low_bensound-evolution.mp3'),
+    backgroundIntense: new Audio('assets/audio/low_bensound-evolution.mp3'),
     zombie: {
         bite: new Audio('assets/audio/zombie-biting.mp3'),
         hiss: new Audio('assets/audio/zombie-hiss.mp3'),
