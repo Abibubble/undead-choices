@@ -29,8 +29,6 @@
     <!--    <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">-->
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Local script -->
-    <script src="assets/js/story.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
@@ -45,7 +43,7 @@
 </header>
 
 <main>
-    <section id="age-modal" class="hide">
+    <section id="age-modal">
         <div class="overlay">
             <!-- empty -->
         </div>
@@ -56,10 +54,10 @@
                     Would you like the child-friendly version?
                 </h2>
             </div>
-            <button type="button" class="modal-btn modal-child-btn" onclick="checkAge('child');">
+            <button type="button" class="modal-btn modal-child-btn" id="child">
                 Child-friendly, please!
             </button>
-            <button type="button" class="modal-btn modal-adult-btn" onclick="checkAge('adult');">
+            <button type="button" class="modal-btn modal-adult-btn" id="adult">
                 Psshhh, I'm the bravest around!
             </button>
         </div>
@@ -97,6 +95,10 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime doloribus facilis soluta, quo totam harum velit, voluptatum sit, doloremque ut quod quae id magnam commodi accusantium tenetur veniam at!
             </p> -->
         </section>
+        <div class="user-name-input-grid" id="user-name-input-section">
+            <input type="text" id="username-input" class="username-input" placeholder="Enter your name">
+            <button id="username-btn" class="username-btn btn">Click</button>
+        </div>
 
         <div class='play-button'>
             <button class='playBut'>
@@ -146,8 +148,7 @@
 </footer>
 <!-- Local script -->
 <script src="assets/js/script.js"></script>
-
-
-
+<script src="assets/js/canvas.js"></script>
+<script src="assets/js/story.js"></script>
 </body>
 </html>
