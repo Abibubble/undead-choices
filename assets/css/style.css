@@ -344,7 +344,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 57rem;
+    height: 0.1rem;
+    transition: all 15s;
 }
 
 .spider-web {
@@ -352,8 +353,9 @@ main {
     /* left: -24px; */
     width: 2px;
     height: 6rem;
-    background-color: #faebd700;
+    background-color: #faebd7;
     flex-grow: 2;
+    transition: all 15s;
 }
 
 .spider-container {
