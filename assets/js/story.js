@@ -6,6 +6,8 @@ let pronoun_they = "they";
 let zombieKingVisited = "kingNotSeen";
 let age = "child";
 let userName = "Zebedee";
+const currentPage = document.getElementsByClassName("page current")[0];
+const waitingPage = document.getElementsByClassName("page waiting")[0];
 
 // -------------------------------------------------------------------------------------------------- Game Choices
 
@@ -36,6 +38,7 @@ document.getElementById("username-btn").addEventListener("click", function () {
     }
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
+    flipPage(background);
     userInputRequired = false;
     story = new Story(); // generate story with new name
     nextPage();
@@ -257,12 +260,13 @@ class Story {
         };
         // user inputs name
         this.page2 = {
-            avatar: `${userName} hunched down. Staring into a murky puddle, their reflection can just about be seen...`,
+            avatar: `${userName} hunched down. Staring into a murky puddle, their reflection can just about be seen...\n
+            What did they see?`,
         };
         // user inputs avatar
         this.page3 = {
             riband: `A blue Riband chocolate bar fell out of ${pronoun_their} pocket. Overcome with hunger, ${pronoun_they} tried to eat it... but it did nothing for ${pronoun_them}. ${userName} wanted something different, something new... something... human! BRAINS!`,
-            zombie: `${userName} stumbled forward as ${pronoun_they} realised what ${pronoun_they} had become, ${pronoun_they} were... A zombie! With this daunting realisation, ${userName} set off in search of some succulent grey matter to feed on...`,
+            zombie: `${userName} stumbled forward as ${pronoun_they} realised what ${pronoun_they} had become, ${userName} was... A zombie! With this daunting realisation, ${userName} set off in search of some succulent grey matter to feed on...`,
         };
         // choose east or west
         // east
@@ -503,6 +507,22 @@ function checkInputs() {
         pageBtn.classList.add("hide");
         showCharacter();
     }
+}
+
+// create background object to hold all backgrounds
+let background = "url(assets/img/background/mock1.jpg)";
+
+/**
+ * clears page and flips next page on top.
+ * @param {string} background url from object
+ */
+function flipPage(background) {
+    currentPage.style.animationName = "flip-page";
+    currentPage.style.backgroundImage = background;
+    setTimeout(() => {
+        waitingPage.style.backgroundImage = background;
+        currentPage.style.animationName = "none";
+    }, 2200)
 }
 
 populateStoryText();

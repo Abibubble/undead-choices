@@ -15,6 +15,12 @@ body {
 	font-family: 'Neucha', cursive;
 }
 
+
+/* can be deleted, here for testing */
+button {
+    position: relative;
+    z-index: 3;
+}
 /* ------------------------------------------------------- Utilities */
 
 .hide {
@@ -83,7 +89,6 @@ footer {
 	height: calc(100vh - 20rem);
 	border-radius: 2rem;
 	/* todo animation-name to be applied in JS */
-	/* animation-name: flip-page; */
 	animation-duration: 2s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: backwards;
@@ -96,140 +101,6 @@ footer {
     height: 19rem;
     width: 50%;
     background-color: #6600ff55;
-}
-
-/* ---------------------------------------------------- Avatars */
-
-
-@keyframes walkoff {
-    0% {
-        visibility: visible;
-    }
-    99% {
-
-    }
-    100% {
-        left: 100vw;
-        visibility: hidden;
-    }
-}
-
-.walking-zombie {    
-    animation-duration: 12s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-#girl_walk {
-    position: relative;
-    width: 125px;
-    height: 201px;
-    top: 40px;
-    left: 0vw;
-}
-
-#boy_walk {
-    position: relative;
-    width: 116px;
-    height: 195px;
-    top: 40px;
-    left: 0vw;
-}
-
-#woman_walk {
-    position: relative;
-    width: 128px;
-    height: 215px;
-    top: 40px;
-    left: 0vw;
-}
-
-#man_walk {
-    position: relative;
-    width: 100px;
-    height: 189px;
-    top: 40px;
-    left: 2vw;
-}
-
-.static-image .girl {
-    position: absolute;
-    left: 40%;
-    top: 4rem;
-    width: 135px;
-    height: 169px;
-    background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
-}
-
-.static-image .girl:hover,
-.static-image .girl:focus {
-    width: 126px;
-    height: 169px;
-    background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
-}
-
-.static-image .boy {
-    position: absolute;
-    left: 53%;
-    top: 4rem;
-    width: 89px;
-    height: 183px;
-    background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
-}
-
-.static-image .boy:hover,
-.static-image .boy:focus {
-    width: 88px;
-    height: 189px;
-    background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
-}
-
-.static-image .man {
-    position: absolute;
-    left: 53%;
-    top: 4rem;
-    width: 105px;
-    height: 181px;
-    background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
-}
-
-.static-image .man:hover,
-.static-image .man:focus {
-    width: 110px;
-    height: 179px;
-    background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
-}
-
-.static-image .woman {
-    position: absolute;
-    left: 40%;
-    top: 4rem;
-    width: 110px;
-    height: 183px;
-    background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
-}
-
-.static-image .woman:hover,
-.static-image .woman:focus {
-    width: 133px;
-    height: 210px;
-    background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
-}
-
-.static-image .candy {
-    position: absolute;
-    left: 27%;
-    top: 4rem;
-    width: 105px;
-    height: 243px;
-    background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
-}
-
-.static-image .candy:hover,
-.static-image .candy:focus {
-    width: 137px;
-    height: 234px;
-    background: url(../img/candy_idle_frame1.png) no-repeat center center / cover;
 }
 
 /* ---------------------------------------------------- Page contents */
@@ -261,15 +132,16 @@ footer {
     transition: transform 2s;
 }
 
-.page.first {
-	background: url(../img/forest-bg-1.webp) no-repeat center center / cover;
-	/* todo delay to be removed animation applied in JS */
-	animation-delay: 4s;
+.page.current {
+	background: url(../img/background/forest-bg-1.webp) no-repeat center center / cover;
+    z-index: 3;
 }
 
-.page.second {
-	background: url(../img/mock1.jpg) no-repeat center center / cover;
-	animation-delay: 8s;
+.page.waiting {
+	background: url(../img/background/forest-bg-1.webp) no-repeat center center / cover;
+    position: absolute;
+    top: 1rem;
+    z-index: 2;
 }
 
 .page.gameover {
@@ -461,6 +333,139 @@ main {
 	grid-area: input;
 	border-radius: 20px;
 	padding: 10px;
+}
+
+/* ---------------------------------------------------- Avatars */
+
+@keyframes walkoff {
+    0% {
+        visibility: visible;
+    }
+    99% {
+
+    }
+    100% {
+        left: 100vw;
+        visibility: hidden;
+    }
+}
+
+.walking-zombie {    
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+#girl_walk {
+    position: relative;
+    width: 125px;
+    height: 201px;
+    top: 40px;
+    left: 0vw;
+}
+
+#boy_walk {
+    position: relative;
+    width: 116px;
+    height: 195px;
+    top: 40px;
+    left: 0vw;
+}
+
+#woman_walk {
+    position: relative;
+    width: 128px;
+    height: 215px;
+    top: 40px;
+    left: 0vw;
+}
+
+#man_walk {
+    position: relative;
+    width: 100px;
+    height: 189px;
+    top: 40px;
+    left: 2vw;
+}
+
+.static-image .girl {
+    position: absolute;
+    left: 40%;
+    top: 4rem;
+    width: 135px;
+    height: 169px;
+    background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .girl:hover,
+.static-image .girl:focus {
+    width: 126px;
+    height: 169px;
+    background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
+}
+
+.static-image .boy {
+    position: absolute;
+    left: 53%;
+    top: 4rem;
+    width: 89px;
+    height: 183px;
+    background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .boy:hover,
+.static-image .boy:focus {
+    width: 88px;
+    height: 189px;
+    background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
+}
+
+.static-image .man {
+    position: absolute;
+    left: 53%;
+    top: 4rem;
+    width: 105px;
+    height: 181px;
+    background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .man:hover,
+.static-image .man:focus {
+    width: 110px;
+    height: 179px;
+    background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
+}
+
+.static-image .woman {
+    position: absolute;
+    left: 40%;
+    top: 4rem;
+    width: 110px;
+    height: 183px;
+    background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .woman:hover,
+.static-image .woman:focus {
+    width: 133px;
+    height: 210px;
+    background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
+}
+
+.static-image .candy {
+    position: absolute;
+    left: 27%;
+    top: 4rem;
+    width: 105px;
+    height: 243px;
+    background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
+}
+
+.static-image .candy:hover,
+.static-image .candy:focus {
+    width: 137px;
+    height: 234px;
+    background: url(../img/candy_idle_frame1.png) no-repeat center center / cover;
 }
 
 /* ----------------------------------------------------  Play button */
