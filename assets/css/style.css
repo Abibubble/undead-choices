@@ -107,8 +107,8 @@ footer {
 
 #paragraph-container {
     background-color: #00000088;
-    height: 11rem;
-    width: 70%;
+    height: 9rem;
+    width: 80%;
     border-radius: 2rem;
     margin: -1.5rem auto;
     position: relative;
@@ -310,7 +310,7 @@ main {
 #progress-image {
 	top: -1px;
 	border-radius: 1.75rem;
-	right: 0;
+	right: -23px;
 	width: 4rem;
 	position: absolute;
     height: inherit;
@@ -563,6 +563,7 @@ main {
     align-items: center;
     height: 0.1vh;
     transition: all 15s;
+    z-index: 3;
 }
 
 .spider-web {
@@ -584,6 +585,7 @@ main {
     top: 5rem;
     width: 50px;
     height: auto;
+    z-index: 3;
 }
 
 @keyframes nudge {
@@ -632,6 +634,24 @@ main {
     }
 }
 
+@media screen and (max-width: 992px) {
+    #next-btn {
+        right: 10%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 8%;
+    }
+
+    .page, footer {
+        font-size: 1.6rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .user-name-input-grid {
         bottom: 11%;
@@ -649,6 +669,24 @@ main {
     }
 }
 
+@media screen and (max-width: 680px) {
+    #next-btn {
+        right: 8%;
+    }
+
+    #next-page {
+        right: 2%;
+    }
+
+    #previous-btn {
+        left: 3%;
+    }
+
+    .page, footer {
+        font-size: 1.4rem;
+    }
+}
+
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
         bottom: 11%;
@@ -663,5 +701,91 @@ main {
     
     .modal-text {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page {
+        height: calc(100vh - 17rem);
+        font-size: 1.1rem;
+    }
+
+    .image-holder {
+        height: 18rem;
+        width: 80%;
+    }
+
+    .paragraph-holder {
+        padding: 0 1rem;
+    }
+
+    #border {
+        border-width: 3rem;
+    }
+
+    .next-prev-button-container {
+        top: 84%;
+    }
+
+    #next-btn {
+        right: 10%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 8%;
+    }
+
+    .audio-container {
+        top: 82%;
+        left: 41%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .image-holder, #paragraph-container {
+        margin: auto;
+        width: 90%;
+    }
+
+    .audio-container {
+        left: 46%;
+    }
+
+    .page-btn .fas {
+        display: none;
+    }
+
+    #next-btn {
+        right: 7%;
+    }
+
+    #next-page {
+        right: 6%;
+    }
+
+    #previous-btn {
+        left: 5%;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    #progress-image {
+        right: -38px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .audio-container {
+        left: 43%;
     }
 }
