@@ -53,18 +53,21 @@ footer {
 /* ---------------------------------------------------- Page Animation */
 
 @keyframes flip-page {
-	0% {
-		transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
-	}
-	20% {
-		transform: translate(96.5%, 0) rotate3d(0, 3, 0.1, 155deg);
-	}
-	40% {
-		transform: translate(85%, 0) rotate3d(0, 3, 0.4, 125deg);
-	}
-	50% {
-		transform: translate(80%, 0) rotate3d(0, 4, 1, 105deg);
-	}
+    0% {
+    transform: translate(100%, 0) rotate3d(0, 1, 0, 180deg);
+    }
+
+    20% {
+    transform: translate(96.5%, 0) rotate3d(0, 3, 0.1, 155deg);
+    }
+
+    40% {
+    transform: translate(85%, 0) rotate3d(0, 3, 0.4, 125deg);
+    }
+
+    50% {
+    transform: translate(80%, 0) rotate3d(0, 4, 1, 105deg);
+    }
 }
 
 /* ---------------------------------------------------- Pages */
@@ -147,21 +150,23 @@ main {
 }
 
 .modal-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: "header header" "button1 button2";
-	background: url("../img/pumpkin_modulo.png") no-repeat center center;
-	background-size: cover;
-	width: 50%;
-	height: 50%;
-	position: absolute;
-	top: 20%;
-	left: 25%;
-	z-index: 10;
-	border: 2px solid black;
-	box-shadow: 2px 2px 2px #000;
-	border-radius: 50px;
-	font-family: 'Finger Paint', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "button1 button2";
+    background: url("../img/pumpkin_modulo.png") no-repeat center center;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 10;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px #000;
+    border-radius: 50px;
+    font-family: 'Finger Paint', cursive;
 }
 
 .modal-text {
@@ -284,93 +289,130 @@ main {
 	padding: 10px;
 }
 
-/*--------------*/
+/* ----------------------------------------------------  Play button */
 
 .play-button {
-	width: 214px;
-	text-align: center;
-	position: fixed;
-	top: 15vh;
-	left: 1%;
+    width: 214px;
+    text-align: center;
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
 }
 
 .circle {
-	stroke: #f8aa28;
-	stroke-dasharray: 650;
-	stroke-dashoffset: 650;
-	-webkit-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-	opacity: 0.3;
+    stroke: #f8aa28;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    opacity: 0.3;
 }
 
 .playBut {
-	/* border: 1px solid red; */
-	text-align: center;
-	display: inline-block;
-	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-	background-color: #f5deb300;
-	border: none;
+    /* border: 1px solid red;*/
+    text-align: center;
+    display: inline-block;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background-color: #f5deb300;
+    border: none;
 }
 
 .playBut .triangle {
-	-webkit-transition: all 0.7s ease-in-out;
-	transition: all 0.7s ease-in-out;
-	stroke-dasharray: 240;
-	stroke-dashoffset: 480;
-	stroke: #000;
-	transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #000;
+    transform: translateY(0);
 }
 
 .playBut:hover .triangle {
-	stroke-dashoffset: 0;
-	opacity: 1;
-	stroke: #f8aa28;
-	animation: nudge 0.7s ease-in-out;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: #f8aa28;
+    animation: nudge 0.7s ease-in-out;
+}
+
+/* ----------------------------------------------------  Spider */
+
+.little-spider {
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 57rem;
+}
+
+.spider-web {
+    position: relative;
+    /* left: -24px; */
+    width: 2px;
+    height: 6rem;
+    background-color: #faebd700;
+    flex-grow: 2;
+}
+
+.spider-container {
+    width: 50px;
+    height: 1px;
+}
+
+#spider {
+    top: 5rem;
+    width: 50px;
+    height: auto;
 }
 
 @keyframes nudge {
-	0% {
-		transform: translateX(0);
-	}
-	30% {
-		transform: translateX(-5px);
-	}
-	50% {
-		transform: translateX(5px);
-	}
-	70% {
-		transform: translateX(-2px);
-	}
-	100% {
-		transform: translateX(0);
-	}
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    70% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .playBut:hover .circle {
-	stroke-dashoffset: 0;
-	opacity: 1;
+    stroke-dashoffset: 0;
+    opacity: 1;
 }
 
 /* ----------------------------------------------------  Media queries */
 
 @media screen and (max-width: 1140px) {
-	.user-name-input-grid {
-		bottom: 11%;
-		width: 50%;
-	}
+    .user-name-input-grid {
+    bottom: 11%;
+    width: 50%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-	.user-name-input-grid {
-		bottom: 11%;
-		width: 70%;
-	}
+    .user-name-input-grid {
+    bottom: 11%;
+    width: 70%;
+    }
 }
 
 @media screen and (max-width: 585px) {
-	.user-name-input-grid {
-		bottom: 11%;
-		width: 85%;
-	}
+    .user-name-input-grid {
+    bottom: 11%;
+    width: 85%;
+    }
 }
