@@ -15,12 +15,11 @@ body {
 	font-family: 'Neucha', cursive;
 }
 
-
-/* can be deleted, here for testing */
 button {
     position: relative;
     z-index: 3;
 }
+
 /* ------------------------------------------------------- Utilities */
 
 .hide {
@@ -286,6 +285,7 @@ main {
 	position: relative;
 	top: -3.5rem;
 	height: 2rem;
+    z-index: 3;
 }
 
 #progress {
@@ -370,6 +370,7 @@ main {
 	grid-area: input;
 	border-radius: 20px;
 	padding: 10px;
+    z-index: 3;
 }
 
 /* ---------------------------------------------------- Avatars */
