@@ -377,8 +377,8 @@ main {
 
 #progress-container {
 	position: relative;
-	top: -4rem;
-	height: 3rem;
+	top: -3.5rem;
+	height: 2rem;
 }
 
 #progress {
@@ -406,6 +406,7 @@ main {
 	right: 0;
 	width: 4rem;
 	position: absolute;
+    height: inherit;
 }
 
 .win-loose {
@@ -424,13 +425,20 @@ main {
 }
 
 #gravestone {
-	bottom: -0.2rem;
+	bottom: 0px;
 	right: -1.7rem;
 }
 
 #heart {
-	bottom: -0.6rem;
-	right: -2.1rem;
+	bottom: -0.5rem;
+	right: -1rem;
+}
+
+#potion {
+	bottom: -0.5rem;
+	right: -1rem;
+    height: 65px;
+    width: auto;
 }
 
 /* ----------------------------------------------------  User name input */
