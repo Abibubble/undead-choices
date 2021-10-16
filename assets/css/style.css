@@ -92,7 +92,7 @@ footer {
 	animation-duration: 2s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: backwards;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-style: italic;
 }
 
@@ -352,7 +352,7 @@ main {
 
 .user-name-input-grid {
 	position: relative;
-	bottom: 13%;
+	bottom: 41%;
 	display: grid;
 	width: 30%;
 	margin: auto;
@@ -427,9 +427,6 @@ main {
 }
 
 .static-image .girl {
-    position: absolute;
-    left: 40%;
-    top: 4rem;
     width: 135px;
     height: 169px;
     background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
@@ -442,10 +439,14 @@ main {
     background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
 }
 
+.static-image .man,
 .static-image .boy {
     position: absolute;
-    left: 53%;
+    left: 61%;
     top: 4rem;
+}
+
+.static-image .boy {
     width: 89px;
     height: 183px;
     background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
@@ -459,9 +460,6 @@ main {
 }
 
 .static-image .man {
-    position: absolute;
-    left: 53%;
-    top: 4rem;
     width: 105px;
     height: 181px;
     background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
@@ -474,10 +472,14 @@ main {
     background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
 }
 
-.static-image .woman {
+.static-image .woman,
+.static-image .girl {
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 4rem;
+}
+
+.static-image .woman {
     width: 110px;
     height: 183px;
     background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
@@ -492,7 +494,7 @@ main {
 
 .static-image .candy {
     position: absolute;
-    left: 27%;
+    left: 30%;
     top: 4rem;
     width: 105px;
     height: 243px;
@@ -619,7 +621,6 @@ main {
 
 @media screen and (max-width: 1140px) {
     .user-name-input-grid {
-        bottom: 11%;
         width: 50%;
     }
 
@@ -647,14 +648,33 @@ main {
         left: 8%;
     }
 
-    .page, footer {
+    footer {
         font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .image-holder {
+        width: 60%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 63%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 41%;
+    }
+
+    .static-image .candy {
+        left: 21%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .user-name-input-grid {
-        bottom: 11%;
         width: 70%;
     }
 
@@ -685,11 +705,21 @@ main {
     .page, footer {
         font-size: 1.4rem;
     }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 59%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 39%;
+    }
 }
 
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
-        bottom: 11%;
+        bottom: 49%;
         width: 85%;
     }
 
@@ -713,6 +743,21 @@ main {
     .image-holder {
         height: 18rem;
         width: 80%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 65%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 36%;
+    }
+
+    .static-image .candy {
+        left: 12%;
+        top: 2.5rem;
     }
 
     .paragraph-holder {
@@ -749,10 +794,19 @@ main {
     h1 {
         font-size: 2rem;
     }
-    
+
     .image-holder, #paragraph-container {
         margin: auto;
         width: 90%;
+    }
+
+    .static-image .man,
+    .static-image .boy {
+        left: 67%;
+    }
+
+    .static-image .candy {
+        left: 6%;
     }
 
     .audio-container {
@@ -784,8 +838,40 @@ main {
     }
 }
 
+@media screen and (max-width: 425px) {
+    .static-image .man,
+    .static-image .boy {
+        left: 64%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 33%;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .audio-container {
         left: 43%;
+    }
+
+    .avatars {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .static-image .man,
+    .static-image .boy {
+        left: 59%;
+    }
+
+    .static-image .woman,
+    .static-image .girl {
+        left: 27%;
+    }
+
+    .static-image .candy {
+        left: 2%;
     }
 }
