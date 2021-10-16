@@ -33,6 +33,7 @@ body {
 	font-family: 'Finger Paint', cursive;
 	background-color: #ff8c00;
 	color: black;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------- Header / Footer */
@@ -339,7 +340,13 @@ main {
 	height: 50%;
 	text-align: center;
 	margin: auto;
+    font-size: inherit;
+    line-height: inherit;
 	font-family: 'Finger Paint', cursive;
+}
+
+.modal-grid a {
+    text-decoration: none;
 }
 
 /* ----------------------------------------------------  Progress Bar */

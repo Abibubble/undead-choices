@@ -4,24 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
     <meta name="keywords" content="zombie, king, story, animation, hackathon, halloween">
-    <link rel="canonical" href="">
+    <link rel="canonical" href="https://abibubble.github.io/undead-choices/">
     <!-- Facebook, LinkedIn, Google -->
     <meta property="og:type" content="article"/>
-    <meta property="og:title" name="title" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:url" content=""/>
+    <meta property="og:title" name="title" content="Undead Choices"/>
+    <meta property="og:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King"/>
+    <meta property="og:url" content="https://abibubble.github.io/undead-choices/"/>
+    <meta property="og:site_name" content="Undead Choices"/>
     <meta property="og:image" name="image" content="docs/img/finalsite.png"/>
-    <meta property="og:image:alt" content="The site on a variety of devices">
+    <meta property="og:image:alt" content="The Undead Choices site on a variety of devices">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:image:alt" content="The site on a variety of devices">
+    <meta name="twitter:title" content="Undead Choices">
+    <meta name="twitter:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
+    <meta name="twitter:image" content="docs/img/finalsite.png">
+    <meta name="twitter:image:alt" content="The Undead Choices site on a variety of devices">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -32,122 +31,136 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Undead Choices</title>
 </head>
 
 <body>
-<header>
-    <h1>Undead Choices!</h1>
-</header>
+    <header>
+        <h1>Undead Choices!</h1>
+    </header>
 
-<main>
-    <section id="age-modal">
-        <div class="overlay">
-            <!-- empty -->
-        </div>
-        <div class="modal-grid">
-            <div class="modal-text">
-                <h2>
-                    This story can contain mature content.<br>
-                    Would you like the child-friendly version?
-                </h2>
-            </div>
-            <button type="button" class="modal-btn modal-child-btn" id="child">
-                Child-friendly, please!
-            </button>
-            <button type="button" class="modal-btn modal-adult-btn" id="adult">
-                Psshhh, I'm the bravest around!
-            </button>
-        </div>
-    </section>
-    <section id="border">
-        <section class="page first">
-            <div class="image-holder">
-                <div class="static-image">
-                    <div class="girl hide" id="girl"></div>
-                    <div class="boy hide" id="boy"></div>
-                    <div class="man hide" id="man"></div>
-                    <div class="woman hide" id="woman"></div>
-
+    <main>
+        <section id="age-modal">
+            <div class="overlay"></div>
+            <div class="modal-grid">
+                <div class="modal-text">
+                    <h2>
+                        This story can contain mature content.<br>
+                        Would you like the child-friendly version?
+                    </h2>
                 </div>
-                <!-- Girl   -->
-                <img src="assets/img/girl_walk.gif" alt="zombie character" id="girl_walk" class="hide">
-                <!-- Boy   -->
-                <img src="assets/img/boy_walk.gif" alt="jumping zombie girl" id="boy_walk" class="hide">
-                <!-- Woman   -->
-                <img src="assets/img/woman_walk.gif" alt="jumping zombie girl" id="woman_walk" class="hide">
-                <!-- Man   -->
-                <img src="assets/img/man_walk.gif" alt="jumping zombie girl" id="man_walk" class="hide">
-
+                <button type="button" class="modal-btn modal-child-btn" id="child">
+                    Child-friendly, please!
+                </button>
+                <button type="button" class="modal-btn modal-adult-btn" id="adult">
+                    Psshhh, I'm the bravest around!
+                </button>
             </div>
-            <div id="paragraph-container">
-                <div class="paragraph-holder">
-                    <p id="story-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
-                        laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
-                        dicta asperiores accusantium.
-                    </p>
-                </div>
-            </div>
-            <button id="previous-btn">Previous</button>
-            <button id="next-btn">Next</button>
-            <button id="next-page">Next Page</button>
         </section>
-        <div class="user-name-input-grid" id="user-name-input-section">
-            <input type="text" id="username-input" class="username-input" placeholder="Enter your name">
-            <button id="username-btn" class="username-btn btn">Click</button>
-        </div>
 
-        <div class='play-button'>
-            <button class='playBut'>
+        <section id="brian-modal" class="hide">
+            <div class="overlay"></div>
+            <div class="modal-grid">
+                <div class="modal-text">
+                    <h2>
+                        It looks like your name is Brian!<br>
+                        Would you like to play a game?
+                    </h2>
+                </div>
+                <a href="https://abibubble.github.io/icecapades/" target="_blank" rel="noopener noreferrer" role="button" class="modal-btn btn">
+                    A game? Yes please!!
+                </a>
+                <button type="button" class="modal-btn btn" id="close-brian-modal">
+                    No thanks, I like zombies!
+                </button>
+            </div>
+        </section>
 
-                                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
-                <svg version="1.1"
-                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                     xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                     x="0px" y="0px" width="53.7px" height="53.7px" viewBox="0 0 213.7 213.7"
-                     enable-background="new 0 0 213.7 213.7"
-                     xml:space="preserve">
+        <section id="border">
+            <section class="page first">
+                <div class="image-holder">
+                    <div class="static-image">
+                        <div class="girl" id="girl"></div>
+                        <div class="boy" id="boy"></div>
+                        <div class="man hide" id="man"></div>
+                        <div class="woman hide" id="woman"></div>
+                    </div>
+                    <!-- Girl -->
+                    <img src="assets/img/girl_walk.gif" alt="zombie character" id="girl_walk" class="hide">
+                    <!-- Boy -->
+                    <img src="assets/img/boy_walk.gif" alt="jumping zombie girl" id="boy_walk" class="hide">
+                    <!-- Woman -->
+                    <img src="assets/img/woman_walk.gif" alt="jumping zombie girl" id="woman_walk" class="hide">
+                    <!-- Man -->
+                    <img src="assets/img/man_walk.gif" alt="jumping zombie girl" id="man_walk" class="hide">
+                </div>
+                <div id="paragraph-container">
+                    <div class="paragraph-holder">
+                        <p id="story-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
+                            laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
+                            dicta asperiores accusantium.
+                        </p>
+                    </div>
+                </div>
+                <button id="previous-btn">Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="next-page">Next Page</button>
+            </section>
 
-                    <polygon class='triangle' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
-                             stroke-linejoin="round"
-                             stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/>
+            <div class="user-name-input-grid" id="user-name-input-section">
+                <input type="text" id="username-input" class="username-input" placeholder="Enter your name">
+                <button id="username-btn" class="username-btn btn">Click</button>
+            </div>
 
-                    <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
+            <div class='play-button'>
+                <button class='playBut'>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+                    <svg version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                        x="0px" y="0px" width="53.7px" height="53.7px" viewBox="0 0 213.7 213.7"
+                        enable-background="new 0 0 213.7 213.7"
+                        xml:space="preserve">
+                        <polygon class='triangle' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/>
+                        <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
                     </svg>
+                </button>
+                <span>Play</span>
+            </div>
 
-
-            </button>
-            <span>Play</span>
-        </div>
-        <div id="progress-container">
-            <div id="progress">
-                <div id="progress-bar">
-                    <img src="assets/img/hand.gif" alt="progress" id="progress-image"> <!-- 0 - 90%-->
-                </div>
-                <div class="win-loose">
-                    <img id="tombstone" src="assets/img/tombstone.png" alt="">
-                    <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart">
+            <div id="progress-container">
+                <div id="progress">
+                    <div id="progress-bar">
+                        <img src="assets/img/hand.gif" alt="progress" id="progress-image"> <!-- 0 - 90%-->
+                    </div>
+                    <div class="win-loose">
+                        <img id="tombstone" src="assets/img/tombstone.png" alt="">
+                        <img id="heart" src="assets/img/heart.png" alt="image of the zombie heart">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="little-spider">
-            <div class="spider-web" id="spider-web"></div>
-            <div class="spider-container">
-                <img id="spider" src="assets/img/enemy_spider.png" alt="spider">
-            </div>
-        </div>
-    </section>
-</main>
 
-<footer>
-    <p>Copyright &copy; Team 8 <span id="copyright"></span></p>
-</footer>
-<!-- Local script -->
-<script src="assets/js/script.js"></script>
-<script src="assets/js/story.js"></script>
+            <div class="little-spider">
+                <div class="spider-web" id="spider-web"></div>
+                <div class="spider-container">
+                    <img id="spider" src="assets/img/enemy_spider.png" alt="spider">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Team 8 <span id="copyright"></span></p>
+    </footer>
+
+    <!-- Local scripts -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/story.js"></script>
 </body>
 </html>
