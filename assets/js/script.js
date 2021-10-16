@@ -12,6 +12,8 @@ const audioFile = { // Set audio files within object
     smallHorde: new Audio('assets/audio/small-horde.mp3'),
     puddle: new Audio('assets/audio/step-puddle.mp3'),
     windy: new Audio('assets/audio/windy-trees.mp3'),
+    background: new Audio('assets/audio/low_bensound-ofeliasdream.mp3'),
+    backgroundIntence: new Audio('assets/audio/low_bensound-evolution.mp3'),
     zombie: {
         bite: new Audio('assets/audio/zombie-biting.mp3'),
         hiss: new Audio('assets/audio/zombie-hiss.mp3'),
@@ -26,8 +28,10 @@ const audioButton = document.getElementById("audio-btn"); // Toggle the audio on
 audioButton.addEventListener("click", function () {
     if (music) {
         audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br>Toggle audio`;
+        audioFile.background.pause();
     } else {
         audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Toggle audio`;
+        audioFile.background.play();
     }
     music = !music;
 });
