@@ -349,6 +349,10 @@ main {
     text-decoration: none;
 }
 
+.modal-grid a:visited {
+    color: black;
+}
+
 /* ----------------------------------------------------  Progress Bar */
 
 #progress-container {
