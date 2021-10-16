@@ -431,18 +431,22 @@ function showCharacter(){
 function animateWalkingOff(name) {
     if (name === "boy") {
         girl.classList.add("hide");
+        candy.classList.add("hide");
         girlWalk.classList.remove("hide");
         girlWalk.style.animationName = "walkoff";
     } else if (name === "girl") {
         boy.classList.add("hide");
+        candy.classList.add("hide");
         boyWalk.classList.remove("hide");
         boyWalk.style.animationName = "walkoff";
     } else if (name === "man") {
         woman.classList.add("hide");
+        candy.classList.add("hide");
         womanWalk.classList.remove("hide");
         womanWalk.style.animationName = "walkoff";
     }else if (name === "woman") {
         man.classList.add("hide");
+        candy.classList.add("hide");
         manWalk.classList.remove("hide");
         manWalk.style.animationName = "walkoff";
     } else if (age === "child") {
