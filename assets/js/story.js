@@ -82,35 +82,35 @@ girl.addEventListener("click", function () {
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 10000);
+    setTimeout(nextPage, 8500);
 });
 boy.addEventListener("click", function () {
     character = "boy";
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 10000);
+    setTimeout(nextPage, 8500);
 });
 man.addEventListener("click", function () {
     character = "man";
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 10000);
+    setTimeout(nextPage, 8500);
 });
 woman.addEventListener("click", function () {
     character = "woman";
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 10000);
+    setTimeout(nextPage, 8500);
 });
 candy.addEventListener("click", function () {
     character = "candy";
     animateWalkingOff();
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 10000);
+    setTimeout(nextPage, 8500);
 });
 
 function showCharacter() {

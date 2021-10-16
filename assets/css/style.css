@@ -91,13 +91,33 @@ footer {
 	font-style: italic;
 }
 
-/* ---------------------------------------------------- Avatars */
-
 .image-holder {
     margin: 0 auto 2rem;
     height: 19rem;
     width: 50%;
     background-color: #6600ff55;
+}
+
+/* ---------------------------------------------------- Avatars */
+
+
+@keyframes walkoff {
+    0% {
+        visibility: visible;
+    }
+    99% {
+
+    }
+    100% {
+        left: 100vw;
+        visibility: hidden;
+    }
+}
+
+.walking-zombie {    
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 #girl_walk {
@@ -106,19 +126,6 @@ footer {
     height: 201px;
     top: 40px;
     left: 0vw;
-    animation-duration: 15s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes walkoff {
-    0% {
-        visibility: visible;
-    }
-  
-    100% {
-        left: 100vw;
-    }
 }
 
 #boy_walk {
@@ -127,9 +134,6 @@ footer {
     height: 195px;
     top: 40px;
     left: 0vw;
-    animation-duration: 15s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
 }
 
 #woman_walk {
@@ -138,9 +142,6 @@ footer {
     height: 215px;
     top: 40px;
     left: 0vw;
-    animation-duration: 15s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
 }
 
 #man_walk {
@@ -149,9 +150,6 @@ footer {
     height: 189px;
     top: 40px;
     left: 2vw;
-    animation-duration: 15s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
 }
 
 .static-image .girl {
