@@ -464,16 +464,15 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Male, female, and child male zombies](https://craftpix.net/freebies/2d-game-zombie-character-free-sprite-pack-1/).
 * [Female child zombie](https://craftpix.net/freebies/2d-game-zombie-kids-character-free-sprite-8/).
 * [Spider](https://frankslaboratory.co.uk/downloads/enemy_spider.png).
-* [Blue potion](https://www.pngwing.com/en/free-png-ygpcf/download).
-* [Red potion](https://www.pngwing.com/en/free-png-nyfal/download).
-* [Purple potion](https://www.pngwing.com/en/free-png-yzfse/download).
 * [Heart icon in progress bar](https://www.pngwing.com/en/free-png-zkxld/download).
 * [Pumpkin border](https://ibb.co/Kz1ww7k).
 * [Forest background image](https://unsplash.com/photos/hvrpOmuMrAI).
 * [All sound effects were found here](https://www.fesliyanstudios.com/royalty-free-sound-effects-download/zombie-174).
 * [Gravestone image in progress bar](https://www.clipartmax.com/middle/m2i8d3A0m2A0Z5b1_rip-gravestone-grave-cartoon/).
 * [Pumpkins image on the modals](https://www.pexels.com/photo/two-jack-o-lantern-lamps-619418/).
-* [Cured human image in the progress bar](https://pixabay.com/illustrations/man-dna-spiral-biology-merge-2125123/).
+* [Universal healthcare image in the progress bar](https://pixabay.com/illustrations/universal-health-care-3d-transparent-1095124/).
+* [All of the potions](https://pixabay.com/illustrations/potions-bottles-magic-herbalist-6003024/).
+* [Animated severed hand gif](https://cdn.dribbble.com/users/287797/screenshots/5480635/hand.gif).
 
 ### Acknowledgements
 
