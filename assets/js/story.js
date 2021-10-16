@@ -32,9 +32,9 @@ document.getElementById("username-btn").addEventListener("click", function () {
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     userInputRequired = false;
-    story = new Story();
+    story = new Story(); // generate story with new name
     populateStoryText();
-    userInputRequired = true;
+    userInputRequired = true; // needed for avatar selection
 });
 
 function checkAvatar(avatar) {
@@ -345,23 +345,27 @@ function previousPara() {
         populateStoryText();
         storyText.classList.remove("scale-0");
     }, 1500);
-    checkInputs();
+    checkInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
 
 nextBtn.addEventListener("click", nextPara);
 previousBtn.addEventListener("click", previousPara);
 
-populateStoryText();
-
 // page control
 pageBtn.addEventListener("click", nextPage);
 
+/**
+ * resets paraNumber, increases pageNumber and populates story text
+ */
 function nextPage() {
     pageNumber++;
     paraNumber = 1;
     populateStoryText();
 }
 
+/**
+ * check for required user inputs
+ */
 function checkInputs() {
     if ((pageNumber === 1) &&
         (paraNumber === 3)) {
@@ -372,6 +376,8 @@ function checkInputs() {
         userNameInput.children[1].classList.add("hide");
     }
 }
+
+populateStoryText();
 
 // function startStory() {
 //         document.getElementById("story-text").innerText = story.begin;
