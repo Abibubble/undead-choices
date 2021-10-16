@@ -723,10 +723,8 @@ main {
         width: 85%;
     }
 
-    .modal-grid {
-        width: 90%;
-        height: 70%;
-        left: 5%;
+    .modal-grid h2 {
+        font-size: 1.3rem;
     }
     
     .modal-text {
@@ -857,6 +855,14 @@ main {
 
     .avatars {
         transform: scale(0.8);
+    }
+
+    .modal-grid h2 {
+        font-size: 1.1rem;
+    }
+
+    .modal-btn {
+        font-size: 0.8rem;
     }
 }
 
