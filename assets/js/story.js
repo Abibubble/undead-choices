@@ -10,27 +10,21 @@ let pronoun_them = "them";
 let pronoun_they = "they";
 let adult = false;
 let zombieKingVisited = "kingNotSeen";
+let age;
 
 // ! commented out for simplicity of testing
 // function startStory() {
 //     document.getElementById("story-text").innerText = story.begin;
 // }
 
-// function checkAge(age) {
-//     if (age == "adult") {
-//         adult = true;
-//     } else {
-//         adult = false;
-//     }
-//     document.getElementById("age-modal").classList.add("hide");
-//     startStory();
-// }
-
-if (adult) {
-    age = "adult";
-} else {
-    age = "child";
+function checkAge() {
+    age = this.id;
+    document.getElementById("age-modal").classList.add("hide");
 }
+
+document.querySelectorAll(".modal-btn").forEach(btn => {
+    btn.addEventListener("click", checkAge);
+});
 
 function checkAvatar(avatar) {
     if (avatar == "boy") {
