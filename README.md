@@ -105,9 +105,9 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 
 ### Typography
 
-* The main font used is [Neucha from Google Fonts](https://fonts.google.com/specimen/Neucha?query=Neucha).
-* This font has been used to link the story aspect with the Halloween theme.
-* It's a rough font, similar to clumpy handwriting, which matches the zombie theme nicely.
+* The main fonts used are [Neucha](https://fonts.google.com/specimen/Neucha?query=Neucha) and [Finger Paint](https://fonts.google.com/specimen/Finger+Paint?query=finger+paint) from Google Fonts.
+* These fonts have been used to link the story aspect with the Halloween theme.
+* They are rough fonts, similar to clumpy handwriting, which match the zombie theme nicely.
 
 ### Imagery
 
@@ -471,6 +471,9 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Pumpkin border](https://ibb.co/Kz1ww7k).
 * [Forest background image](https://unsplash.com/photos/hvrpOmuMrAI).
 * [All sound effects were found here](https://www.fesliyanstudios.com/royalty-free-sound-effects-download/zombie-174).
+* [Gravestone image in progress bar](https://www.clipartmax.com/middle/m2i8d3A0m2A0Z5b1_rip-gravestone-grave-cartoon/).
+* [Pumpkins image on the modals](https://www.pexels.com/photo/two-jack-o-lantern-lamps-619418/).
+* [Cured human image in the progress bar](https://pixabay.com/illustrations/man-dna-spiral-biology-merge-2125123/).
 
 ### Acknowledgements
 
