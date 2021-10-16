@@ -85,10 +85,18 @@ updateProgressBar(4);
 
 
 //------------------------------characters
-
+let spider = document.getElementsByClassName("little-spider")[0];
 let girl = document.getElementById("girl");
 let boy = document.getElementById("boy");
 let man = document.getElementById("man");
 let woman = document.getElementById("woman");
 
+
+function moveSpider(height){
+    let newHeight = height;
+    if (newHeight > 57){
+        newHeight = 57;
+    }
+    spider.style.height = `${String(newHeight)}rem`
+}
 
