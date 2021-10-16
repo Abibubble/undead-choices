@@ -423,6 +423,7 @@ let userInputRequired = true;
 // paragraph control
 const storyText = document.getElementById("story-text");
 storyText.addEventListener("transitionend", checkInputs);
+storyText.addEventListener("transitionend", checkButtons);
 const nextBtn = document.getElementById("next-btn");
 const previousBtn = document.getElementById("previous-btn");
 const pageBtn = document.getElementById("next-page");
@@ -439,6 +440,10 @@ function getParas() {
 function populateStoryText() {
     getParas();
     storyText.innerText = story[pages[pageNumber - 1]][paras[paraNumber - 1]];
+}
+
+function checkButtons() {
+    getParas();
     if (paraNumber >= paras.length) {
         nextBtn.classList.add("hide");
         if (!userInputRequired) {
@@ -467,9 +472,6 @@ function nextPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
-        previousBtn.classList.remove("hide");
-        pageBtn.classList.remove("hide");
-        nextBtn.classList.remove("hide");
     }, 1500);
 }
 
@@ -485,9 +487,6 @@ function previousPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
-        previousBtn.classList.remove("hide");
-        pageBtn.classList.remove("hide");
-        nextBtn.classList.remove("hide");
     }, 1500);
     checkInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
@@ -540,6 +539,7 @@ function flipPage(background) {
 }
 
 populateStoryText();
+checkButtons();
 
 // function startStory() {
 //         document.getElementById("story-text").innerText = story.begin;
