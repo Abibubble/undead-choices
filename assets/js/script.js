@@ -81,3 +81,14 @@ function updateProgressBar(progress){
 }
 
 updateProgressBar(4);
+
+
+
+//------------------------------characters
+
+let girl = document.getElementById("girl");
+let boy = document.getElementById("boy");
+let man = document.getElementById("man");
+let woman = document.getElementById("woman");
+
+
