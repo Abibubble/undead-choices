@@ -21,9 +21,9 @@ function hideEastWest() {
 }
 
 function chooseEast() {
-  nextPage(4);
+  console.log("EAST");
 }
 
 function chooseWest() {
-  nextPage(13)
+  console.log("WEST");
 }
