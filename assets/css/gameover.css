@@ -92,7 +92,13 @@
     font-size: 1rem;
 }
 
-.go-back{
+.go-back {
     position: relative;
-    top: 4rem;
+    top: 6rem;
+}
+
+.go-back a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
 }
