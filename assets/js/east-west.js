@@ -2,7 +2,7 @@
  * show buttons and add event listeners
  */
 function showEastWest() {
-  staticImage.appendChild(contentImage); //move to switch case for every page/para
+  // staticImage.appendChild(contentImage); //move to switch case for every page/para
   containerObj.eastWest.classList.remove("hide");
   choiceButtonsObj.east.addEventListener("click", chooseEast);
   choiceButtonsObj.west.addEventListener("click", chooseWest);

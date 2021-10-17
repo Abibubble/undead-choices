@@ -181,13 +181,7 @@ function animateWalkingOff(name) {
 }
 
 // ---------------------------------story control
-let choicesMade = new ChoicesMade();
-let ageInserts = new AgeInserts();
-let story = new Story();
-
 const pages = Array.from(Object.keys(story));
-let pageNumber = 1;
-let paraNumber = 1;
 
 // paragraph control
 const storyText = document.getElementById("story-text");
@@ -278,14 +272,28 @@ function nextPage() {
     pageNumber++;
     paraNumber = 1;
     runStory();
-    if (!storyEnd) {
+    // if (!storyEnd) {
         flipPage(background[pageNumber]);
         checkButtons();
         populateStoryText();
-    } else {
+    // } else {
         // showError();
-    }
+    // }
     // updateProgress();
+}
+
+
+function goToPage(destinationPageNumber) {
+    pageNumber = destinationPageNumber;
+    paraNumber = 1;
+    runStory();
+    // if (!storyEnd) {
+        flipPage(background[pageNumber]);
+        checkButtons();
+        populateStoryText();
+    // } else {
+        // showError();
+    // }
 }
 
 
@@ -293,6 +301,13 @@ function hideInputs() {
     // name input
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
+
+    hideEastWest();
+
+    // for (let i = 0; i < containerArray.length; i ++) {
+    //     let cont = containerObj[containerArray[i]];
+    //     cont.classList.add("hide");
+    // }
 }
 
 function showNameInput() {
@@ -328,15 +343,18 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     userInputRequired = true;
+                    showEastWest();
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 7:
             switch (paraNumber) {
                 case 3:
                     userInputRequired = true;
+                    showConsumeCollect();
                     break;
                 default:
                     userInputRequired = false;
