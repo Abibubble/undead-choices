@@ -226,9 +226,6 @@ function nextPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
-        previousBtn.classList.remove("hide");
-        pageBtn.classList.remove("hide");
-        nextBtn.classList.remove("hide");
     }, 1500);
 }
 
@@ -244,9 +241,6 @@ function previousPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
-        previousBtn.classList.remove("hide");
-        pageBtn.classList.remove("hide");
-        nextBtn.classList.remove("hide");
     }, 1500);
     checkInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
