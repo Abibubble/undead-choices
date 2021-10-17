@@ -40,7 +40,6 @@ function playSoundEffect(which) {
             case 'puddle':
                 audioFile.puddle.play();
                 break;
-
             case 'windy':
                 audioFile.windy.play();
                 break;
@@ -58,11 +57,9 @@ function playSoundEffect(which) {
             case 'hiss':
                 audioFile.zombie.bite.play();
                 break;
-
             case 'moan':
                 audioFile.zombie.moan.play();
                 break;
-
             case 'giggle':
                 audioFile.giggle.play();
                 break;
@@ -87,7 +84,6 @@ function pauseSoundEffect(which){
             case 'puddle':
                 audioFile.puddle.pause();
                 break;
-
             case 'windy':
                 audioFile.windy.pause();
                 break;
