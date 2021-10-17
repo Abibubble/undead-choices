@@ -23,63 +23,89 @@ const audioFile = { // Set audio files within object
 }
 
 function playSoundEffect(which) {
-    if (which === 'bubbles') {
-        audioFile.bubbles.play();
-    } else if (which === 'drink') {
-        audioFile.drink.play();
-    } else if (which === 'largeHorde') {
-        audioFile.largeHorde.play();
-    } else if (which === 'smallHorde') {
-        audioFile.smallHorde.play();
-    } else if (which === 'puddle') {
-        audioFile.puddle.play();
-    } else if (which === 'windy') {
-        audioFile.windy.play();
-    } else if (which === 'background') {
-        audioFile.backgroundIntense.pause();
-        audioFile.background.play();
-    } else if (which === 'backgroundIntense') {
-        audioFile.background.pause();
-        audioFile.backgroundIntense.play();
-    } else if (which === 'bite') {
-        audioFile.zombie.bite.play();
-    } else if (which === 'hiss') {
-        audioFile.zombie.hiss.play();
-    } else if (which === 'moan') {
-        audioFile.zombie.moan.play();
-    }else if (which === 'giggle') {
-        audioFile.giggle.play();
+    if (music) {
+        switch (which.toLowerCase()) {
+            case 'bubbles':
+                audioFile.bubbles.play();
+                break;
+            case 'drink':
+                audioFile.drink.play();
+                break;
+            case 'largeHorde':
+                audioFile.largeHorde.play();
+                break;
+            case 'smallHorde':
+                audioFile.smallHorde.play();
+                break;
+            case 'puddle':
+                audioFile.puddle.play();
+                break;
+            case 'windy':
+                audioFile.windy.play();
+                break;
+            case 'background':
+                audioFile.backgroundIntense.pause();
+                audioFile.background.play();
+                break;
+            case 'backgroundIntense':
+                audioFile.background.pause();
+                audioFile.backgroundIntense.play();
+                break;
+            case 'bite':
+                audioFile.zombie.bite.play();
+                break;
+            case 'hiss':
+                audioFile.zombie.bite.play();
+                break;
+            case 'moan':
+                audioFile.zombie.moan.play();
+                break;
+            case 'giggle':
+                audioFile.giggle.play();
+                break;
+        }
     }
 }
 
 function pauseSoundEffect(which){
-    if (which === 'bubbles') {
-        audioFile.bubbles.pause();
-    } else if (which === 'drink') {
-        audioFile.drink.pause();
-    } else if (which === 'largeHorde') {
-        audioFile.largeHorde.pause();
-    } else if (which === 'smallHorde') {
-        audioFile.smallHorde.pause();
-    } else if (which === 'puddle') {
-        audioFile.puddle.pause();
-    } else if (which === 'windy') {
-        audioFile.windy.pause();
-    } else if (which === 'background') {
-        // audioFile.backgroundIntense.pause();
-        audioFile.background.pause();
-    } else if (which === 'backgroundIntense') {
-        // audioFile.background.pause();
-        audioFile.backgroundIntense.pause();
-    } else if (which === 'bite') {
-        audioFile.zombie.bite.pause();
-    } else if (which === 'hiss') {
-        audioFile.zombie.hiss.pause();
-    } else if (which === 'moan') {
-        audioFile.zombie.moan.pause();
-    }else if (which === 'giggle') {
-        audioFile.giggle.pause();
-    }
+    switch (which.toLowerCase()) {
+            case 'bubbles':
+                audioFile.bubbles.pause();
+                break;
+            case 'drink':
+                audioFile.drink.pause();
+                break;
+            case 'largeHorde':
+                audioFile.largeHorde.pause();
+                break;
+            case 'smallHorde':
+                audioFile.smallHorde.pause();
+                break;
+            case 'puddle':
+                audioFile.puddle.pause();
+                break;
+            case 'windy':
+                audioFile.windy.pause();
+                break;
+            case 'background':
+                audioFile.background.pause();
+                break;
+            case 'backgroundIntense':
+                audioFile.backgroundIntense.pause();
+                break;
+            case 'bite':
+                audioFile.zombie.bite.pause();
+                break;
+            case 'hiss':
+                audioFile.zombie.bite.pause();
+                break;
+            case 'moan':
+                audioFile.zombie.moan.pause();
+                break;
+            case 'giggle':
+                audioFile.giggle.pause();
+                break;
+        }
 }
 
 // ---------------------------------------------------------------- Toggle audio
