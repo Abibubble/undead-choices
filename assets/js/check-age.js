@@ -2,6 +2,9 @@
 
 function checkAge() {
   age = this.id;
+  if (this.id === "child" && music){
+    playSoundEffect("giggle");
+  }
   document.getElementById("age-modal").classList.add("hide");
 }
 
