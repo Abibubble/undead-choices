@@ -191,16 +191,23 @@ footer {
     width: 100%;
 }
 
-#previous-btn {
+#previous-btn,
+.left-choice {
     left: 14%;
 }
 
-#next-btn {
+#next-btn,
+.right-choice {
     right: 17%;
 }
 
 #next-page {
     right: 13.5%;
+}
+
+.choice-container {
+    width: 70%;
+    left: 16%;
 }
 
 /* ---------------------------------------------------- Audio button */
