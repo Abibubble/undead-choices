@@ -1,0 +1,115 @@
+.page {
+    height: calc(100vh - 7rem);
+}
+
+.page.current {
+    margin-top: 13px;
+}
+
+#paragraph-container {
+    width: 50%;
+    position: relative;
+    top: 2%;
+    height: 7rem;
+    padding: 20px;
+}
+
+.names-container {
+    position: relative;
+    top: 8%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.chronicles {
+    padding-top: 10px;
+}
+
+.candy {
+    height: 186px;
+    width: 90px;
+}
+
+.names-container .boss {
+    position: relative;
+    left: 50%;
+    top: -5rem;
+    transform: translate(-50%);
+    width: 360px;
+    height: 190px;
+    background: url("../img/boss.gif") no-repeat center center / cover;
+}
+
+.team {
+    background-color: black;
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.jim-grid, .team-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.jim-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "fac boss jim";
+    height: 120px;
+    margin-top: 40px;
+}
+
+.team-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "team girl man candy boy"
+        "team abi alex dave djang";
+    grid-row-gap: 10px;
+}
+
+#boss {
+    grid-area: boss;
+}
+
+#fac {
+    grid-area: fac;
+    justify-self: right;
+}
+
+#team {
+    grid-area: team;
+}
+
+#abi {
+    grid-area: abi;
+}
+
+#alex {
+    grid-area: alex;
+}
+
+#dave {
+    grid-area: dave;
+}
+
+#djang {
+    grid-area: djang;
+}
+
+#jim {
+    grid-area: jim;
+}
+
+.go-back {
+    position: relative;
+    top: -2rem;
+}
+
+.go-back a {
+    text-decoration: none;
+}
+
+.go-back a:visited {
+    color: black;
+}
