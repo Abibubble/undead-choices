@@ -66,8 +66,8 @@ girl.addEventListener("click", function () {
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 8500);
-    setTimeout(hideCharacter, 8500);
+    setTimeout(nextPage, 4500);
+    setTimeout(hideCharacter, 4500);
 });
 
 boy.addEventListener("click", function () {
@@ -75,8 +75,8 @@ boy.addEventListener("click", function () {
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 8500);
-    setTimeout(hideCharacter, 8500);
+    setTimeout(nextPage, 4500);
+    setTimeout(hideCharacter, 4500);
 });
 
 man.addEventListener("click", function () {
@@ -84,8 +84,8 @@ man.addEventListener("click", function () {
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 8500);
-    setTimeout(hideCharacter, 8500);
+    setTimeout(nextPage, 4500);
+    setTimeout(hideCharacter, 4500);
 });
 
 woman.addEventListener("click", function () {
@@ -93,8 +93,8 @@ woman.addEventListener("click", function () {
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 8500);
-    setTimeout(hideCharacter, 8500);
+    setTimeout(nextPage, 4500);
+    setTimeout(hideCharacter, 4500);
 });
 
 candy.addEventListener("click", function () {
@@ -102,8 +102,8 @@ candy.addEventListener("click", function () {
     animateWalkingOff();
     story = new Story();
     ageInserts = new AgeInserts();
-    setTimeout(nextPage, 8500);
-    setTimeout(hideCharacter, 8500);
+    setTimeout(nextPage, 4500);
+    setTimeout(hideCharacter, 4500);
 });
 
 function showCharacter() {
@@ -188,7 +188,6 @@ let story = new Story();
 const pages = Array.from(Object.keys(story));
 let pageNumber = 1;
 let paraNumber = 1;
-let userInputRequired = true;
 
 // paragraph control
 const storyText = document.getElementById("story-text");
@@ -206,12 +205,16 @@ function getParas() {
     return paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
 }
 
-/** Modifies story text and hides/shows buttons */
+/** Modifies story text */
 function populateStoryText() {
     getParas();
     storyText.innerText = story[pages[pageNumber - 1]][paras[paraNumber - 1]];
 }
 
+/**
+ * show/hide next/page/previous buttons as required
+ * @param {Number} paraNumber
+ */
 function checkButtons() {
     getParas();
     if (paraNumber >= paras.length) {
@@ -234,7 +237,6 @@ function checkButtons() {
  * moves to next paragraph
  */
 function nextPara() {
-    // staticImage.removeChild(staticImage.children[0])
     storyText.classList.add("scale-0");
     paraNumber++;
     previousBtn.classList.add("hide");
@@ -383,7 +385,7 @@ function checkInputs() {
     }
 
     if (pageNumber === 19) {
-        switch(drinkColor) {
+        switch (drinkColor) {
             case "red":
                 pageNumber = 21;
                 break;
@@ -420,10 +422,236 @@ function checkInputs() {
         zombieKingVisited = "kingSeen";
         pageNumber = 4;
     }
-    
+
     if (pageNumber === 24) {
         storyEnd = true;
         // dieNoHelp()
+    }
+}
+
+function runStory() {
+    switch (pageNumber) {
+        case 1:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 2:
+            switch (paraNumber) {
+                case 1:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 3:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 7:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 8:
+            switch (paraNumber) {
+                case 1:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 9:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 10:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 11:
+            switch (paraNumber) {
+                case 2:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 12:
+            hasDrink = true;
+            switch (paraNumber) {
+                case 3:
+                    // head to king or west
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 13:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 14:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 15:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 16:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    stroyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 17:
+            switch (paraNumber) {
+                case 6:
+                    userInputRequired = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 18:
+            switch (paraNumber) {
+                case 2:
+                    userInputRequired = false;
+                    if (hasDrink) {
+                        // see king
+                    } else {
+                        // go east
+                    }
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 19:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = false;
+                    switch (drinkColor) {
+                        case "red":
+                            // do red stuff
+                            break;
+                        case "purple":
+                            // do red stuff
+                            break;
+                        case "blue":
+                            // do red stuff
+                            break;
+                        default:
+                            // 404 page
+                    }
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 20:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = false;
+                    storyEnd = true;
+                    // win
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 21:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 22:
+            switch (paraNumber) {
+                case 4:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 23:
+            switch (paraNumber) {
+                case 1:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+            break;
+        case 24:
+            switch (paraNumber) {
+                case 3:
+                    userInputRequired = true;
+                    storyEnd = true;
+                    break;
+                default:
+                    userInputRequired = false;
+            }
+        default:
+            userInputRequired = false;
+            storyEnd = false;
     }
 }
 
@@ -460,7 +688,4 @@ checkButtons();
 - each page has a new background?
 - age is set at start
 - avatar determines pronoun choice
-
-- possibly have next paragraph loaded ready for transition?
-- can be checked against length of paragraph array.
 */
