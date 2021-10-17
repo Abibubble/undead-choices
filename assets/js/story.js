@@ -35,7 +35,7 @@ document.getElementById("close-brian-modal").addEventListener("click", function 
     document.getElementById("brian-modal").classList.add("hide");
 });
 
-// -------------------------------------------------------------------- Avatar setup
+// ---------------------------------------- Avatar setup
 
 function checkAvatar(avatar) {
     if (avatar === "boy" || avatar === "man") {
@@ -53,17 +53,17 @@ function checkAvatar(avatar) {
     }
 }
 
-//----------------------------------------------------------------character animation
+//----------------------------------character animation
 
-let girl = document.getElementById("girl");
-let boy = document.getElementById("boy");
-let man = document.getElementById("man");
-let woman = document.getElementById("woman");
-let candy = document.getElementById("candy");
-let girlWalk = document.getElementById("girl_walk");
-let boyWalk = document.getElementById("boy_walk");
-let manWalk = document.getElementById("man_walk");
-let womanWalk = document.getElementById("woman_walk");
+const girl = document.getElementById("girl");
+const boy = document.getElementById("boy");
+const man = document.getElementById("man");
+const woman = document.getElementById("woman");
+const candy = document.getElementById("candy");
+const girlWalk = document.getElementById("girl_walk");
+const boyWalk = document.getElementById("boy_walk");
+const manWalk = document.getElementById("man_walk");
+const womanWalk = document.getElementById("woman_walk");
 
 girl.addEventListener("click", function () {
     character = "girl";
@@ -71,6 +71,7 @@ girl.addEventListener("click", function () {
     story = new Story();
     ageInserts = new AgeInserts();
     setTimeout(nextPage, 8500);
+    setTimeout(hideCharacter, 8500);
 });
 boy.addEventListener("click", function () {
     character = "boy";
@@ -78,6 +79,7 @@ boy.addEventListener("click", function () {
     story = new Story();
     ageInserts = new AgeInserts();
     setTimeout(nextPage, 8500);
+    setTimeout(hideCharacter, 8500);
 });
 man.addEventListener("click", function () {
     character = "man";
@@ -85,6 +87,7 @@ man.addEventListener("click", function () {
     story = new Story();
     ageInserts = new AgeInserts();
     setTimeout(nextPage, 8500);
+    setTimeout(hideCharacter, 8500);
 });
 woman.addEventListener("click", function () {
     character = "woman";
@@ -92,6 +95,7 @@ woman.addEventListener("click", function () {
     story = new Story();
     ageInserts = new AgeInserts();
     setTimeout(nextPage, 8500);
+    setTimeout(hideCharacter, 8500);
 });
 candy.addEventListener("click", function () {
     character = "candy";
@@ -99,6 +103,7 @@ candy.addEventListener("click", function () {
     story = new Story();
     ageInserts = new AgeInserts();
     setTimeout(nextPage, 8500);
+    setTimeout(hideCharacter, 8500);
 });
 
 function showCharacter() {
@@ -113,7 +118,13 @@ function showCharacter() {
     }
 }
 
-// set gender = "boy"/
+function hideCharacter() {
+        girl.classList.add("hide");
+        boy.classList.add("hide");
+        candy.classList.add("hide");
+        man.classList.add("hide");
+        woman.classList.add("hide");
+}
 
 function animateWalkingOff(name) {
     if (name) {
