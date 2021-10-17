@@ -306,6 +306,7 @@ function hideInputs() {
     hideEastWest();
     hideConsumeCollect();
     hideDrinks();
+    hideFeedNoFeed()
 
     // for (let i = 0; i < containerArray.length; i ++) {
     //     let cont = containerObj[containerArray[i]];
@@ -451,7 +452,7 @@ function runStory() {
                         updateProgressBar(25)
                     }
                     userInputRequired = true;
-                    // showFeedOrNot();
+                    showFeedOrNot();
                     break;
                 default:
                     userInputRequired = false;
@@ -604,6 +605,7 @@ function runStory() {
                     updateProgressBar(45);
                     userInputRequired = true;
                     storyEnd = true;
+                    zombieKingVisited = "kingSeen";
                     goToPage(4);
                     break;
                 default:
