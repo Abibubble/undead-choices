@@ -192,6 +192,7 @@ footer {
     position: absolute;
     top: 5%;
     left: 3%;
+    z-index: 500;
 }
 
 /* ---------------------------------------------------- General */
