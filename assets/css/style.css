@@ -114,6 +114,15 @@ footer {
     position: relative;
 }
 
+#paragraph-404-container {
+    background-color: #00000088;
+    height: 9rem;
+    width: 80%;
+    border-radius: 2rem;
+    margin: auto;
+    position: relative;
+}
+
 .paragraph-holder {
     padding: .5rem 1.5rem;
     height: 10rem;
@@ -383,13 +392,13 @@ main {
 
     }
     100% {
-        left: 100vw;
+        left: 155%;
         visibility: hidden;
     }
 }
 
 .walking-zombie {    
-    animation-duration: 12s;
+    animation-duration: 8s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
@@ -476,7 +485,7 @@ main {
 .static-image .girl {
     position: absolute;
     left: 45%;
-    top: 4rem;
+    top: 3rem;
 }
 
 .static-image .woman {
@@ -494,8 +503,8 @@ main {
 
 .static-image .candy {
     position: absolute;
-    left: 30%;
-    top: 4rem;
+    left: 32%;
+    top: 2rem;
     width: 105px;
     height: 243px;
     background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
