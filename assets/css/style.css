@@ -209,7 +209,7 @@ footer {
     position: absolute;
     top: 12%;
     left: 3%;
-    z-index: 4;
+    z-index: 6;
 }
 
 /* ---------------------------------------------------- General */
@@ -456,14 +456,14 @@ main {
     left: 2vw;
 }
 
-.static-image .girl {
+.girl {
     width: 135px;
     height: 169px;
     background: url(../img/girl_idle_frame0.png) no-repeat center center / cover;
 }
 
-.static-image .girl:hover,
-.static-image .girl:focus {
+.girl:hover,
+.girl:focus {
     width: 126px;
     height: 169px;
     background: url(../img/girl_idle_frame1.png) no-repeat center center / cover;
@@ -476,27 +476,27 @@ main {
     top: 4rem;
 }
 
-.static-image .boy {
+.boy {
     width: 89px;
     height: 183px;
     background: url(../img/boy_idle_frame0.png) no-repeat center center / cover;
 }
 
-.static-image .boy:hover,
-.static-image .boy:focus {
+.boy:hover,
+.boy:focus {
     width: 88px;
     height: 189px;
     background: url(../img/boy_idle_frame1.png) no-repeat center center / cover;
 }
 
-.static-image .man {
+.man {
     width: 105px;
     height: 181px;
     background: url(../img/man_idle_frame0.png) no-repeat center center / cover;
 }
 
-.static-image .man:hover,
-.static-image .man:focus {
+.man:hover,
+.man:focus {
     width: 110px;
     height: 179px;
     background: url(../img/man_idle_frame1.png) no-repeat center center / cover;
@@ -509,26 +509,29 @@ main {
     top: 3rem;
 }
 
-.static-image .woman {
+.woman {
     width: 110px;
     height: 183px;
     background: url(../img/woman_idle_frame0.png) no-repeat center center / cover;
 }
 
-.static-image .woman:hover,
-.static-image .woman:focus {
+.woman:hover,
+.woman:focus {
     width: 133px;
     height: 210px;
     background: url(../img/woman_idle_frame1.png) no-repeat center center / cover;
+}
+
+.candy {
+    width: 105px;
+    height: 243px;
+    background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
 }
 
 .static-image .candy {
     position: absolute;
     left: 32%;
     top: 2rem;
-    width: 105px;
-    height: 243px;
-    background: url(../img/candy_idle_frame0.png) no-repeat center center / cover;
 }
 
 .static-image .candy:hover,

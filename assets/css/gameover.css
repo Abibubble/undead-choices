@@ -1,40 +1,32 @@
+.page {
+    height: calc(100vh - 7rem);
+}
+
+.page.current {
+    margin-top: 13px;
+}
+
 #paragraph-container {
-    width: 30%;
+    width: 50%;
     position: relative;
-    top: 1%;
+    top: 2%;
+    height: 7rem;
+    padding: 20px;
 }
 
 .names-container {
     position: relative;
-    top: 6%;
+    top: 8%;
+    background-color: rgba(0,0,0,0.5);
 }
 
-.static-image {
-    position: relative;
-    left: 46%;
-    height: 230px;
-    transform: translate(-50%);
+.chronicles {
+    padding-top: 10px;
 }
 
-.static-image .man {
-    left: 60% !important;
-    top: 0 !important;
-}
-
-.static-image .boy {
-    left: 76% !important;
-    top: 0 !important;
-}
-
-.static-image .woman,
-.static-image .girl {
-    left: 43% !important;
-    top: 1rem !important;
-}
-
-.static-image .candy {
-    left: 26% !important;
-    top: -3rem !important;
+.candy {
+    height: 186px;
+    width: 90px;
 }
 
 .names-container .boss {
@@ -43,56 +35,81 @@
     top: -5rem;
     transform: translate(-50%);
     width: 360px;
-    height: 213px;
+    height: 190px;
     background: url("../img/boss.gif") no-repeat center center / cover;
 }
 
-#abi {
+.team {
     background-color: black;
     position: relative;
-    top: 11rem;
     border-radius: 0.5rem;
     padding: 5px;
     font-size: 1rem;
+}
+
+.jim-grid, .team-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.jim-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "fac boss jim";
+    height: 120px;
+    margin-top: 40px;
+}
+
+.team-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "team girl man candy boy"
+        "team abi alex dave djang";
+    grid-row-gap: 10px;
+}
+
+#boss {
+    grid-area: boss;
+}
+
+#fac {
+    grid-area: fac;
+    justify-self: right;
+}
+
+#team {
+    grid-area: team;
+}
+
+#abi {
+    grid-area: abi;
 }
 
 #alex {
-    background-color: black;
-    position: relative;
-    top: 12rem;
-    border-radius: 0.5rem;
-    padding: 5px;
-    font-size: 1rem;
+    grid-area: alex;
 }
 
 #dave {
-    background-color: black;
-    position: relative;
-    top: 15rem;
-    border-radius: 0.5rem;
-    padding: 5px;
-    font-size: 1rem;
+    grid-area: dave;
 }
 
 #djang {
-    background-color: black;
-    position: relative;
-    top: 12.1rem;
-    border-radius: 0.5rem;
-    padding: 5px;
-    font-size: 1rem;
+    grid-area: djang;
 }
 
 #jim {
-    background-color: black;
-    position: relative;
-    top: 12.1rem;
-    border-radius: 0.5rem;
-    padding: 5px;
-    font-size: 1rem;
+    grid-area: jim;
 }
 
-.go-back{
+.go-back {
     position: relative;
-    top: 4rem;
+    top: -2rem;
+}
+
+.go-back a {
+    text-decoration: none;
+}
+
+.go-back a:visited {
+    color: black;
 }

@@ -43,37 +43,58 @@
 
     <body>
         <header>
-            <h1>Undead Choices!</h1>
+            <img src="assets/img/pumpkin1.png" alt="A black and orange carved pumpkin" class="pumpkin1">
+            <h1>Undead <br class="header-br">Choices!</h1>
+            <img src="assets/img/pumpkin2.png" alt="A black and orange carved pumpkin" class="pumpkin2">
         </header>
 
         <main>
-            <section id="border">
+            <section>
                 <section class="page current">
                     <div id="paragraph-container">
-                        <h2>Doh, <br> what a cliffhanger...</h2>
+                        <h2>Doh, what a cliffhanger...</h2>
                         <h3>Thanks for reading</h3>
                     </div>
                     <div class="names-container">
-                        <h2>Undead Choices chronicles</h2>
-                        <br>
-                        <h3>Facilitator</h3>
-                        <div class="avatars boss " id="boss"><span id="jim">Jim Morel</span></div>
-                        <div class="static-image">
-                            <div class="avatars girl " id="girl"><span id="abi">Abi Harrison</span></div>
-                            <div class="avatars man " id="man"><span id="alex">Alexander Grib</span></div>
-                            <div class="avatars candy " id="candy"><span id="dave">Dave Horrocks</span></div>
-                            <div class="avatars boy " id="boy"><span id="djang">Djang</span></div>
+                        <h2 class="chronicles">Undead Choices chronicles</h2>
+                        <div class="jim-grid">
+                            <h3 id="fac">Facilitator</h3>
+                            <div class="avatars boss" id="boss"></div>
+                            <div id="jim">
+                                <p class="team">Jim Morel</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="go-back">
-                        <a href="/">Start again?</a>
+                        <button class="go-back btn" id="restart">
+                            <a href="/" role="button" rel="noopener noreferrer">
+                                Start again?
+                            </a>
+                        </button>
+                        <div class="team-grid">
+                            <h3 id="team">Team</h3>
+                            <div class="avatars girl" id="girl"></div>
+                            <div id="abi">
+                                <p class="team">Abi Harrison</p>
+                            </div>
+                            <div class="avatars man" id="man"></div>
+                            <div id="alex">
+                                <p class="team">Alexander Grib</p>
+                            </div>
+                            <div class="avatars candy" id="candy"></div>
+                            <div id="dave">
+                                <p class="team">Dave Horrocks</p>
+                            </div>
+                            <div class="avatars boy" id="boy"></div>
+                            <div id="djang">
+                                <p class="team">Djang Heimgartner</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>
         </main>
 
         <footer>
-            <p>Copyright &copy; Team 8 <span id="copyright"></span></p>
+            <p>Copyright &copy; Blood, Sweat, and Brains <span id="copyright"></span></p>
         </footer>
     </body>
 </html>
