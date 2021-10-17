@@ -113,3 +113,78 @@
 .go-back a:visited {
     color: black;
 }
+
+@media screen and (max-width: 770px) {
+    #paragraph-container {
+        padding: 10px;
+    }
+
+    #paragraph-container h2 {
+        font-size: 2rem;
+    }
+
+    #paragraph-container h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page {
+        height: calc(100vh - 8rem);
+    }
+
+    #paragraph-container {
+        width: 60%;
+        height: 6rem;
+    }
+
+    .jim-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "boss jim";
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "girl man candy boy"
+            "abi alex dave djang";
+        grid-row-gap: 5px;
+    }
+
+    #team, #fac {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .page {
+        height: calc(100vh - 10rem);
+    }
+
+    #paragraph-container {
+        width: 70%;
+        height: 8rem;
+    }
+
+    .jim-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "jim";
+        justify-items: center;
+        margin-top: 0;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "abi"
+            "alex"
+            "dave"
+            "djang";
+        grid-row-gap: 5px;
+        justify-items: center;
+    }
+
+    #boss, #man, #girl, #boy, #candy {
+        display: none;
+    }
+}
