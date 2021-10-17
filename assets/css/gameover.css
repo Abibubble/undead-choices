@@ -1,0 +1,98 @@
+#paragraph-container {
+    width: 30%;
+    position: relative;
+    top: 1%;
+}
+
+.names-container {
+    position: relative;
+    top: 6%;
+}
+
+.static-image {
+    position: relative;
+    left: 46%;
+    height: 230px;
+    transform: translate(-50%);
+}
+
+.static-image .man {
+    left: 60% !important;
+    top: 0 !important;
+}
+
+.static-image .boy {
+    left: 76% !important;
+    top: 0 !important;
+}
+
+.static-image .woman,
+.static-image .girl {
+    left: 43% !important;
+    top: 1rem !important;
+}
+
+.static-image .candy {
+    left: 26% !important;
+    top: -3rem !important;
+}
+
+.names-container .boss {
+    position: relative;
+    left: 50%;
+    top: -5rem;
+    transform: translate(-50%);
+    width: 360px;
+    height: 213px;
+    background: url("../img/boss.gif") no-repeat center center / cover;
+}
+
+#abi {
+    background-color: black;
+    position: relative;
+    top: 11rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#alex {
+    background-color: black;
+    position: relative;
+    top: 12rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#dave {
+    background-color: black;
+    position: relative;
+    top: 15rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#djang {
+    background-color: black;
+    position: relative;
+    top: 12.1rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#jim {
+    background-color: black;
+    position: relative;
+    top: 12.1rem;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.go-back{
+    position: relative;
+    top: 4rem;
+}
