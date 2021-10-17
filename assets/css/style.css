@@ -383,6 +383,21 @@ main {
     z-index: 3;
 }
 
+/* -------------------------------- Static Images */
+
+#content-image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-image img {
+    height: 90%;
+    width: auto;
+}
+
 /* ---------------------------------------------------- Avatars */
 
 @keyframes walkoff {
