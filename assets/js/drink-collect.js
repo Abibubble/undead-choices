@@ -17,25 +17,40 @@ function hideConsumeCollect() {
   containerObj.consumeCollect.classList.add("hide");
 }
 
+/**
+ * hide buttons and remove event listeners
+ */
+function hideDrinks() {
+  choiceButtonsObj.red.removeEventListener("click", collectRed);
+  choiceButtonsObj.purple.removeEventListener("click", collectRed);
+  choiceButtonsObj.blue.removeEventListener("click", collectRed);
+  choiceButtonsObj.red.removeEventListener("click", consumeRed);
+  choiceButtonsObj.purple.removeEventListener("click", consumeRed);
+  choiceButtonsObj.blue.removeEventListener("click", consumeRed);
+  containerObj.redPurpleBlue.classList.add("hide");
+}
+
 function chooseConsume() {
-  showDrinks("consume");
+  hideInputs();
+  goToPage(8);
 }
 
 function chooseCollect() {
-  showDrinks("collect");
+  collectDrink = true;
+  hideInputs();
+  goToPage(12);
 }
 
-function showDrinks(drinkOrNot) {
-  hideInputs();
+function showDrinks(collectedDrink) {
   containerObj.redPurpleBlue.classList.remove("hide");
-  if (drinkOrNot === "consume") {
-    choiceButtonsObj.red.addEventListener("click", consumeRed);
-    choiceButtonsObj.purple.addEventListener("click", consumePurple);
-    choiceButtonsObj.blue.addEventListener("click", consumeBlue);
-  } else {
+  if (collectedDrink) {
     choiceButtonsObj.red.addEventListener("click", collectRed);
     choiceButtonsObj.purple.addEventListener("click", collectRed);
     choiceButtonsObj.blue.addEventListener("click", collectRed);
+  } else {
+    choiceButtonsObj.red.addEventListener("click", consumeRed);
+    choiceButtonsObj.purple.addEventListener("click", consumePurple);
+    choiceButtonsObj.blue.addEventListener("click", consumeBlue);
   }
 }
 
@@ -69,19 +84,21 @@ function consumeBlue() {
 function collectRed() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(19)
+    goToPage(13)
   } else {
     drinkColor = "red";
-    goToPage(12);
+    hasDrink = true;
+    goToPage(19);
   }
 }
 
 function collectPurple() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(12)
+    goToPage(13)
   } else {
     drinkColor = "purple";
+    hasDrink = true;
     goToPage(19);
   }
 }
@@ -89,9 +106,10 @@ function collectPurple() {
 function collectBlue() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(12)
+    goToPage(13)
   } else {
     drinkColor = "blue";
+    hasDrink = true;
     goToPage(19);
   }
 }
