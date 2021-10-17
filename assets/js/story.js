@@ -191,7 +191,6 @@ let paraNumber = 1;
 
 // paragraph control
 const storyText = document.getElementById("story-text");
-storyText.addEventListener("transitionend", checkInputs);
 storyText.addEventListener("transitionend", checkButtons);
 const nextBtn = document.getElementById("next-btn");
 const previousBtn = document.getElementById("previous-btn");
@@ -245,6 +244,7 @@ function nextPara() {
     setTimeout(() => {
         populateStoryText();
         storyText.classList.remove("scale-0");
+        runStory();
     }, 1500);
 }
 
@@ -254,6 +254,7 @@ function nextPara() {
 function previousPara() {
     storyText.classList.add("scale-0");
     paraNumber--;
+    runStory();
     previousBtn.classList.add("hide");
     pageBtn.classList.add("hide");
     nextBtn.classList.add("hide");
@@ -261,7 +262,7 @@ function previousPara() {
         populateStoryText();
         storyText.classList.remove("scale-0");
     }, 1500);
-    checkInputs(); // allows immediate hiding of inputs if paragraph reversed
+    hideInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
 
 nextBtn.addEventListener("click", nextPara);
@@ -275,10 +276,10 @@ pageBtn.addEventListener("click", nextPage);
  */
 function nextPage() {
     pageNumber++;
-    checkInputs();
+    paraNumber = 1;
+    runStory();
     if (!storyEnd) {
         flipPage(background[pageNumber]);
-        paraNumber = 1;
         checkButtons();
         populateStoryText();
     } else {
@@ -288,145 +289,15 @@ function nextPage() {
 }
 
 
-// change to switch??
-/**
- * check for required user inputs
- */
-function checkInputs() {
-    if ((pageNumber === 1) &&
-        (paraNumber === 3)) {
-        userInputRequired = true;
-        userNameInput.children[0].classList.remove("hide");
-        userNameInput.children[1].classList.remove("hide");
-    } else {
-        // needed for returning a paragraph
-        // may need in other if statements
-        userInputRequired = false;
-        userNameInput.children[0].classList.add("hide");
-        userNameInput.children[1].classList.add("hide");
-    }
+function hideInputs() {
+    // name input
+    userNameInput.children[0].classList.add("hide");
+    userNameInput.children[1].classList.add("hide");
+}
 
-    if (pageNumber === 2) {
-        userInputRequired = true;
-        showCharacter();
-    }
-
-    if (pageNumber === 3) {
-        userInputRequired = true;
-        // showEastWest();
-    }
-
-    if (pageNumber === 7) {
-        userInputRequired = true;
-        // showDrinkOrCollect();
-    }
-
-    if (pageNumber === 8) {
-        userInputRequired = true;
-        // showDrinks();
-    }
-
-    if (pageNumber === 9) {
-        storyEnd = true;
-        zombieKingVisited = "kingNotSeen";
-        // endRed();
-    }
-
-    if (pageNumber === 10) {
-        storyEnd = true;
-        zombieKingVisited = "kingNotSeen";
-        // endPurple();
-    }
-
-    if (pageNumber === 11) {
-        storyEnd = true;
-        zombieKingVisited = "kingNotSeen";
-        // endBlue();
-    }
-
-    if (pageNumber === 12) {
-        hasDrink = true;
-        if (zombieKingVisited = "kingSeen") {
-            pageNumber = 19;
-        }
-    }
-
-    if (pageNumber === 13) {
-        userInputRequired = true;
-        // showFeedOrNot();
-    }
-
-    if (pageNumber === 14) {
-        storyEnd = true;
-        // endFeed();
-    }
-
-    if (pageNumber === 15) {
-        userInputRequired = true;
-        // showFindKing();
-    }
-
-    if (pageNumber === 16) {
-        storyEnd = true;
-        // endNoFind();
-    }
-
-    if (pageNumber === 17) {
-        userInputRequired = true;
-        // showHelp();
-    }
-
-    if (pageNumber === 18) {
-        if (hasDrink = true) {
-            // showYesNo("yes");
-        } else {
-            // showYesNo("no");
-        }
-    }
-
-    if (pageNumber === 19) {
-        switch (drinkColor) {
-            case "red":
-                pageNumber = 21;
-                break;
-            case "purple":
-                pageNumber = 22;
-                break;
-            case "blue":
-                pageNumber = 20;
-                break;
-            default:
-                // showError();
-        }
-    }
-
-    if (pageNumber === 20) {
-        storyEnd = true;
-        zombieKingVisited = "kingSeen";
-        // endBlue();
-    }
-
-    if (pageNumber === 21) {
-        storyEnd = true;
-        zombieKingVisited = "kingSeen";
-        // endRed();
-    }
-
-    if (pageNumber === 22) {
-        storyEnd = true;
-        zombieKingVisited = "kingSeen";
-        // endPurple();
-    }
-
-    if (pageNumber === 23) {
-        zombieKingVisited = "kingSeen";
-        pageNumber = 4;
-    }
-
-    if (pageNumber === 24) {
-        storyEnd = true;
-        // dieNoHelp()
-    }
+function showNameInput() {
+    userNameInput.children[0].classList.remove("hide");
+    userNameInput.children[1].classList.remove("hide");
 }
 
 function runStory() {
@@ -435,18 +306,22 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     userInputRequired = true;
+                    setTimeout(showNameInput, 2500);
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 2:
             switch (paraNumber) {
                 case 1:
                     userInputRequired = true;
+                    showCharacter();
                     break;
                 default:
                     userInputRequired = false;
+                    hideCharacter();
             }
             break;
         case 3:
@@ -484,6 +359,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 10:
@@ -494,6 +370,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 11:
@@ -504,6 +381,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 12:
@@ -533,6 +411,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 15:
@@ -552,6 +431,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 17:
@@ -608,6 +488,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 21:
@@ -618,6 +499,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 22:
@@ -628,6 +510,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 23:
@@ -638,6 +521,7 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
             break;
         case 24:
@@ -648,8 +532,10 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    storyEnd = false;
             }
         default:
+            hideInputs();
             userInputRequired = false;
             storyEnd = false;
     }
