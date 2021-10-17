@@ -23,12 +23,8 @@ document.getElementById("username-btn").addEventListener("click", function () {
 
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
-
-    userInputRequired = false;
     story = new Story(); // generate story with new name
     nextPage();
-    // populateStoryText();
-    userInputRequired = true; // needed for avatar selection
 });
 
 document.getElementById("close-brian-modal").addEventListener("click", function () {
@@ -260,27 +256,137 @@ pageBtn.addEventListener("click", nextPage);
  */
 function nextPage() {
     pageNumber++;
-    flipPage(background[pageNumber]);
-    paraNumber = 1;
-    populateStoryText();
     checkInputs();
+    if (!storyEnd) {
+        flipPage(background[pageNumber]);
+        paraNumber = 1;
+        checkButtons();
+        populateStoryText();
+    } else {
+        // showError();
+    }
+    // updateProgress();
 }
 
+
+// change to switch??
 /**
  * check for required user inputs
  */
 function checkInputs() {
     if ((pageNumber === 1) &&
         (paraNumber === 3)) {
+        userInputRequired = true;
         userNameInput.children[0].classList.remove("hide");
         userNameInput.children[1].classList.remove("hide");
     } else {
+        // needed for returning a paragraph
+        // may need in other if statements
+        userInputRequired = false;
         userNameInput.children[0].classList.add("hide");
         userNameInput.children[1].classList.add("hide");
     }
     if (pageNumber === 2) {
-        pageBtn.classList.add("hide");
+        userInputRequired = true;
         showCharacter();
+    }
+    if (pageNumber === 3) {
+        userInputRequired = true;
+        // showEastWest();
+    }
+    if (pageNumber === 7) {
+        userInputRequired = true;
+        // showDrinkOrCollect();
+    }
+    if (pageNumber === 8) {
+        userInputRequired = true;
+        // showDrinks();
+    }
+    if (pageNumber === 9) {
+        storyEnd = true;
+        zombieKingVisited = "kingNotSeen";
+        // endRed();
+    }
+    if (pageNumber === 10) {
+        storyEnd = true;
+        zombieKingVisited = "kingNotSeen";
+        // endPurple();
+    }
+    if (pageNumber === 11) {
+        storyEnd = true;
+        zombieKingVisited = "kingNotSeen";
+        // endBlue();
+    }
+    if (pageNumber === 12) {
+        hasDrink = true;
+        if (zombieKingVisited = "kingSeen") {
+            pageNumber = 19;
+        }
+    }
+    if (pageNumber === 13) {
+        userInputRequired = true;
+        // showFeedOrNot();
+    }
+    if (pageNumber === 14) {
+        storyEnd = true;
+        // endFeed();
+    }
+    if (pageNumber === 15) {
+        userInputRequired = true;
+        // showFindKing();
+    }
+    if (pageNumber === 16) {
+        storyEnd = true;
+        // endNoFind();
+    }
+    if (pageNumber === 17) {
+        userInputRequired = true;
+        // showHelp();
+    }
+    if (pageNumber === 18) {
+        if (hasDrink = true) {
+            // showYesNo("yes");
+        } else {
+            // showYesNo("no");
+        }
+    }
+    if (pageNumber === 19) {
+        switch(drinkColor) {
+            case "red":
+                pageNumber = 21;
+                break;
+            case "purple":
+                pageNumber = 22;
+                break;
+            case "blue":
+                pageNumber = 20;
+                break;
+            default:
+                // showError();
+        }
+    }
+    if (pageNumber === 20) {
+        storyEnd = true;
+        zombieKingVisited = "kingSeen";
+        // endBlue();
+    }
+    if (pageNumber === 21) {
+        storyEnd = true;
+        zombieKingVisited = "kingSeen";
+        // endRed();
+    }
+    if (pageNumber === 22) {
+        storyEnd = true;
+        zombieKingVisited = "kingSeen";
+        // endPurple();
+    }
+    if (pageNumber === 23) {
+        zombieKingVisited = "kingSeen";
+        pageNumber = 4;
+    }
+    if (pageNumber === 24) {
+        storyEnd = true;
+        // dieNoHelp()
     }
 }
 
@@ -300,9 +406,6 @@ function flipPage(background) {
 populateStoryText();
 checkButtons();
 
-// function startStory() {
-//         document.getElementById("story-text").innerText = story.begin;
-// }
 // for (let i = 0; i < pages.length; i++) {
 //     const paras = Array.from(Object.keys(story[pages[i]]));
 //     console.log(paras);
@@ -310,7 +413,6 @@ checkButtons();
 //         console.log(story[pages[i]][paras[p]]);
 //     }
 // }
-
 
 /* rough logic for storybook
 - for each page, maintain background. loop through paragraphs. (allow <--/-->)
