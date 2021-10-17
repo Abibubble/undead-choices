@@ -1,3 +1,5 @@
+/* ------------------------------------------------------- Page */
+
 .page {
     height: calc(100vh - 7rem);
 }
@@ -24,6 +26,8 @@
     padding-top: 10px;
 }
 
+/* ------------------------------------------------------- Characters */
+
 .candy {
     height: 186px;
     width: 90px;
@@ -46,6 +50,8 @@
     padding: 5px;
     font-size: 1rem;
 }
+
+/* ------------------------------------------------------- Grids */
 
 .jim-grid, .team-grid {
     display: grid;
@@ -101,6 +107,8 @@
     grid-area: jim;
 }
 
+/* ------------------------------------------------------- Button */
+
 .go-back {
     position: relative;
     top: -2rem;
@@ -113,6 +121,8 @@
 .go-back a:visited {
     color: black;
 }
+
+/* ------------------------------------------------------- Media queries */
 
 @media screen and (max-width: 770px) {
     #paragraph-container {

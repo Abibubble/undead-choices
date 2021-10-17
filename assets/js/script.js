@@ -1,23 +1,4 @@
 
-// function whichMusic() { // Decide which audio to play depending on which page they're on
-// commented out until decision made on audio for pages etc.
-//     if (music) {
-//         if (onePage.classList.contains("hide")) {
-//             audioFile.one.pause();
-//             audioFile.two.play();
-//         } else if (twoPage.classList.contains("hide")) {
-//             audioFile.one.play();
-//             audioFile.two.pause();
-//         } else {
-//             audioFile.one.play();
-//             audioFile.two.pause();
-//         }
-//     } else {
-//         audioFile.one.pause();
-//         audioFile.two.pause();
-//     }
-// }
-
 // -------------------------------------------------------------------------------------------------- Misc
 
 // -------------------------------------------------------------------- Copyright

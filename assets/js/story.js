@@ -1,4 +1,4 @@
-// ------------------------------------ User name / Brian modal
+// ----------------------------------------------------------------  User name / Brian modal
 
 /**
  * @param {string} userName name input
@@ -31,7 +31,7 @@ document.getElementById("close-brian-modal").addEventListener("click", function 
     document.getElementById("brian-modal").classList.add("hide");
 });
 
-// ---------------------------------------- Avatar setup
+// ----------------------------------------------------------------  Avatar setup
 
 function checkAvatar(avatar) {
     if (avatar === "boy" || avatar === "man") {
@@ -49,7 +49,7 @@ function checkAvatar(avatar) {
     }
 }
 
-//----------------------------------character animation
+// ---------------------------------------------------------------- Character animation
 
 const girl = document.getElementById("girl");
 const boy = document.getElementById("boy");
@@ -69,6 +69,7 @@ girl.addEventListener("click", function () {
     setTimeout(nextPage, 8500);
     setTimeout(hideCharacter, 8500);
 });
+
 boy.addEventListener("click", function () {
     character = "boy";
     animateWalkingOff(character);
@@ -77,6 +78,7 @@ boy.addEventListener("click", function () {
     setTimeout(nextPage, 8500);
     setTimeout(hideCharacter, 8500);
 });
+
 man.addEventListener("click", function () {
     character = "man";
     animateWalkingOff(character);
@@ -85,6 +87,7 @@ man.addEventListener("click", function () {
     setTimeout(nextPage, 8500);
     setTimeout(hideCharacter, 8500);
 });
+
 woman.addEventListener("click", function () {
     character = "woman";
     animateWalkingOff(character);
@@ -93,6 +96,7 @@ woman.addEventListener("click", function () {
     setTimeout(nextPage, 8500);
     setTimeout(hideCharacter, 8500);
 });
+
 candy.addEventListener("click", function () {
     character = "candy";
     animateWalkingOff();
@@ -115,17 +119,18 @@ function showCharacter() {
 }
 
 function hideCharacter() {
-        girl.classList.add("hide");
-        boy.classList.add("hide");
-        candy.classList.add("hide");
-        man.classList.add("hide");
-        woman.classList.add("hide");
+    girl.classList.add("hide");
+    boy.classList.add("hide");
+    candy.classList.add("hide");
+    man.classList.add("hide");
+    woman.classList.add("hide");
 }
 
 function animateWalkingOff(name) {
     if (name) {
         // walk off candy
     }
+
     if (name === "boy") {
         girl.classList.add("hide");
         candy.classList.add("hide");
@@ -171,7 +176,6 @@ function animateWalkingOff(name) {
         manWalk.classList.remove("hide");
         manWalk.style.animationName = "walkoff";
         playSoundEffect("puddle");
-
     }
     checkAvatar(name);
 }
@@ -299,63 +303,77 @@ function checkInputs() {
         userNameInput.children[0].classList.add("hide");
         userNameInput.children[1].classList.add("hide");
     }
+
     if (pageNumber === 2) {
         userInputRequired = true;
         showCharacter();
     }
+
     if (pageNumber === 3) {
         userInputRequired = true;
         // showEastWest();
     }
+
     if (pageNumber === 7) {
         userInputRequired = true;
         // showDrinkOrCollect();
     }
+
     if (pageNumber === 8) {
         userInputRequired = true;
         // showDrinks();
     }
+
     if (pageNumber === 9) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endRed();
     }
+
     if (pageNumber === 10) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endPurple();
     }
+
     if (pageNumber === 11) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endBlue();
     }
+
     if (pageNumber === 12) {
         hasDrink = true;
         if (zombieKingVisited = "kingSeen") {
             pageNumber = 19;
         }
     }
+
     if (pageNumber === 13) {
         userInputRequired = true;
         // showFeedOrNot();
     }
+
     if (pageNumber === 14) {
         storyEnd = true;
         // endFeed();
     }
+
     if (pageNumber === 15) {
         userInputRequired = true;
         // showFindKing();
     }
+
     if (pageNumber === 16) {
         storyEnd = true;
         // endNoFind();
     }
+
     if (pageNumber === 17) {
         userInputRequired = true;
         // showHelp();
     }
+
     if (pageNumber === 18) {
         if (hasDrink = true) {
             // showYesNo("yes");
@@ -363,6 +381,7 @@ function checkInputs() {
             // showYesNo("no");
         }
     }
+
     if (pageNumber === 19) {
         switch(drinkColor) {
             case "red":
@@ -378,25 +397,30 @@ function checkInputs() {
                 // showError();
         }
     }
+
     if (pageNumber === 20) {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endBlue();
     }
+
     if (pageNumber === 21) {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endRed();
     }
+
     if (pageNumber === 22) {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endPurple();
     }
+
     if (pageNumber === 23) {
         zombieKingVisited = "kingSeen";
         pageNumber = 4;
     }
+    
     if (pageNumber === 24) {
         storyEnd = true;
         // dieNoHelp()

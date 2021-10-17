@@ -1,3 +1,5 @@
+// ---------------------------------------------------------------- Background images
+
 const background = {
   1: "url(assets/img/background/forest-bg-1.webp",
   11: "url(assets/img/background/blue.webp",
