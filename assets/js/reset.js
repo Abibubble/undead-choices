@@ -13,4 +13,5 @@ function reset() {
   pageNumber = 0;
   paraNumber = 1;
   nextPage();
+  updateProgressBar(4);
 }

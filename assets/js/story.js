@@ -179,6 +179,7 @@ function animateWalkingOff(name) {
         playSoundEffect("puddle");
     }
     checkAvatar(name);
+    moveSpider();
 }
 
 // ---------------------------------story control
@@ -282,7 +283,6 @@ function nextPage() {
     // }
     // updateProgress();
 }
-
 
 function goToPage(destinationPageNumber) {
     pageNumber = destinationPageNumber;
