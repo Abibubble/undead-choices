@@ -549,51 +549,6 @@ main {
     background: url(../img/candy_idle_frame1.png) no-repeat center center / cover;
 }
 
-/* ----------------------------------------------------  Play button */
-
-.play-button {
-    width: 214px;
-    text-align: center;
-    position: absolute;
-    top: 1rem;
-    left: -1rem;
-}
-
-.circle {
-    stroke: #ff8c00;
-    stroke-dasharray: 650;
-    stroke-dashoffset: 650;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    opacity: 0.3;
-}
-
-.playBut {
-    /* border: 1px solid red;*/
-    text-align: center;
-    display: inline-block;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    background-color: #f5deb300;
-    border: none;
-}
-
-.playBut .triangle {
-    transition: all 0.7s ease-in-out;
-    -webkit-transition: all 0.7s ease-in-out;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 480;
-    stroke: #000;
-    transform: translateY(0);
-}
-
-.playBut:hover .triangle {
-    stroke-dashoffset: 0;
-    opacity: 1;
-    stroke: #ff8c00;
-    animation: nudge 0.7s ease-in-out;
-}
-
 /* ----------------------------------------------------  Spider */
 
 .little-spider {
@@ -611,7 +566,6 @@ main {
 
 .spider-web {
     position: relative;
-    /* left: -24px; */
     width: 2px;
     height: 6rem;
     background-color: #faebd7;
@@ -653,10 +607,7 @@ main {
     }
 }
 
-.playBut:hover .circle {
-    stroke-dashoffset: 0;
-    opacity: 1;
-}
+/* ------------------------------------------------------- 404 page */
 
 .paragraph-holder-grid {
     display: grid;
