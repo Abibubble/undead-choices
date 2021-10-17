@@ -8,6 +8,7 @@ let age = "child";
 let userName = "Zebedee";
 let storyEnd = false;
 let drinkColor = "";
+let collectDrink = false;
 let hasDrink = false;
 let userInputRequired = false;
 
