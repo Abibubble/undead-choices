@@ -61,6 +61,21 @@ footer {
 	font-family: 'Finger Paint', cursive;
 }
 
+.pumpkin1, .pumpkin2 {
+    width: auto;
+    height: 65px;
+    position: absolute;
+    top: 0;
+}
+
+.pumpkin1 {
+    left: 10px;
+}
+
+.pumpkin2 {
+    right: 10px;
+}
+
 /* ---------------------------------------------------- Page Animation */
 
 @keyframes flip-page {
@@ -85,10 +100,9 @@ footer {
 
 .page {
 	position: relative;
-	width: calc(100vw - 3rem);
-	height: calc(100vh - 20rem);
+	width: calc(100vw - 1rem);
+	height: calc(100vh - 10rem);
 	border-radius: 2rem;
-	/* todo animation-name to be applied in JS */
 	animation-duration: 2s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: backwards;
@@ -97,8 +111,8 @@ footer {
 }
 
 .image-holder {
-    margin: 0 auto 2rem;
-    height: 19rem;
+    margin: 0 auto 1rem;
+    height: 21rem;
     width: 50%;
     background-color: #6600ff55;
 }
@@ -107,7 +121,7 @@ footer {
 
 #paragraph-container {
     background-color: #00000088;
-    height: 9rem;
+    height: 11rem;
     width: 80%;
     border-radius: 2rem;
     margin: -1.5rem auto;
@@ -149,13 +163,12 @@ footer {
 .page.waiting {
 	background: url(../img/background/forest-bg-1.webp) no-repeat center center / cover;
     position: absolute;
-    top: 1rem;
+    top: 6rem;
     z-index: 2;
 }
 
 .page.gameover {
 	background: url(../img/gameover_bg.jpg) no-repeat center center / cover;
-	animation-delay: 8s;
 }
 
 /* ---------------------------------------------------- Previous / Next buttons */
@@ -190,9 +203,9 @@ footer {
 
 .audio-container {
     position: absolute;
-    top: 5%;
+    top: 12%;
     left: 3%;
-    z-index: 500;
+    z-index: 4;
 }
 
 /* ---------------------------------------------------- General */
@@ -203,19 +216,6 @@ main {
 	padding: 1rem .5rem;
 }
 
-#border {
-	border-width: 5rem;
-    border-left: 0;
-    border-right: 0;
-    height: calc(100vh - 9rem);
-    padding: 1rem;
-    border-image: round 33% url(../img/pumpkin-border.png);
-    -webkit-border-image: round 33% url(../img/pumpkin-border.png);
-    -moz-border-image: round 33% url(../img/pumpkin-border.png);
-    position: relative;
-    border-style: solid;
-}
-
 /* ---------------------------------------------------- Modal */
 
 .overlay {
@@ -224,7 +224,7 @@ main {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
 	z-index: 5;
 }
 
@@ -363,7 +363,7 @@ main {
 
 .user-name-input-grid {
 	position: relative;
-	bottom: 41%;
+    bottom: 20px;
 	display: grid;
 	width: 30%;
 	margin: auto;
@@ -384,7 +384,7 @@ main {
     z-index: 3;
 }
 
-/* -------------------------------- Static Images */
+/* ---------------------------------------------------- Static Images */
 
 #content-image {
     height: 100%;
@@ -584,7 +584,7 @@ main {
 .little-spider {
     position: absolute;
     top: 1rem;
-    right: 5%;
+    right: 11%;
     width: 50px;
     display: flex;
     flex-direction: column;
@@ -662,16 +662,13 @@ main {
 }
 
 @media screen and (max-width: 992px) {
-    #next-btn {
-        right: 10%;
-    }
-
+    #next-btn,
     #next-page {
-        right: 6%;
+        right: 2%;
     }
 
     #previous-btn {
-        left: 8%;
+        left: 2%;
     }
 
     footer {
@@ -716,18 +713,6 @@ main {
 }
 
 @media screen and (max-width: 680px) {
-    #next-btn {
-        right: 8%;
-    }
-
-    #next-page {
-        right: 2%;
-    }
-
-    #previous-btn {
-        left: 3%;
-    }
-
     .page, footer {
         font-size: 1.4rem;
     }
@@ -745,7 +730,6 @@ main {
 
 @media screen and (max-width: 585px) {
     .user-name-input-grid {
-        bottom: 49%;
         width: 85%;
     }
 
@@ -823,6 +807,10 @@ main {
     .image-holder, #paragraph-container {
         margin: auto;
         width: 90%;
+    }
+
+    .user-name-input-grid {
+        bottom: 0;
     }
 
     .static-image .man,
