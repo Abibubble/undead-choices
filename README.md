@@ -365,12 +365,14 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
     * All tested and working correctly.
 
 5. Safari
-    * All tested and working correctly.
+    * Pumpkin border causes issues with the layout.
+    * Otherwise all working correctly.
 
 #### Tablet
 
 1. Safari
-    * All tested and working correctly.
+    * Pumpkin border causes issues with the layout.
+    * Otherwise all working correctly.
 
 #### Mobile
 
@@ -378,7 +380,8 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
     * All tested and working correctly.
 
 2. Safari
-    * All tested and working correctly.
+    * Pumpkin border causes issues with the layout.
+    * Otherwise all working correctly.
 
 3. Samsung Internet
     * All tested and working correctly.
@@ -418,7 +421,7 @@ Friends, family members, and other developers were asked to review the site and 
 
 ### Known Bugs
 
-* ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
+* The pumpkin border on Safari looks too large, but unfortunately we couldn't find why the border-image property isn't being supported properly on Safari.
 
 ### Lighthouse
 
