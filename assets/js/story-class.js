@@ -93,6 +93,7 @@ class Story {
         this.page3 = {
             riband: `A Blue Riband chocolate bar fell out of ${pronoun_their} pocket. Overcome with hunger, ${pronoun_they} tried to eat it... but it did nothing for ${pronoun_them}. ${userName} wanted something different, something new... something... human! BRAINS!`,
             zombie: `${userName} stumbled forward as ${pronoun_they} realised what ${pronoun_they} had become, ${userName} was... A zombie! With this daunting realisation, ${userName} set off in search of some succulent grey matter to feed on...`,
+            direction: `Which direction did ${userName} go?`,
         }; //3
         // choose east or west
         // east
