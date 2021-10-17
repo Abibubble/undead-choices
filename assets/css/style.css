@@ -42,6 +42,10 @@ button {
     cursor: pointer;
 }
 
+.header-br {
+    display: none;
+}
+
 /* ------------------------------------------------------- Header / Footer */
 
 header {
@@ -717,6 +721,10 @@ main {
         font-size: 1.4rem;
     }
 
+    h1 {
+        font-size: 2.5rem;
+    }
+
     .static-image .man,
     .static-image .boy {
         left: 59%;
@@ -743,8 +751,12 @@ main {
 }
 
 @media screen and (max-width: 550px) {
+    h1 {
+        font-size: 2rem;
+    }
+
     .page {
-        height: calc(100vh - 17rem);
+        height: calc(100vh - 10rem);
         font-size: 1rem;
     }
 
@@ -773,6 +785,10 @@ main {
         height: 9rem;
     }
 
+    #paragraph-container {
+        height: 10rem;
+    }
+
     #border {
         border-width: 3rem;
     }
@@ -794,14 +810,22 @@ main {
     }
 
     .audio-container {
-        top: 82%;
+        top: 77%;
         left: 41%;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    #progress-container {
+        top: -1.5rem;
     }
 }
 
 @media screen and (max-width: 460px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .image-holder, #paragraph-container {
@@ -842,10 +866,6 @@ main {
         left: 5%;
     }
 
-    .toggle {
-        display: none;
-    }
-
     #progress-image {
         right: -38px;
     }
@@ -868,6 +888,15 @@ main {
 }
 
 @media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+
+    .header-br {
+        display: inline-block;
+    }
+
     .audio-container {
         left: 43%;
     }
