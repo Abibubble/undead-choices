@@ -114,6 +114,15 @@ footer {
     position: relative;
 }
 
+#paragraph-404-container {
+    background-color: #00000088;
+    height: 9rem;
+    width: 80%;
+    border-radius: 2rem;
+    margin: auto;
+    position: relative;
+}
+
 .paragraph-holder {
     padding: .5rem 1.5rem;
     height: 10rem;
