@@ -304,6 +304,8 @@ function hideInputs() {
     userNameInput.children[1].classList.add("hide");
 
     hideEastWest();
+    hideConsumeCollect();
+    hideDrinks();
 
     // for (let i = 0; i < containerArray.length; i ++) {
     //     let cont = containerObj[containerArray[i]];
@@ -359,15 +361,18 @@ function runStory() {
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 8:
             switch (paraNumber) {
                 case 1:
                     userInputRequired = true;
+                    showDrinks(collectDrink);
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 9:
@@ -375,6 +380,7 @@ function runStory() {
                 case 3:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showRedDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -386,6 +392,7 @@ function runStory() {
                 case 3:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showPurpleDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -397,6 +404,7 @@ function runStory() {
                 case 2:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showWin();
                     break;
                 default:
                     userInputRequired = false;
@@ -404,22 +412,24 @@ function runStory() {
             }
             break;
         case 12:
-            hasDrink = true;
             switch (paraNumber) {
-                case 3:
-                    // head to king or west
+                case 1:
+                    showDrinks(collectDrink);
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 13:
             switch (paraNumber) {
                 case 4:
                     userInputRequired = true;
+                    // showFeedOrNot();
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 14:
@@ -427,6 +437,7 @@ function runStory() {
                 case 4:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showFeedDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -437,9 +448,11 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     userInputRequired = true;
+                    // showContinueOrRun()
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 16:
@@ -447,6 +460,7 @@ function runStory() {
                 case 3:
                     userInputRequired = true;
                     stroyEnd = true;
+                    // showRunDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -457,19 +471,21 @@ function runStory() {
             switch (paraNumber) {
                 case 6:
                     userInputRequired = true;
+                    showHelpOrNot();
                     break;
                 default:
                     userInputRequired = false;
+                    hideInputs();
             }
             break;
         case 18:
             switch (paraNumber) {
                 case 2:
-                    userInputRequired = false;
+                    userInputRequired = true;
                     if (hasDrink) {
-                        // see king
+                        goToPage(19);
                     } else {
-                        // go east
+                        goToPage(23);
                     }
                     break;
                 default:
@@ -479,16 +495,16 @@ function runStory() {
         case 19:
             switch (paraNumber) {
                 case 3:
-                    userInputRequired = false;
+                    userInputRequired = true;
                     switch (drinkColor) {
                         case "red":
-                            // do red stuff
+                            goToPage(21);
                             break;
                         case "purple":
-                            // do red stuff
+                            goToPage(22);
                             break;
                         case "blue":
-                            // do red stuff
+                            goToPage(20);
                             break;
                         default:
                             // 404 page
@@ -501,8 +517,9 @@ function runStory() {
         case 20:
             switch (paraNumber) {
                 case 4:
-                    userInputRequired = false;
+                    userInputRequired = true;
                     storyEnd = true;
+                    // showWin();
                     // win
                     break;
                 default:
@@ -515,6 +532,7 @@ function runStory() {
                 case 4:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showRedDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -526,6 +544,7 @@ function runStory() {
                 case 4:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showPurpleDeath();
                     break;
                 default:
                     userInputRequired = false;
@@ -537,6 +556,7 @@ function runStory() {
                 case 1:
                     userInputRequired = true;
                     storyEnd = true;
+                    goToPage(4);
                     break;
                 default:
                     userInputRequired = false;
@@ -548,6 +568,7 @@ function runStory() {
                 case 3:
                     userInputRequired = true;
                     storyEnd = true;
+                    // showNoHelpDeath();
                     break;
                 default:
                     userInputRequired = false;
