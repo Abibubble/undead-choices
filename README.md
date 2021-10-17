@@ -116,7 +116,7 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 * The characters are all zombies, to fit with the storyline.
 * The image in the progress bar is a dismembered hand, to fill the entire site with spooky theming.
 * The images at the end of the progress bar change depending on which ending the user gets.
-* The border is made of black pumpkins, to link with the Halloween theme.
+* There are two black pumpkins in the top corners of the header, to link with the Halloween theme.
 
 ### Wireframes
 
@@ -365,14 +365,12 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
     * All tested and working correctly.
 
 5. Safari
-    * Pumpkin border causes issues with the layout.
-    * Otherwise all working correctly.
+    * All tested and working correctly.
 
 #### Tablet
 
 1. Safari
-    * Pumpkin border causes issues with the layout.
-    * Otherwise all working correctly.
+    * All tested and working correctly.
 
 #### Mobile
 
@@ -380,8 +378,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
     * All tested and working correctly.
 
 2. Safari
-    * Pumpkin border causes issues with the layout.
-    * Otherwise all working correctly.
+    * All tested and working correctly.
 
 3. Samsung Internet
     * All tested and working correctly.
@@ -416,8 +413,10 @@ Friends, family members, and other developers were asked to review the site and 
 
 ### Solved Bugs
 
-1. WHAT THE BUG IS
-    * WHAT STEPS I TOOK TO FIX IT
+1. [The responsive pumpkin border](https://www.youtube.com/watch?v=vnODfFJTLGg) caused us issues on all browsers except for Google Chrome.
+    * We checked on [Can I Use](https://caniuse.com/) and didn't see any issues with the border-image property not being supported.
+    * We tried prefixing the border-image properties with `-webkit-` and `-moz` but that didn't help.
+    * In the end, we removed the border, and instead used the pumpkin images as accents on the header.
 
 ### Known Bugs
 
@@ -472,7 +471,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Female child zombie](https://craftpix.net/freebies/2d-game-zombie-kids-character-free-sprite-8/).
 * [Spider](https://frankslaboratory.co.uk/downloads/enemy_spider.png).
 * [Heart icon in progress bar](https://www.pngwing.com/en/free-png-zkxld/download).
-* [Pumpkin border](https://ibb.co/Kz1ww7k).
+* [Pumpkins in the header](https://ibb.co/Kz1ww7k).
 * [Forest background image](https://unsplash.com/photos/hvrpOmuMrAI).
 * [Gravestone image in progress bar](https://www.clipartmax.com/middle/m2i8d3A0m2A0Z5b1_rip-gravestone-grave-cartoon/).
 * [Pumpkins image on the modals](https://www.pexels.com/photo/two-jack-o-lantern-lamps-619418/).
