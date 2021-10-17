@@ -13,12 +13,20 @@ let userInputRequired = false;
 
 // ---------------------------------------------------------------- Page control
 
+
+let choicesMade = new ChoicesMade();
+let ageInserts = new AgeInserts();
+let story = new Story();
+
+let pageNumber = 1;
+let paraNumber = 1;
+
 const currentPage = document.getElementsByClassName("page current")[0];
 const waitingPage = document.getElementsByClassName("page waiting")[0];
 
 
 
-const container = {
+const containerObj = {
   eastWest: document.getElementById("east-west-container"),
   consumeCollect: document.getElementById("consume-collect-container"),
   redPurpleBlue: document.getElementById("red-purple-blue-container"),
@@ -27,7 +35,7 @@ const container = {
   helpNoHelp: document.getElementById("help-no-help-container"),
 }
 
-const choiceButtons = {
+const choiceButtonsObj = {
   east: document.getElementById("east-btn"),
   west: document.getElementById("west-btn"),
   consume: document.getElementById("consume-btn"),
@@ -42,6 +50,8 @@ const choiceButtons = {
   help: document.getElementById("help-btn"),
   noHelp: document.getElementById("no-help-btn"),
 }
+
+const containerArray = Array.from(Object.keys(containerObj));
 
 // ---------------------------------------------------------------- Image control
 
