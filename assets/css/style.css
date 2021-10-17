@@ -286,11 +286,13 @@ main {
 	font-family: 'Finger Paint', cursive;
 }
 
-.modal-grid a {
+.modal-grid a,
+.paragraph-holder-grid a {
     text-decoration: none;
 }
 
-.modal-grid a:visited {
+.modal-grid a:visited,
+.paragraph-holder-grid a:visited {
     color: black;
 }
 
@@ -649,6 +651,29 @@ main {
 .playBut:hover .circle {
     stroke-dashoffset: 0;
     opacity: 1;
+}
+
+.paragraph-holder-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "page-404"
+        "oh-no"
+        "safety-btn";
+    grid-row-gap: 10px;
+    margin-top: 20px;
+}
+
+#page-404 {
+    grid-area: page-404;
+}
+
+#oh-no {
+    grid-area: oh-no;
+}
+
+#safety-btn {
+    grid-area: safety-btn;
 }
 
 /* ----------------------------------------------------  Media queries */
