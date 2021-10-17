@@ -62,6 +62,7 @@
 * [Hands with blue, red and yellow paint on them](https://www.pexels.com/photo/person-with-blue-green-and-red-paint-on-hand-3778548/).
 * [Person in medical PPE holding a flask](https://www.pexels.com/photo/person-in-medical-ppe-holding-a-flask-7230320/).
 * [Filled glass flasks on a table](https://www.pexels.com/photo/clear-glass-bottle-on-table-5428259/).
+* [Glass of red wine with purple flowers in it](https://www.pexels.com/photo/glass-of-red-wine-decorated-purple-flowers-6858592/).
 * All other background images found on [Unsplash](https://unsplash.com/).
 
 #### Story images

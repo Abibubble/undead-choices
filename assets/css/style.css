@@ -23,7 +23,7 @@ button {
 /* ------------------------------------------------------- Utilities */
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .scale-0 {
@@ -206,8 +206,32 @@ footer {
 }
 
 .choice-container {
-    width: 70%;
-    left: 16%;
+    position: absolute;
+    top: 23%;
+    width: 55%;
+    left: 23%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "red-potion purple-potion blue-potion";
+    justify-items: center;
+}
+
+#red-btn {
+    grid-area: red-potion;
+}
+
+#purple-btn {
+    grid-area: purple-potion;
+}
+
+#blue-btn {
+    grid-area: blue-potion;
+}
+
+#purple-btn img,
+#red-btn img,
+#blue-btn img {
+    height: 125px;
 }
 
 /* ---------------------------------------------------- Audio button */
@@ -248,7 +272,7 @@ main {
     background: url("../img/pumpkins.webp") no-repeat center center;
     background-size: cover;
     width: 50%;
-    height: 50%;
+    height: 60%;
     position: absolute;
     top: 20%;
     left: 25%;
@@ -648,7 +672,6 @@ main {
 
     .modal-grid {
         width: 60%;
-        height: 50%;
         left: 20%;
     }
     
@@ -703,7 +726,6 @@ main {
 
     .modal-grid {
         width: 80%;
-        height: 60%;
         left: 10%;
     }
     
@@ -803,6 +825,17 @@ main {
 
     #previous-btn {
         left: 8%;
+    }
+
+    #purple-btn img,
+    #red-btn img,
+    #blue-btn img {
+        height: 100px;
+    }
+
+    .choice-container {
+        width: 74%;
+        left: 13%;
     }
 
     .modal-grid {
