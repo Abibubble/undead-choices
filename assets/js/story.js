@@ -236,6 +236,7 @@ function checkButtons() {
  * moves to next paragraph
  */
 function nextPara() {
+    // staticImage.removeChild(staticImage.children[0])
     storyText.classList.add("scale-0");
     paraNumber++;
     previousBtn.classList.add("hide");
