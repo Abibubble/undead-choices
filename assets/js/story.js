@@ -306,7 +306,9 @@ function hideInputs() {
     hideEastWest();
     hideConsumeCollect();
     hideDrinks();
-    hideFeedNoFeed()
+    hideFeedNoFeed();
+    hideContinueOrFlee();
+    hideHelpOrNot();
 
     // for (let i = 0; i < containerArray.length; i ++) {
     //     let cont = containerObj[containerArray[i]];
@@ -481,7 +483,7 @@ function runStory() {
                         updateProgressBar(26)
                     }
                     userInputRequired = true;
-                    // showContinueOrRun()
+                    showContinueOrFlee()
                     break;
                 default:
                     userInputRequired = false;
