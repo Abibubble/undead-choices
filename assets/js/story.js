@@ -306,6 +306,9 @@ function hideInputs() {
     hideEastWest();
     hideConsumeCollect();
     hideDrinks();
+    hideFeedNoFeed();
+    hideContinueOrFlee();
+    hideHelpOrNot();
 
     // for (let i = 0; i < containerArray.length; i ++) {
     //     let cont = containerObj[containerArray[i]];
@@ -323,6 +326,7 @@ function runStory() {
         case 1:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(8);
                     userInputRequired = true;
                     setTimeout(showNameInput, 2500);
                     break;
@@ -334,6 +338,7 @@ function runStory() {
         case 2:
             switch (paraNumber) {
                 case 1:
+                    updateProgressBar(14);
                     userInputRequired = true;
                     showCharacter();
                     break;
@@ -345,6 +350,7 @@ function runStory() {
         case 3:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(22);
                     userInputRequired = true;
                     showEastWest();
                     break;
@@ -356,6 +362,11 @@ function runStory() {
         case 7:
             switch (paraNumber) {
                 case 3:
+                    if (zombieKingVisited === "kingNotSeen") {
+                        updateProgressBar(34);
+                    } else {
+                        updateProgressBar(49);
+                    }
                     userInputRequired = true;
                     showConsumeCollect();
                     break;
@@ -367,6 +378,11 @@ function runStory() {
         case 8:
             switch (paraNumber) {
                 case 1:
+                    if (zombieKingVisited === "kingNotSeen") {
+                    updateProgressBar(59);
+                    } else {
+                        updateProgressBar(94);
+                    }
                     userInputRequired = true;
                     showDrinks(collectDrink);
                     break;
@@ -417,6 +433,11 @@ function runStory() {
         case 12:
             switch (paraNumber) {
                 case 1:
+                    if (zombieKingVisited === "kingNotSeen") {
+                        updateProgressBar(52);
+                    } else {
+                        updateProgressBar(84);
+                    }
                     showDrinks(collectDrink);
                     break;
                 default:
@@ -427,8 +448,13 @@ function runStory() {
         case 13:
             switch (paraNumber) {
                 case 4:
+                    if (hasDrink) {
+                        updateProgressBar(59)
+                    } else {
+                        updateProgressBar(25)
+                    }
                     userInputRequired = true;
-                    // showFeedOrNot();
+                    showFeedOrNot();
                     break;
                 default:
                     userInputRequired = false;
@@ -451,8 +477,13 @@ function runStory() {
         case 15:
             switch (paraNumber) {
                 case 4:
+                    if (hasDrink) {
+                        updateProgressBar(66)
+                    } else {
+                        updateProgressBar(26)
+                    }
                     userInputRequired = true;
-                    // showContinueOrRun()
+                    showContinueOrFlee()
                     break;
                 default:
                     userInputRequired = false;
@@ -475,6 +506,11 @@ function runStory() {
         case 17:
             switch (paraNumber) {
                 case 6:
+                    if (hasDrink) {
+                        updateProgressBar(70)
+                    } else {
+                        updateProgressBar(32)
+                    }
                     userInputRequired = true;
                     showHelpOrNot();
                     break;
@@ -486,6 +522,11 @@ function runStory() {
         case 18:
             switch (paraNumber) {
                 case 2:
+                    if (hasDrink) {
+                        updateProgressBar(76)
+                    } else {
+                        updateProgressBar(39)
+                    }
                     userInputRequired = true;
                     if (hasDrink) {
                         goToPage(19);
@@ -500,6 +541,7 @@ function runStory() {
         case 19:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(87);
                     userInputRequired = true;
                     switch (drinkColor) {
                         case "red":
@@ -562,8 +604,10 @@ function runStory() {
         case 23:
             switch (paraNumber) {
                 case 1:
+                    updateProgressBar(45);
                     userInputRequired = true;
                     storyEnd = true;
+                    zombieKingVisited = "kingSeen";
                     goToPage(4);
                     break;
                 default:

@@ -353,6 +353,7 @@ main {
 	height: inherit;
 	background-color: #272727;
 	border-radius: 1.5rem;
+    transition: width 3s;
 }
 
 #progress-image {
