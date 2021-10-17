@@ -698,6 +698,10 @@ main {
     .static-image .candy {
         left: 21%;
     }
+
+    .modal-btn {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -907,10 +911,6 @@ main {
 
     .modal-grid h2 {
         font-size: 1.1rem;
-    }
-
-    .modal-btn {
-        font-size: 0.8rem;
     }
 }
 
