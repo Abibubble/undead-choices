@@ -238,7 +238,7 @@ main {
     grid-template-areas:
     "header header"
     "button1 button2";
-    background: url("../img/pumpkins.jpg") no-repeat center center;
+    background: url("../img/pumpkins.webp") no-repeat center center;
     background-size: cover;
     width: 50%;
     height: 50%;
