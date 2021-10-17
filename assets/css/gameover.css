@@ -9,13 +9,12 @@
     top: 6%;
 }
 
-.static-image{
+.static-image {
     position: relative;
     left: 46%;
     height: 230px;
     transform: translate(-50%);
 }
-
 
 .static-image .man {
     left: 60% !important;
@@ -27,18 +26,15 @@
     top: 0 !important;
 }
 
-
 .static-image .woman,
 .static-image .girl {
     left: 43% !important;
     top: 1rem !important;
 }
 
-
 .static-image .candy {
     left: 26% !important;
     top: -3rem !important;
-
 }
 
 .names-container .boss {
@@ -51,8 +47,7 @@
     background: url("../img/boss.gif") no-repeat center center / cover;
 }
 
-
-#abi{
+#abi {
     background-color: black;
     position: relative;
     top: 11rem;
@@ -60,6 +55,7 @@
     padding: 5px;
     font-size: 1rem;
 }
+
 #alex {
     background-color: black;
     position: relative;
@@ -68,6 +64,7 @@
     padding: 5px;
     font-size: 1rem;
 }
+
 #dave {
     background-color: black;
     position: relative;
@@ -76,7 +73,6 @@
     padding: 5px;
     font-size: 1rem;
 }
-
 
 #djang {
     background-color: black;
@@ -95,7 +91,6 @@
     padding: 5px;
     font-size: 1rem;
 }
-
 
 .go-back{
     position: relative;
