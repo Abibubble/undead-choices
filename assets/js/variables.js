@@ -9,6 +9,7 @@ let userName = "Zebedee";
 let storyEnd = false;
 let drinkColor = "";
 let hasDrink = false;
+let userInputRequired = false;
 
 // ---------------------------------------------------------------- Page control
 
