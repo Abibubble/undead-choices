@@ -71,45 +71,45 @@ function playSoundEffect(which) {
 
 function pauseSoundEffect(which) {
     switch (which.toLowerCase()) {
-            case 'bubbles':
-                audioFile.bubbles.pause();
-                break;
-            case 'drink':
-                audioFile.drink.pause();
-                break;
-            case 'largehorde':
-                audioFile.largeHorde.pause();
-                break;
-            case 'smallhorde':
-                audioFile.smallHorde.pause();
-                break;
-            case 'puddle':
-                audioFile.puddle.pause();
-                break;
-            case 'windy':
-                audioFile.windy.pause();
-                break;
-            case 'background':
-                audioFile.background.pause();
-                break;
-            case 'backgroundintense':
-                audioFile.backgroundIntense.pause();
-                break;
-            case 'bite':
-                audioFile.zombie.bite.pause();
-                break;
-            case 'hiss':
-                audioFile.zombie.bite.pause();
-                break;
-            case 'moan':
-                audioFile.zombie.moan.pause();
-                break;
-            case 'giggle':
-                audioFile.giggle.pause();
-                break;
+        case 'bubbles':
+            audioFile.bubbles.pause();
+            break;
+        case 'drink':
+            audioFile.drink.pause();
+            break;
+        case 'largehorde':
+            audioFile.largeHorde.pause();
+            break;
+        case 'smallhorde':
+            audioFile.smallHorde.pause();
+            break;
+        case 'puddle':
+            audioFile.puddle.pause();
+            break;
+        case 'windy':
+            audioFile.windy.pause();
+            break;
+        case 'background':
+            audioFile.background.pause();
+            break;
+        case 'backgroundintense':
+            audioFile.backgroundIntense.pause();
+            break;
+        case 'bite':
+            audioFile.zombie.bite.pause();
+            break;
+        case 'hiss':
+            audioFile.zombie.bite.pause();
+            break;
+        case 'moan':
+            audioFile.zombie.moan.pause();
+            break;
+        case 'giggle':
+            audioFile.giggle.pause();
+            break;
         default:
             //
-        }
+    }
 }
 
 // ---------------------------------------------------------------- Toggle audio
@@ -118,10 +118,10 @@ const audioButton = document.getElementById("audio-btn"); // Toggle the audio on
 
 audioButton.addEventListener("click", function () {
     if (music) {
-        audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br>Toggle audio`;
+        audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio`;
         audioFile.background.pause();
     } else {
-        audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Toggle audio`;
+        audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br><span class="toggle">Toggle </span>Audio`;
         audioFile.background.play();
     }
     music = !music;

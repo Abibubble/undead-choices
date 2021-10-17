@@ -37,7 +37,9 @@
 
 <body>
     <header>
-        <h1>Undead Choices!</h1>
+        <img src="assets/img/pumpkin1.png" alt="A black and orange carved pumpkin" class="pumpkin1">
+        <h1>Undead <br class="header-br">Choices!</h1>
+        <img src="assets/img/pumpkin2.png" alt="A black and orange carved pumpkin" class="pumpkin2">
     </header>
 
     <main>
@@ -79,9 +81,10 @@
             </div>
         </section>
 
-        <section id="border">
+        <section>
             <section class="page current">
                 <div class="image-holder">
+                    <div id="content-image"></div>
                     <div class="static-image">
                         <div class="avatars girl hide" id="girl"></div>
                         <div class="avatars boy hide" id="boy"></div>
@@ -98,6 +101,12 @@
                     <!-- Man -->
                     <img src="assets/img/man_walk.gif" alt="A walking zombie man" id="man_walk" class="walking-zombie hide">
                 </div>
+
+                <div class="user-name-input-grid" id="user-name-input-section">
+                    <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
+                    <button id="username-btn" class="username-btn btn hide">Click</button>
+                </div>
+
                 <div id="paragraph-container">
                     <div class="paragraph-holder">
                         <p id="story-text">
@@ -114,11 +123,6 @@
                 </div>
             </section>
             <div class="page waiting"></div>
-
-            <div class="user-name-input-grid" id="user-name-input-section">
-                <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
-                <button id="username-btn" class="username-btn btn hide">Click</button>
-            </div>
 
             <div class="audio-container">
                 <button class="btn audio-btn" id="audio-btn">
@@ -160,6 +164,7 @@
     <script src="assets/js/story-class.js"></script>
     <script src="assets/js/background.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/east-west.js"></script>
     <script src="assets/js/story.js"></script>
 </body>
 </html>
