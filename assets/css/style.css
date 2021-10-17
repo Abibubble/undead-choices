@@ -116,7 +116,7 @@ footer {
 
 .image-holder {
     margin: 0 auto 1rem;
-    height: 21rem;
+    height: 18rem;
     width: 50%;
     background-color: #6600ff55;
 }
@@ -207,7 +207,7 @@ footer {
 
 .audio-container {
     position: absolute;
-    top: 12%;
+    top: 15%;
     left: 3%;
     z-index: 6;
 }
@@ -277,7 +277,7 @@ main {
 	box-shadow: 2px 2px 2px #000;
 	border: 0;
     padding: 0 5px;
-	width: 60%;
+	width: 80%;
 	height: 50%;
 	text-align: center;
 	margin: auto;
@@ -388,6 +388,11 @@ main {
 	border-radius: 20px;
 	padding: 10px;
     z-index: 3;
+}
+
+.user-name-input-grid,
+#paragraph-container {
+    bottom: 2.5rem;
 }
 
 /* ---------------------------------------------------- Static Images */
@@ -815,11 +820,11 @@ main {
 
     .paragraph-holder {
         padding: 0 1rem;
-        height: 9rem;
+        height: 7rem;
     }
 
     #paragraph-container {
-        height: 10rem;
+        height: 8rem;
     }
 
     #border {
@@ -827,7 +832,7 @@ main {
     }
 
     .next-prev-button-container {
-        top: 84%;
+        top: 0;
     }
 
     #next-btn {
@@ -842,8 +847,17 @@ main {
         left: 8%;
     }
 
+    .modal-grid {
+        top: 25%;
+    }
+
+    .modal-btn {
+        width: 90%;
+        font-size: 0.7rem;
+    }
+
     .audio-container {
-        top: 77%;
+        top: 13%;
         left: 41%;
     }
 
@@ -852,7 +866,11 @@ main {
     }
 
     #progress-container {
-        top: -1.5rem;
+        top: -0.5rem;
+    }
+
+    footer {
+        font-size: 1rem;
     }
 }
 
