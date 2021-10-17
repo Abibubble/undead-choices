@@ -178,6 +178,7 @@ function animateWalkingOff(name) {
         playSoundEffect("puddle");
     }
     checkAvatar(name);
+    moveSpider();
 }
 
 // ---------------------------------story control
@@ -296,6 +297,7 @@ function checkInputs() {
         userInputRequired = true;
         userNameInput.children[0].classList.remove("hide");
         userNameInput.children[1].classList.remove("hide");
+        updateProgressBar(8);
     } else {
         // needed for returning a paragraph
         // may need in other if statements
@@ -307,74 +309,90 @@ function checkInputs() {
     if (pageNumber === 2) {
         userInputRequired = true;
         showCharacter();
+        updateProgressBar(10);
+
     }
 
     if (pageNumber === 3) {
         userInputRequired = true;
         // showEastWest();
+        updateProgressBar(16);
     }
 
     if (pageNumber === 7) {
         userInputRequired = true;
         // showDrinkOrCollect();
+        updateProgressBar(20);
     }
 
     if (pageNumber === 8) {
         userInputRequired = true;
         // showDrinks();
+        updateProgressBar(24);
     }
 
     if (pageNumber === 9) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endRed();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 10) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endPurple();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 11) {
         storyEnd = true;
         zombieKingVisited = "kingNotSeen";
         // endBlue();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 12) {
         hasDrink = true;
+        updateProgressBar(30);
         if (zombieKingVisited = "kingSeen") {
             pageNumber = 19;
+            updateProgressBar(50);
         }
     }
 
     if (pageNumber === 13) {
         userInputRequired = true;
         // showFeedOrNot();
+        updateProgressBar(35);
     }
 
     if (pageNumber === 14) {
         storyEnd = true;
         // endFeed();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 15) {
         userInputRequired = true;
         // showFindKing();
+        updateProgressBar(60);
     }
 
     if (pageNumber === 16) {
         storyEnd = true;
         // endNoFind();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 17) {
         userInputRequired = true;
         // showHelp();
+        updateProgressBar(65);
     }
 
     if (pageNumber === 18) {
+        updateProgressBar(70);
         if (hasDrink = true) {
             // showYesNo("yes");
         } else {
@@ -383,6 +401,7 @@ function checkInputs() {
     }
 
     if (pageNumber === 19) {
+        updateProgressBar(75);
         switch(drinkColor) {
             case "red":
                 pageNumber = 21;
@@ -402,28 +421,33 @@ function checkInputs() {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endBlue();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 21) {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endRed();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 22) {
         storyEnd = true;
         zombieKingVisited = "kingSeen";
         // endPurple();
+        updateProgressBar(100);
     }
 
     if (pageNumber === 23) {
         zombieKingVisited = "kingSeen";
         pageNumber = 4;
+        updateProgressBar(30);
     }
     
     if (pageNumber === 24) {
         storyEnd = true;
         // dieNoHelp()
+        updateProgressBar(100);
     }
 }
 
