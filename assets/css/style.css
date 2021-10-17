@@ -395,6 +395,7 @@ main {
 }
 
 #content-image img {
+    border-radius: 5%;
     height: 90%;
     width: auto;
 }
