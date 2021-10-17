@@ -24,6 +24,7 @@ document.getElementById("username-btn").addEventListener("click", function () {
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     story = new Story(); // generate story with new name
+    ageInserts = new AgeInserts();
     nextPage();
 });
 
