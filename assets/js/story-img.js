@@ -26,7 +26,3 @@ const storyImg = {
   20: "url(assets/img/background/blue.webp",
   18: "url(assets/img/background/spook-forest.webp",
 }
-
-// function to display prev / next buttons as east / west with a page number
-
-// if page number for east is 10, need to change page number to 9, then call nextPage(), because it increments

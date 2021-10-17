@@ -378,6 +378,7 @@ function runStory() {
         case 9:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showRedDeath();
@@ -390,6 +391,7 @@ function runStory() {
         case 10:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showPurpleDeath();
@@ -402,6 +404,7 @@ function runStory() {
         case 11:
             switch (paraNumber) {
                 case 2:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showWin();
@@ -435,6 +438,7 @@ function runStory() {
         case 14:
             switch (paraNumber) {
                 case 4:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showFeedDeath();
@@ -458,6 +462,7 @@ function runStory() {
         case 16:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     stroyEnd = true;
                     // showRunDeath();
@@ -517,6 +522,7 @@ function runStory() {
         case 20:
             switch (paraNumber) {
                 case 4:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showWin();
@@ -530,6 +536,7 @@ function runStory() {
         case 21:
             switch (paraNumber) {
                 case 4:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showRedDeath();
@@ -542,6 +549,7 @@ function runStory() {
         case 22:
             switch (paraNumber) {
                 case 4:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showPurpleDeath();
@@ -566,6 +574,7 @@ function runStory() {
         case 24:
             switch (paraNumber) {
                 case 3:
+                    updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
                     // showNoHelpDeath();
