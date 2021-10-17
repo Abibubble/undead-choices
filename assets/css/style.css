@@ -105,7 +105,7 @@ footer {
 .page {
 	position: relative;
 	width: calc(100vw - 1rem);
-	height: calc(100vh - 10rem);
+	height: calc(100vh - 9rem);
 	border-radius: 2rem;
 	animation-duration: 2s;
 	animation-timing-function: ease-out;
@@ -167,7 +167,7 @@ footer {
 .page.waiting {
 	background: url(../img/background/forest-bg-1.webp) no-repeat center center / cover;
     position: absolute;
-    top: 6rem;
+    top: 5rem;
     z-index: 2;
 }
 
