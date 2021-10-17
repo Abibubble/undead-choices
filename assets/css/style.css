@@ -204,15 +204,16 @@ main {
 }
 
 #border {
-	border: 5rem solid;
-	border-left: none;
-	border-right: none;
-	height: calc(100vh - 9rem);
-	padding: 1rem;
-	border-image-source: url(../img/pumpkin-border.png);
-	border-image-slice: 33%;
-	border-image-repeat: round;
-	position: relative;
+	border-width: 5rem;
+    border-left: 0;
+    border-right: 0;
+    height: calc(100vh - 9rem);
+    padding: 1rem;
+    border-image: round 33% url(../img/pumpkin-border.png);
+    -webkit-border-image: round 33% url(../img/pumpkin-border.png);
+    -moz-border-image: round 33% url(../img/pumpkin-border.png);
+    position: relative;
+    border-style: solid;
 }
 
 /* ---------------------------------------------------- Modal */
