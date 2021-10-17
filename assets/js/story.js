@@ -448,7 +448,7 @@ function runStory() {
                     if (hasDrink) {
                         updateProgressBar(59)
                     } else {
-                        updateProgressBar(19)
+                        updateProgressBar(25)
                     }
                     userInputRequired = true;
                     // showFeedOrNot();
