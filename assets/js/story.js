@@ -250,7 +250,6 @@ function nextPara() {
 function previousPara() {
     storyText.classList.add("scale-0");
     paraNumber--;
-    runStory();
     previousBtn.classList.add("hide");
     pageBtn.classList.add("hide");
     nextBtn.classList.add("hide");

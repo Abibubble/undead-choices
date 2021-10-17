@@ -32,7 +32,7 @@ const containerObj = {
   consumeCollect: document.getElementById("consume-collect-container"),
   redPurpleBlue: document.getElementById("red-purple-blue-container"),
   feedNoFeed: document.getElementById("feed-no-feed-container"),
-  continueFlee: document.getElementById("continue-feed-container"),
+  continueFlee: document.getElementById("continue-flee-container"),
   helpNoHelp: document.getElementById("help-no-help-container"),
 }
 
