@@ -118,10 +118,10 @@ const audioButton = document.getElementById("audio-btn"); // Toggle the audio on
 
 audioButton.addEventListener("click", function () {
     if (music) {
-        audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br>Toggle audio`;
+        audioButton.innerHTML = `<i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio`;
         audioFile.background.pause();
     } else {
-        audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br>Toggle audio`;
+        audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br><span class="toggle">Toggle </span>Audio`;
         audioFile.background.play();
     }
     music = !music;
