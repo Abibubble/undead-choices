@@ -433,35 +433,35 @@ main {
 }
 
 #girl_walk {
-    position: relative;
+    position: absolute;
     width: 125px;
     height: 201px;
-    top: 40px;
-    left: 0vw;
+    top: 1.5rem;
+    left: 45%;
 }
 
 #boy_walk {
-    position: relative;
+    position: absolute;
     width: 116px;
     height: 195px;
-    top: 40px;
-    left: 0vw;
+    top: 3.9rem;
+    left: 62%;
 }
 
 #woman_walk {
-    position: relative;
+    position: absolute;
     width: 128px;
     height: 215px;
-    top: 40px;
-    left: 0vw;
+    top: 1.3rem;
+    left: 47%;
 }
 
 #man_walk {
-    position: relative;
+    position: absolute;
     width: 100px;
     height: 189px;
-    top: 40px;
-    left: 2vw;
+    top: 4rem;
+    left: 65%;
 }
 
 .girl {
