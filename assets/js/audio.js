@@ -31,10 +31,10 @@ function playSoundEffect(which) {
             case 'drink':
                 audioFile.drink.play();
                 break;
-            case 'largeHorde':
+            case 'largehorde':
                 audioFile.largeHorde.play();
                 break;
-            case 'smallHorde':
+            case 'smallhorde':
                 audioFile.smallHorde.play();
                 break;
             case 'puddle':
@@ -47,7 +47,7 @@ function playSoundEffect(which) {
                 audioFile.backgroundIntense.pause();
                 audioFile.background.play();
                 break;
-            case 'backgroundIntense':
+            case 'backgroundintense':
                 audioFile.background.pause();
                 audioFile.backgroundIntense.play();
                 break;
@@ -63,11 +63,13 @@ function playSoundEffect(which) {
             case 'giggle':
                 audioFile.giggle.play();
                 break;
+            default:
+                //
         }
     }
 }
 
-function pauseSoundEffect(which){
+function pauseSoundEffect(which) {
     switch (which.toLowerCase()) {
             case 'bubbles':
                 audioFile.bubbles.pause();
@@ -75,10 +77,10 @@ function pauseSoundEffect(which){
             case 'drink':
                 audioFile.drink.pause();
                 break;
-            case 'largeHorde':
+            case 'largehorde':
                 audioFile.largeHorde.pause();
                 break;
-            case 'smallHorde':
+            case 'smallhorde':
                 audioFile.smallHorde.pause();
                 break;
             case 'puddle':
@@ -90,7 +92,7 @@ function pauseSoundEffect(which){
             case 'background':
                 audioFile.background.pause();
                 break;
-            case 'backgroundIntense':
+            case 'backgroundintense':
                 audioFile.backgroundIntense.pause();
                 break;
             case 'bite':
@@ -105,6 +107,8 @@ function pauseSoundEffect(which){
             case 'giggle':
                 audioFile.giggle.pause();
                 break;
+        default:
+            //
         }
 }
 

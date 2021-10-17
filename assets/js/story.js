@@ -131,33 +131,29 @@ function animateWalkingOff(name) {
         candy.classList.add("hide");
         girlWalk.classList.remove("hide");
         girlWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     } else if (name === "girl") {
         boy.classList.add("hide");
         candy.classList.add("hide");
         boyWalk.classList.remove("hide");
         boyWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     } else if (name === "man") {
         woman.classList.add("hide");
         candy.classList.add("hide");
         womanWalk.classList.remove("hide");
         womanWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     } else if (name === "woman") {
         man.classList.add("hide");
         candy.classList.add("hide");
         manWalk.classList.remove("hide");
         manWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     } else if (age === "child") {
         girl.classList.add("hide");
         girlWalk.classList.remove("hide");
@@ -165,9 +161,8 @@ function animateWalkingOff(name) {
         boy.classList.add("hide");
         boyWalk.classList.remove("hide");
         boyWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     } else if (age === "adult") {
         woman.classList.add("hide");
         womanWalk.classList.remove("hide");
@@ -175,9 +170,8 @@ function animateWalkingOff(name) {
         man.classList.add("hide");
         manWalk.classList.remove("hide");
         manWalk.style.animationName = "walkoff";
-        if (music) {
-            playSoundEffect("puddle");
-        }
+        playSoundEffect("puddle");
+
     }
     checkAvatar(name);
 }
