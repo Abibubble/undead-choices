@@ -1,170 +1,171 @@
 <!doctype html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
-    <meta name="keywords" content="zombie, king, story, animation, hackathon, halloween">
-    <link rel="canonical" href="https://abibubble.github.io/undead-choices/">
-    <!-- Facebook, LinkedIn, Google -->
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" name="title" content="Undead Choices"/>
-    <meta property="og:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King"/>
-    <meta property="og:url" content="https://abibubble.github.io/undead-choices/"/>
-    <meta property="og:site_name" content="Undead Choices"/>
-    <meta property="og:image" name="image" content="docs/img/finalsite.png"/>
-    <meta property="og:image:alt" content="The Undead Choices site on a variety of devices">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Undead Choices">
-    <meta name="twitter:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
-    <meta name="twitter:image" content="docs/img/finalsite.png">
-    <meta name="twitter:image:alt" content="The Undead Choices site on a variety of devices">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">
-    <!-- Local stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title>Undead Choices</title>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
+        <meta name="keywords" content="zombie, king, story, animation, hackathon, halloween">
+        <link rel="canonical" href="https://abibubble.github.io/undead-choices/">
+        <!-- Facebook, LinkedIn, Google -->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" name="title" content="Undead Choices"/>
+        <meta property="og:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King"/>
+        <meta property="og:url" content="https://abibubble.github.io/undead-choices/"/>
+        <meta property="og:site_name" content="Undead Choices"/>
+        <meta property="og:image" name="image" content="docs/img/finalsite.png"/>
+        <meta property="og:image:alt" content="The Undead Choices site on a variety of devices">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Undead Choices">
+        <meta name="twitter:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
+        <meta name="twitter:image" content="docs/img/finalsite.png">
+        <meta name="twitter:image:alt" content="The Undead Choices site on a variety of devices">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest" crossorigin="use-credentials">
+        <!-- Local stylesheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <title>Undead Choices</title>
+    </head>
 
-<body>
-    <header>
-        <img src="assets/img/pumpkin1.png" alt="A black and orange carved pumpkin" class="pumpkin1">
-        <h1>Undead <br class="header-br">Choices!</h1>
-        <img src="assets/img/pumpkin2.png" alt="A black and orange carved pumpkin" class="pumpkin2">
-    </header>
+    <body>
+        <header>
+            <img src="assets/img/pumpkin1.png" alt="A black and orange carved pumpkin" class="pumpkin1">
+            <h1>Undead <br class="header-br">Choices!</h1>
+            <img src="assets/img/pumpkin2.png" alt="A black and orange carved pumpkin" class="pumpkin2">
+        </header>
 
-    <main>
-        <section id="age-modal">
-            <div class="overlay"></div>
-            <div class="modal-grid">
-                <div class="modal-text">
-                    <h2>
-                        This story can contain mature content.<br>
-                        Would you like the child-friendly version?
-                    </h2>
-                </div>
-                <button type="button" class="modal-btn modal-child-btn" id="child">
-                    Child-friendly, please!
-                </button>
-                <button type="button" class="modal-btn modal-adult-btn" id="adult">
-                    Psshhh, I'm the bravest around!
-                </button>
-            </div>
-        </section>
-
-        <section id="brian-modal" class="hide">
-            <div class="overlay"></div>
-            <div class="modal-grid">
-                <div class="modal-text">
-                    <h2>
-                        It looks like your name is Brian!<br>
-                        Would you like to play a game?
-                    </h2>
-                </div>
-                <button class="modal-btn btn">
-                    <a href="https://abibubble.github.io/icecapades/" target="_blank" rel="noopener noreferrer" role="button">
-                        A game? Yes please!!
-                    </a>
-                </button>
-                <button type="button" class="modal-btn btn" id="close-brian-modal">
-                    No thanks, I like zombies!
-                </button>
-            </div>
-        </section>
-
-        <section>
-            <section class="page current">
-                <div class="image-holder">
-                    <div id="content-image"></div>
-                    <div class="static-image">
-                        <div class="avatars girl hide" id="girl"></div>
-                        <div class="avatars boy hide" id="boy"></div>
-                        <div class="avatars man hide" id="man"></div>
-                        <div class="avatars woman hide" id="woman"></div>
-                        <div class="avatars candy hide" id="candy"></div>
+        <main>
+            <section id="age-modal">
+                <div class="overlay"></div>
+                <div class="modal-grid">
+                    <div class="modal-text">
+                        <h2>
+                            This story can contain mature content.<br>
+                            Would you like the child-friendly version?
+                        </h2>
                     </div>
-                    <!-- Girl -->
-                    <img src="assets/img/girl_walk.gif" alt="A walking zombie girl" id="girl_walk" class="walking-zombie hide">
-                    <!-- Boy -->
-                    <img src="assets/img/boy_walk.gif" alt="A jumping zombie boy" id="boy_walk" class="walking-zombie hide">
-                    <!-- Woman -->
-                    <img src="assets/img/woman_walk.gif" alt="A walking zombie woman" id="woman_walk" class="walking-zombie hide">
-                    <!-- Man -->
-                    <img src="assets/img/man_walk.gif" alt="A walking zombie man" id="man_walk" class="walking-zombie hide">
-                </div>
-
-                <div class="user-name-input-grid" id="user-name-input-section">
-                    <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
-                    <button id="username-btn" class="username-btn btn hide">Click</button>
-                </div>
-
-                <div id="paragraph-container">
-                    <div class="paragraph-holder">
-                        <p id="story-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
-                            laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
-                            dicta asperiores accusantium.
-                        </p>
-                    </div>
-                </div>
-                <div class="next-prev-button-container">
-                    <button id="previous-btn" class="btn page-btn"><i class="fas fa-lg fa-hand-point-left"></i> Previous</button>
-                    <button id="next-btn" class="btn page-btn">Next <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="next-page" class="btn page-btn">Next Page <i class="fas fa-lg fa-hand-point-right"></i></button>
+                    <button type="button" class="modal-btn modal-child-btn" id="child">
+                        Child-friendly, please!
+                    </button>
+                    <button type="button" class="modal-btn modal-adult-btn" id="adult">
+                        Psshhh, I'm the bravest around!
+                    </button>
                 </div>
             </section>
-            <div class="page waiting"></div>
 
-            <div class="audio-container">
-                <button class="btn audio-btn" id="audio-btn">
-                    <i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio
-                </button>
-            </div>
-
-            <div id="progress-container">
-                <div id="progress">
-                    <div id="progress-bar">
-                        <img src="assets/img/hand.gif" alt="An animated severed hand crawling along the progress bar" id="progress-image"> <!-- 0 - 90%-->
+            <section id="brian-modal" class="hide">
+                <div class="overlay"></div>
+                <div class="modal-grid">
+                    <div class="modal-text">
+                        <h2>
+                            It looks like your name is Brian!<br>
+                            Would you like to play a game?
+                        </h2>
                     </div>
-                    <div class="win-loose">
-                        <img id="gravestone" class="hide" src="assets/img/gravestone.png" alt="A gravestone with dirty and a single daisy growing from it">
-                        <img id="heart" class="hide" src="assets/img/heart.png" alt="A zombie-looking broken heart">
-                        <img id="potion" class="hide" src="assets/img/blue-potion.png" alt="A blue potion bottle">
+                    <button class="modal-btn btn">
+                        <a href="https://abibubble.github.io/icecapades/" target="_blank" rel="noopener noreferrer" role="button">
+                            A game? Yes please!!
+                        </a>
+                    </button>
+                    <button type="button" class="modal-btn btn" id="close-brian-modal">
+                        No thanks, I like zombies!
+                    </button>
+                </div>
+            </section>
+
+            <section>
+                <section class="page current">
+                    <div class="image-holder">
+                        <div id="content-image"></div>
+                        <div class="static-image">
+                            <div class="avatars girl hide" id="girl"></div>
+                            <div class="avatars boy hide" id="boy"></div>
+                            <div class="avatars man hide" id="man"></div>
+                            <div class="avatars woman hide" id="woman"></div>
+                            <div class="avatars candy hide" id="candy"></div>
+                        </div>
+                        <!-- Girl -->
+                        <img src="assets/img/girl_walk.gif" alt="A walking zombie girl" id="girl_walk" class="walking-zombie hide">
+                        <!-- Boy -->
+                        <img src="assets/img/boy_walk.gif" alt="A jumping zombie boy" id="boy_walk" class="walking-zombie hide">
+                        <!-- Woman -->
+                        <img src="assets/img/woman_walk.gif" alt="A walking zombie woman" id="woman_walk" class="walking-zombie hide">
+                        <!-- Man -->
+                        <img src="assets/img/man_walk.gif" alt="A walking zombie man" id="man_walk" class="walking-zombie hide">
+                    </div>
+
+                    <div class="user-name-input-grid" id="user-name-input-section">
+                        <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
+                        <button id="username-btn" class="username-btn btn hide">Click</button>
+                    </div>
+
+                    <div id="paragraph-container">
+                        <div class="paragraph-holder">
+                            <p id="story-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
+                                laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
+                                dicta asperiores accusantium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="next-prev-button-container">
+                        <button id="previous-btn" class="btn page-btn"><i class="fas fa-lg fa-hand-point-left"></i> Previous</button>
+                        <button id="next-btn" class="btn page-btn">Next <i class="fas fa-lg fa-hand-point-right"></i></button>
+                        <button id="next-page" class="btn page-btn">Next Page <i class="fas fa-lg fa-hand-point-right"></i></button>
+                    </div>
+                </section>
+                <div class="page waiting"></div>
+
+                <div class="audio-container">
+                    <button class="btn audio-btn" id="audio-btn">
+                        <i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio
+                    </button>
+                </div>
+
+                <div id="progress-container">
+                    <div id="progress">
+                        <div id="progress-bar">
+                            <img src="assets/img/hand.gif" alt="An animated severed hand crawling along the progress bar" id="progress-image"> <!-- 0 - 90%-->
+                        </div>
+                        <div class="win-loose">
+                            <img id="gravestone" class="hide" src="assets/img/gravestone.png" alt="A gravestone with dirty and a single daisy growing from it">
+                            <img id="heart" class="hide" src="assets/img/heart.png" alt="A zombie-looking broken heart">
+                            <img id="potion" class="hide" src="assets/img/blue-potion.png" alt="A blue potion bottle">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="little-spider">
-                <div class="spider-web" id="spider-web"></div>
-                <div class="spider-container">
-                    <img id="spider" src="assets/img/enemy_spider.png" alt="An animated spider dropping down from the top of the screen on a strand of web">
+                <div class="little-spider">
+                    <div class="spider-web" id="spider-web"></div>
+                    <div class="spider-container">
+                        <img id="spider" src="assets/img/enemy_spider.png" alt="An animated spider dropping down from the top of the screen on a strand of web">
+                    </div>
                 </div>
-            </div>
 
-        </section>
-    </main>
+            </section>
+        </main>
 
     <footer>
         <p>Copyright &copy; Blood, Sweat, and Brains <span id="copyright"></span></p>
     </footer>
 
-    <!-- Local scripts -->
-    <script src="assets/js/audio.js"></script>
-    <script src="assets/js/variables.js"></script>
-    <script src="assets/js/check-age.js"></script>
-    <script src="assets/js/story-class.js"></script>
-    <script src="assets/js/background.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/east-west.js"></script>
-    <script src="assets/js/story.js"></script>
-</body>
+        <!-- Local scripts -->
+        <script src="assets/js/audio.js"></script>
+        <script src="assets/js/variables.js"></script>
+        <script src="assets/js/check-age.js"></script>
+        <script src="assets/js/story-class.js"></script>
+        <script src="assets/js/background.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/east-west.js"></script>
+        <script src="assets/js/story.js"></script>
+    </body>
 </html>
