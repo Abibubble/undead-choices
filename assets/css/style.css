@@ -17,7 +17,7 @@ body {
 
 button {
     position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 /* ------------------------------------------------------- Utilities */
@@ -129,15 +129,6 @@ footer {
     width: 80%;
     border-radius: 2rem;
     margin: -1.5rem auto;
-    position: relative;
-}
-
-#paragraph-404-container {
-    background-color: #00000088;
-    height: 9rem;
-    width: 80%;
-    border-radius: 2rem;
-    margin: auto;
     position: relative;
 }
 
@@ -320,6 +311,10 @@ main {
 .modal-grid a,
 .paragraph-holder-grid a {
     text-decoration: none;
+}
+
+.modal-grid a {
+    padding-top: 23px;
 }
 
 .modal-grid a:visited,
@@ -641,6 +636,15 @@ main {
 
 /* ------------------------------------------------------- 404 page */
 
+#paragraph-404-container {
+    background-color: #00000088;
+    height: 11rem;
+    width: 70%;
+    border-radius: 2rem;
+    margin: auto;
+    position: relative;
+}
+
 .paragraph-holder-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -662,6 +666,7 @@ main {
 
 #safety-btn {
     grid-area: safety-btn;
+    font-size: 1rem;
 }
 
 /* ----------------------------------------------------  Media queries */
