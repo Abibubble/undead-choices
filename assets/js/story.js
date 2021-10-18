@@ -270,15 +270,23 @@ pageBtn.addEventListener("click", nextPage);
  * resets paraNumber, increases pageNumber and populates story text
  */
 function nextPage() {
-    pageNumber++;
-    paraNumber = 1;
-    runStory();
-    // if (!storyEnd) {
+    if (pageNumber === 18) {
+        if (hasDrink) {
+            goToPage(19);
+        } else {
+            goToPage(23);
+        }
+    } else {
+        pageNumber++;
+        paraNumber = 1;
+        runStory();
+        // if (!storyEnd) {
         flipPage(background[pageNumber]);
         checkButtons();
         populateStoryText();
+    }
     // } else {
-        // showError();
+    // showError();
     // }
     // updateProgress();
 }
@@ -288,11 +296,11 @@ function goToPage(destinationPageNumber) {
     paraNumber = 1;
     runStory();
     // if (!storyEnd) {
-        flipPage(background[pageNumber]);
-        checkButtons();
-        populateStoryText();
+    flipPage(background[pageNumber]);
+    checkButtons();
+    populateStoryText();
     // } else {
-        // showError();
+    // showError();
     // }
 }
 
@@ -378,7 +386,7 @@ function runStory() {
             switch (paraNumber) {
                 case 1:
                     if (zombieKingVisited === "kingNotSeen") {
-                    updateProgressBar(59);
+                        updateProgressBar(59);
                     } else {
                         updateProgressBar(94);
                     }
@@ -526,12 +534,7 @@ function runStory() {
                     } else {
                         updateProgressBar(39)
                     }
-                    userInputRequired = true;
-                    if (hasDrink) {
-                        goToPage(19);
-                    } else {
-                        goToPage(23);
-                    }
+                    userInputRequired = false;
                     break;
                 default:
                     userInputRequired = false;
@@ -626,10 +629,10 @@ function runStory() {
                     userInputRequired = false;
                     storyEnd = false;
             }
-        default:
-            hideInputs();
-            userInputRequired = false;
-            storyEnd = false;
+            default:
+                hideInputs();
+                userInputRequired = false;
+                storyEnd = false;
     }
 }
 
