@@ -622,14 +622,11 @@ function runStory() {
             switch (paraNumber) {
                 case 1:
                     updateProgressBar(45);
-                    userInputRequired = true;
-                    storyEnd = true;
+                    userInputRequired = false;
                     zombieKingVisited = "kingSeen";
-                    goToPage(4);
                     break;
                 default:
                     userInputRequired = false;
-                    storyEnd = false;
             }
             break;
         case 24:
