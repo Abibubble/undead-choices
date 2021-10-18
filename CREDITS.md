@@ -81,3 +81,6 @@
 * [Cartoon lips](https://pixabay.com/vectors/lips-mouth-smile-teeth-happy-156991/).
 * [An outline of a witch on a broomstick](https://pixabay.com/vectors/witch-evil-scary-spooky-halloween-1751025/).
 * [Four pills of varying shapes and sizes](https://pixabay.com/illustrations/pill-capsule-medicine-medical-1884775/).
+* [Green goo blobs](https://pixabay.com/illustrations/particles-green-goo-design-792301/).
+* [Knotted tree](https://unsplash.com/photos/Ytxbq_DhUwY).
+* [Two people touching fingertips](https://unsplash.com/photos/_UIVmIBB3JU).
