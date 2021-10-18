@@ -64,7 +64,7 @@ function playSoundEffect(which) {
                 audioFile.giggle.play();
                 break;
             default:
-                //
+                break;
         }
     }
 }
@@ -108,7 +108,7 @@ function pauseSoundEffect(which) {
             audioFile.giggle.pause();
             break;
         default:
-            //
+            break;
     }
 }
 
