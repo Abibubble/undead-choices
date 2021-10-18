@@ -229,6 +229,14 @@ Google DevTools was used to help me find what code correlated to what feature.
 
 [DeepStory AI](https://www.deepstory.ai/#!/) was used to help with creating the storyline.
 
+#### Online Convert
+
+[Online Convert](https://image.online-convert.com/convert-to-webp) was used to convert our images to webp format.
+
+#### Compressor
+
+[Compressor.io](https://compressor.io/) was used to compress our images.
+
 [Back to Top](#title)
 
 ---
