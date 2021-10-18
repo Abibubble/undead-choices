@@ -313,6 +313,10 @@ main {
     text-decoration: none;
 }
 
+.modal-grid a {
+    padding-top: 23px;
+}
+
 .modal-grid a:visited,
 .paragraph-holder-grid a:visited {
     color: black;
@@ -662,6 +666,7 @@ main {
 
 #safety-btn {
     grid-area: safety-btn;
+    font-size: 1rem;
 }
 
 /* ----------------------------------------------------  Media queries */
