@@ -197,7 +197,8 @@ const pageBtn = document.getElementById("next-page");
  * @returns Array of paragraphs
  */
 function getParas() {
-    return paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+    paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+    return paras;
 }
 
 /** Modifies story text */
@@ -263,18 +264,16 @@ function previousPara() {
 // Scroll trough pages with keyboard arrow keys
 document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowRight') {
-        if (nextBtn.classList.contains("hide") ) {
-        } else {
+        if (nextBtn.classList.contains("hide")) {} else {
             nextPara();
         }
     }
     if (event.key === 'ArrowLeft') {
-        if (previousBtn.classList.contains("hide") ) {
-        } else {
+        if (previousBtn.classList.contains("hide")) {} else {
             previousPara();
         }
     }
-  });
+});
 
 nextBtn.addEventListener("click", nextPara);
 previousBtn.addEventListener("click", previousPara);
@@ -472,9 +471,9 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     if (hasDrink) {
-                        updateProgressBar(59)
+                        updateProgressBar(59);
                     } else {
-                        updateProgressBar(25)
+                        updateProgressBar(25);
                     }
                     userInputRequired = true;
                     showFeedNoFeed();
@@ -501,12 +500,12 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     if (hasDrink) {
-                        updateProgressBar(66)
+                        updateProgressBar(66);
                     } else {
-                        updateProgressBar(26)
+                        updateProgressBar(26);
                     }
                     userInputRequired = true;
-                    showContinueOrFlee()
+                    showContinueOrFlee();
                     break;
                 default:
                     userInputRequired = false;
@@ -530,9 +529,9 @@ function runStory() {
             switch (paraNumber) {
                 case 6:
                     if (hasDrink) {
-                        updateProgressBar(70)
+                        updateProgressBar(70);
                     } else {
-                        updateProgressBar(32)
+                        updateProgressBar(32);
                     }
                     userInputRequired = true;
                     showHelpOrNot();
@@ -546,9 +545,9 @@ function runStory() {
             switch (paraNumber) {
                 case 2:
                     if (hasDrink) {
-                        updateProgressBar(76)
+                        updateProgressBar(76);
                     } else {
-                        updateProgressBar(39)
+                        updateProgressBar(39);
                     }
                     break;
                 default:
@@ -641,10 +640,11 @@ function runStory() {
                     userInputRequired = false;
                     storyEnd = false;
             }
-            default:
-                hideInputs();
-                userInputRequired = false;
-                storyEnd = false;
+            break;
+        default:
+            hideInputs();
+            userInputRequired = false;
+            storyEnd = false;
     }
 }
 
@@ -658,7 +658,7 @@ function flipPage(background) {
     setTimeout(() => {
         waitingPage.style.backgroundImage = background;
         currentPage.style.animationName = "none";
-    }, 2200)
+    }, 2200);
 }
 
 populateStoryText();
