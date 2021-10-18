@@ -299,6 +299,8 @@ function nextPage() {
         } else {
             goToPage(23);
         }
+    } else if (pageNumber === 23) {
+        goToPage(4);
     } else {
         pageNumber++;
         paraNumber = 1;
