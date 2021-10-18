@@ -57,7 +57,7 @@ function showDrinks(collectedDrink) {
 function consumeRed() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(9)
+    goToPage(9);
   } else {
     goToPage(21);
   }
@@ -66,7 +66,7 @@ function consumeRed() {
 function consumePurple() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(10)
+    goToPage(10);
   } else {
     goToPage(22);
   }
@@ -75,7 +75,7 @@ function consumePurple() {
 function consumeBlue() {
   hideInputs();
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(11)
+    goToPage(11);
   } else {
     goToPage(20);
   }
@@ -85,7 +85,7 @@ function collectRed() {
   hideInputs();
   hasDrink = true;
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13)
+    goToPage(13);
   } else {
     drinkColor = "red";
     goToPage(19);
@@ -96,7 +96,7 @@ function collectPurple() {
   hideInputs();
   hasDrink = true;
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13)
+    goToPage(13);
   } else {
     drinkColor = "purple";
     goToPage(19);
@@ -107,7 +107,7 @@ function collectBlue() {
   hideInputs();
   hasDrink = true;
   if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13)
+    goToPage(13);
   } else {
     drinkColor = "blue";
     goToPage(19);

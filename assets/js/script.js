@@ -27,7 +27,7 @@ let spider = document.getElementsByClassName("little-spider")[0];
 let spiderWeb = document.getElementById("spider-web");
 
 function moveSpider() {
-    spider.style.height = `74vh`
+    spider.style.height = `74vh`;
     setTimeout(function () {
         spiderWeb.style.backgroundColor = "#faebd700";
 
