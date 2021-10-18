@@ -446,6 +446,7 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     // showRedDeath();
@@ -460,6 +461,7 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     // showPurpleDeath();
@@ -474,6 +476,7 @@ function runStory() {
             switch (paraNumber) {
                 case 2:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     // showWin();
@@ -528,6 +531,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
+                    playSoundEffect("bite");
                     userInputRequired = false;
                     storyEnd = true;
                     gravestone.classList.remove("hide");
@@ -624,6 +628,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     potion.classList.remove("hide");
@@ -639,6 +644,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     gravestone.classList.remove("hide");
@@ -653,6 +659,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
+                    playSoundEffect("drink");
                     userInputRequired = false;
                     storyEnd = true;
                     heart.classList.remove("hide");
