@@ -57,3 +57,4 @@ const containerArray = Array.from(Object.keys(containerObj));
 // ---------------------------------------------------------------- Image control
 
 const staticImage = document.getElementById("content-image");
+const statImg = new Image();
