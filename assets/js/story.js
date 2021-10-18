@@ -190,7 +190,8 @@ function animateWalkingOff(name) {
     moveSpider();
 }
 
-// ---------------------------------story control
+// ---------------------------------------------------------------- Story control
+
 const pages = Array.from(Object.keys(story));
 
 // paragraph control
@@ -199,6 +200,11 @@ storyText.addEventListener("transitionend", checkButtons);
 const nextBtn = document.getElementById("next-btn");
 const previousBtn = document.getElementById("previous-btn");
 const pageBtn = document.getElementById("next-page");
+
+// Ending image for progress bar
+const gravestone = document.getElementById("gravestone");
+const heart = document.getElementById("heart");
+const potion = document.getElementById("potion");
 
 /**
  * Array of paragraphs from current page
@@ -423,6 +429,7 @@ function runStory() {
                     storyEnd = true;
                     // assignOutro();
                     // showRedDeath();
+                    gravestone.classList.remove("hide");
                     break;
                 default:
                     userInputRequired = false;
@@ -436,6 +443,7 @@ function runStory() {
                     userInputRequired = true;
                     storyEnd = true;
                     // showPurpleDeath();
+                    heart.classList.remove("hide");
                     break;
                 default:
                     userInputRequired = false;
@@ -449,6 +457,7 @@ function runStory() {
                     userInputRequired = true;
                     storyEnd = true;
                     // showWin();
+                    potion.classList.remove("hide");
                     break;
                 default:
                     userInputRequired = false;
@@ -501,6 +510,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    gravestone.classList.remove("hide");
                     // showFeedDeath();
                     break;
                 default:
@@ -530,6 +540,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     stroyEnd = true;
+                    gravestone.classList.remove("hide");
                     // showRunDeath();
                     break;
                 default:
@@ -595,6 +606,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    potion.classList.remove("hide");
                     // showWin();
                     // win
                     break;
@@ -609,6 +621,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    gravestone.classList.remove("hide");
                     // showRedDeath();
                     break;
                 default:
@@ -622,6 +635,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    heart.classList.remove("hide");
                     // showPurpleDeath();
                     break;
                 default:
@@ -646,6 +660,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    gravestone.classList.remove("hide");
                     // showNoHelpDeath();
                     break;
                 default:
