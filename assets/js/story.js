@@ -193,6 +193,7 @@ function animateWalkingOff(name) {
 // ---------------------------------------------------------------- Story control
 
 const pages = Array.from(Object.keys(story));
+const pageImages = Array.from(Object.keys(contImage));
 
 // paragraph control
 const storyText = document.getElementById("story-text");
@@ -211,14 +212,23 @@ const potion = document.getElementById("potion");
  * @returns Array of paragraphs
  */
 function getParas() {
-    let paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
-    return paras;
+    return paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+}
+
+function getContImage() {
+    return paraImages = Array.from(Object.keys(contImage[pageImages[pageNumber - 1]]));
 }
 
 /** Modifies story text */
 function populateStoryText() {
     getParas();
     storyText.innerText = story[pages[pageNumber - 1]][paras[paraNumber - 1]];
+    while (staticImage.children.length > 0) {
+        staticImage.removeChild(staticImage.children[0]);
+    }
+    getContImage();
+    statImg.src = `${contImage[pageImages[pageNumber - 1]][paraImages[paraNumber - 1]]}`;
+    staticImage.appendChild(statImg);
 }
 
 /**
@@ -263,6 +273,7 @@ function nextPara() {
  * moves to previous paragraph
  */
 function previousPara() {
+    staticImage.appendChild(statImg);
     storyText.classList.add("scale-0");
     paraNumber--;
     previousBtn.classList.add("hide");
@@ -484,7 +495,7 @@ function runStory() {
                     }
                     showDrinks(collectDrink);
                     break;
-                case 3:                    
+                case 3:
                     userInputRequired = false;
                     if (zombieKingVisited === "kingNotSeen") {
                         goToPage(13);
