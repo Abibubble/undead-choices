@@ -871,6 +871,12 @@ main {
     }
 }
 
+@media screen and (max-width: 530px) {
+    .modal-grid a {
+        padding-top: 18px;
+    }
+}
+
 @media screen and (max-width: 460px) {
     h1 {
         font-size: 1.7rem;
