@@ -41,7 +41,7 @@ function checkAvatar(avatar) {
         pronoun_they = "he";
     } else if (avatar === "girl" || avatar === "woman") {
         pronoun_their = "her";
-        pronoun_them = "them";
+        pronoun_them = "her";
         pronoun_they = "she";
     } else {
         pronoun_their = "their";
@@ -299,6 +299,8 @@ function nextPage() {
         } else {
             goToPage(23);
         }
+    } else if (pageNumber === 23) {
+        goToPage(4);
     } else {
         pageNumber++;
         paraNumber = 1;
@@ -318,13 +320,21 @@ function goToPage(destinationPageNumber) {
     populateStoryText();
 }
 
-// function assignOutro() {
-//     pageBtn.addEventListener("click", )
-// }
+function assignOutro() {
+    pageBtn.removeEventListener("click", nextPage);
+    pageBtn.addEventListener("click", outroPage);
+}
 
-// function unassignOutro() {
+function unassignOutro() {
+    pageBtn.removeEventListener("click", outroPage);
+    pageBtn.addEventListener("click", nextPage);
+}
 
-// }
+function outroPage() {
+    let currentURL = window.location.href;
+    let newURl = currentURL.replace("index.html", "outro.html");
+    window.location = newURl;
+}
 
 function hideInputs() {
     // name input
@@ -337,7 +347,7 @@ function hideInputs() {
     hideFeedNoFeed();
     hideContinueOrFlee();
     hideHelpOrNot();
-    // unassignOutro();
+    unassignOutro();
 }
 
 function showNameInput() {
@@ -419,9 +429,8 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
-                    // assignOutro();
                     // showRedDeath();
                     break;
                 default:
@@ -433,7 +442,7 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showPurpleDeath();
                     break;
@@ -446,7 +455,7 @@ function runStory() {
             switch (paraNumber) {
                 case 2:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showWin();
                     break;
@@ -499,7 +508,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showFeedDeath();
                     break;
@@ -593,7 +602,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showWin();
                     // win
@@ -607,7 +616,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showRedDeath();
                     break;
@@ -620,7 +629,7 @@ function runStory() {
             switch (paraNumber) {
                 case 4:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showPurpleDeath();
                     break;
@@ -644,7 +653,7 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
-                    userInputRequired = true;
+                    userInputRequired = false;
                     storyEnd = true;
                     // showNoHelpDeath();
                     break;
@@ -657,6 +666,9 @@ function runStory() {
             hideInputs();
             userInputRequired = false;
             storyEnd = false;
+    }
+    if (storyEnd) {
+        assignOutro();
     }
 }
 
