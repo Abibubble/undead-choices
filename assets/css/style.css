@@ -636,6 +636,11 @@ main {
     }
 }
 
+.no-script-img {
+    height: 50%;
+    width: auto;
+}
+
 /* ------------------------------------------------------- 404 page */
 
 #paragraph-404-container {
