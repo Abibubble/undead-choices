@@ -681,6 +681,9 @@ function runStory() {
             hideInputs();
             userInputRequired = false;
             storyEnd = false;
+            gravestone.classList.add("hide");
+            heart.classList.add("hide");
+            potion.classList.add("hide");
     }
     if (storyEnd) {
         assignOutro();
@@ -688,8 +691,8 @@ function runStory() {
 }
 
 /**
- * clears page and flips next page on top.
  * @param {string} background url from object
+ * clears page and flips next page on top.
  */
 function flipPage(background) {
     currentPage.style.animationName = "flip-page";
