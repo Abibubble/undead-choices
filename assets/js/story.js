@@ -260,6 +260,22 @@ function previousPara() {
     hideInputs(); // allows immediate hiding of inputs if paragraph reversed
 }
 
+// Scroll trough pages with keyboard arrow keys
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowRight') {
+        if (nextBtn.classList.contains("hide") ) {
+        } else {
+            nextPara();
+        }
+    }
+    if (event.key === 'ArrowLeft') {
+        if (previousBtn.classList.contains("hide") ) {
+        } else {
+            previousPara();
+        }
+    }
+  });
+
 nextBtn.addEventListener("click", nextPara);
 previousBtn.addEventListener("click", previousPara);
 
