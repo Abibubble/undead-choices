@@ -9,9 +9,9 @@
 
 [Here is a link to the final project](https://abibubble.github.io/undead-choices/)
 
-This project was created for the Code Institute Halloween Hackathon in October 2021. The theme for this was 'Spookathon'. We were tasked with creating an interactive Halloween book or story. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through.
+This project was created for the Code Institute Halloween Hackathon in October 2021. The theme for this was 'Spookathon', where we were tasked with creating an interactive Halloween book or story. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through.
 
-![Final project image home page](assets/docs/img/finalsite.png)
+![Final project image home page](assets/docs/finalsite.png)
 
 ## Contents
 
@@ -120,8 +120,14 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 
 ### Wireframes
 
-![Wireframes for desktop for this project](assets/docs/wireframes-desktop.png)
-![Wireframes for mobile for this project](assets/docs/wireframes-mobile.png)
+The design for this site changed as we realised what was a realistic end product. These are the original wireframes:
+
+* [Original wireframes for desktop for this project](assets/docs/wireframes-desktop.png).
+* [Original wireframes for mobile for this project](assets/docs/wireframes-mobile.png).
+
+Once we had changed the designs for the site, we re-made the wireframes for our new design ideas:
+
+* [Wireframes after design change](assets/docs/wireframes.pdf).
 
 ### Features
 
@@ -132,6 +138,12 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 * Multiple story endings.
 * Background audio that changes depending on the section of story that the user is on.
 * Sound effects that play when the user is reading the relevant page.
+
+### Future Features
+
+* A different image for every paragraph, depicting what's happening in the story.
+* Full sound effects linked to each page.
+* Randomised spider animation for going up and down its web.
 
 ### Audio
 
@@ -146,6 +158,7 @@ This project was created for the Code Institute Halloween Hackathon in October 2
   * Zombie hiss audio for zombie attacks.
   * Zombie moan audio for when zombies speak.
   * Page turning audio for when the user turns the page.
+  * Child giggling audio for the child-friendly choice.
 * Two different background audios have been used:
   * Gentle eerie audio, for the majority of the story.
   * Dramatic music for when the zombie horde arrives.
@@ -276,13 +289,19 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the project to ensure there were no syntax errors within the site.
 
 1. W3C Markup Validator
-    * [HTML Results](LINK)
+    * [HTML Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2F)
+    * [Outro page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2Foutro.html)
+    * [404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2F404.html)
 
 2. W3C CSS Validator
-    * [CSS Results](LINK)
+    * [Index page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    * [Outro page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2Foutro.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    * [404 page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fabibubble.github.io%2Fundead-choices%2F404.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-3. JSHint
-    * [JSHint](https://jshint.com/)
+3. JSHint Extension
+    * [JSHint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+    * The JSHint Extension for VSCode was used to validate the JavaScript in this project.
+    * No validation errors were found.
 
 [Back to Top](#title)
 
@@ -293,6 +312,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 ##### To depict a Halloween story or fairy tale
 
 * This site features a Halloween story written by our team (with some help from [an AI writing bot](https://www.deepstory.ai/#!/)).
+* The story is of a zombie discovering they're a zombie, and searching for a cure for the Zombie King.
 
 ##### To be able to be interacted with in some way
 
@@ -420,35 +440,43 @@ Friends, family members, and other developers were asked to review the site and 
 
 ### Known Bugs
 
-* The pumpkin border on Safari looks too large, but unfortunately we couldn't find why the border-image property isn't being supported properly on Safari.
+* The pronoun updates aren't working for the age inserts currently.
+* The characters walk off the screen after the user chooses a character, then reappear and are dragged off.
+* The spider comes down the web, but doesn't go back up.
 
 ### Lighthouse
 
-I tested my website using DevTools Lighthouse feature, and got these results:
+We tested our website using DevTools Lighthouse feature, and got these results:
 
 #### Desktop Lighthouse
 
-![Lighthouse desktop first try](assets/docs/lighthouse.png)
+![Lighthouse desktop first try](assets/docs/lighthouse-desktop.png)
 
 #### Mobile Lighthouse
 
-![Lighthouse mobile first try](assets/docs/lighthousemobile.png)
+![Lighthouse mobile first try](assets/docs/lighthouse-mobile.png)
 
 #### Performance
 
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* Unfortunately we weren't as happy with this score.
+* We lost a lot of points here because the site is incredibly image-heavy.
+* We have also used gifs for animated content, which Lighthouse usually recommends to display as videos.
+* This wasn't an option for us, due to how we wanted to use the gifss.
 
 #### Accessibility
 
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* We were happy with this score.
+* We ensured to include accessibility as a top priority whilst developing this site.
 
 #### Best Practices
 
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* We were happy with this score.
+* The only thing causing us to lose points here was the severed hand gif, which we have rendered slightly squashed. However, this was a design choice, as we wanted the hand to look like it was being pressed in my the top and bottom of the progress bar.
 
 #### SEO
 
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* We were happy with this score.
+* We ensured to have all relevant meta tags in place for best SEO.
 
 [Back to Top](#title)
 
