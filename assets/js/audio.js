@@ -20,7 +20,7 @@ const audioFile = { // Set audio files within object
         hiss: new Audio('assets/audio/zombie-hiss.mp3'),
         moan: new Audio('assets/audio/zombie-moan.mp3'),
     },
-}
+};
 
 function playSoundEffect(which) {
     if (music) {

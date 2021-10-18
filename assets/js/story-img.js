@@ -25,4 +25,4 @@ const storyImg = {
   21: "url(assets/img/background/red.webp",
   20: "url(assets/img/background/blue.webp",
   18: "url(assets/img/background/spook-forest.webp",
-}
+};

@@ -34,7 +34,7 @@ const containerObj = {
   feedNoFeed: document.getElementById("feed-no-feed-container"),
   continueFlee: document.getElementById("continue-flee-container"),
   helpNoHelp: document.getElementById("help-no-help-container"),
-}
+};
 
 const choiceButtonsObj = {
   east: document.getElementById("east-btn"),
@@ -50,7 +50,7 @@ const choiceButtonsObj = {
   flee: document.getElementById("flee-btn"),
   help: document.getElementById("help-btn"),
   noHelp: document.getElementById("no-help-btn"),
-}
+};
 
 const containerArray = Array.from(Object.keys(containerObj));
 

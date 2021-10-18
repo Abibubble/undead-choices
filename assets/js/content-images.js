@@ -117,7 +117,7 @@ const contImage = {
     2: "assets/img/content-images",
     3: "assets/img/content-images",
   },
-}
+};
 
 const contentImage = new Image();
 contentImage.src = contImage[pageNumber[paraNumber]];
