@@ -338,8 +338,8 @@ function unassignOutro() {
 
 function outroPage() {
     let currentURL = window.location.href;
-    let newURl = currentURL.replace("index.html", "outro.html");
-    window.location = newURl;
+    let newURL = currentURL + "outro.html";
+    window.location = newURL;
 }
 
 function hideInputs() {
