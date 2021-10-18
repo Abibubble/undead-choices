@@ -534,7 +534,7 @@ function runStory() {
                     } else {
                         updateProgressBar(39)
                     }
-                    userInputRequired = false;
+                    userInputRequired = true;
                     break;
                 default:
                     userInputRequired = false;
