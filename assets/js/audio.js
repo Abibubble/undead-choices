@@ -5,7 +5,6 @@
 let music = false; // Start with audio off, autoplay is super bad
 
 const audioFile = { // Set audio files within object
-    // todo would allow iterating through to add attributes (eg loop) I CANT GET THIS TO WORK :'(
     giggle: new Audio('assets/audio/giggle.mp3'),
     bubbles: new Audio('assets/audio/boiling-bubbles.mp3'),
     drink: new Audio('assets/audio/drinking-water.mp3'),
@@ -69,47 +68,17 @@ function playSoundEffect(which) {
     }
 }
 
-function pauseSoundEffect(which) {
-    switch (which.toLowerCase()) {
-        case 'bubbles':
-            audioFile.bubbles.pause();
-            break;
-        case 'drink':
-            audioFile.drink.pause();
-            break;
-        case 'largehorde':
-            audioFile.largeHorde.pause();
-            break;
-        case 'smallhorde':
-            audioFile.smallHorde.pause();
-            break;
-        case 'puddle':
-            audioFile.puddle.pause();
-            break;
-        case 'windy':
-            audioFile.windy.pause();
-            break;
-        case 'background':
-            audioFile.background.pause();
-            break;
-        case 'backgroundintense':
-            audioFile.backgroundIntense.pause();
-            break;
-        case 'bite':
-            audioFile.zombie.bite.pause();
-            break;
-        case 'hiss':
-            audioFile.zombie.bite.pause();
-            break;
-        case 'moan':
-            audioFile.zombie.moan.pause();
-            break;
-        case 'giggle':
-            audioFile.giggle.pause();
-            break;
-        default:
-            //
-    }
+function pauseSoundEffect() {
+    audioFile.bubbles.pause();
+    audioFile.drink.pause();
+    audioFile.largeHorde.pause();
+    audioFile.smallHorde.pause();
+    audioFile.puddle.pause();
+    audioFile.windy.pause();
+    audioFile.zombie.bite.pause();
+    audioFile.zombie.bite.pause();
+    audioFile.zombie.moan.pause();
+    audioFile.giggle.pause();
 }
 
 // ---------------------------------------------------------------- Toggle audio

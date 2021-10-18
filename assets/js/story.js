@@ -689,6 +689,7 @@ function runStory() {
             }
             break;
         default:
+            pauseSoundEffect();
             hideInputs();
             userInputRequired = false;
             storyEnd = false;
