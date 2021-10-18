@@ -211,7 +211,7 @@ const potion = document.getElementById("potion");
  * @returns Array of paragraphs
  */
 function getParas() {
-    paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+    let paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
     return paras;
 }
 
