@@ -34,7 +34,7 @@ const contImage = {
   9: {
     1: "assets/img/content-images/lips.webp",
     2: "assets/img/content-images/pouring-drink-into-self.webp",
-    3: "assets/img/content-images/red_bubble.webp",
+    3: "assets/img/content-images/red_bubbles.webp",
   },
   10: {
     1: "assets/img/content-images/pouring-drink-into-self.webp",

@@ -5,7 +5,6 @@
 let music = false; // Start with audio off, autoplay is super bad
 
 const audioFile = { // Set audio files within object
-    // todo would allow iterating through to add attributes (eg loop) I CANT GET THIS TO WORK :'(
     giggle: new Audio('assets/audio/giggle.mp3'),
     bubbles: new Audio('assets/audio/boiling-bubbles.mp3'),
     drink: new Audio('assets/audio/drinking-water.mp3'),
