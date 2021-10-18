@@ -137,10 +137,6 @@ function hideCharacter() {
 }
 
 function animateWalkingOff(name) {
-    if (name) {
-        // walk off candy
-    }
-
     if (name === "boy") {
         girl.classList.add("hide");
         candy.classList.add("hide");
