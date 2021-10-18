@@ -37,8 +37,8 @@ class AgeInserts {
             child: "",
         };
         this.collectDrink = {
-            adult: `${userName} reached forward to collect a concoction and continued on their quest...`,
-            child: `As ${userName} reached forward to collect a concoction, the chocolate wrapper fell from ${pronoun_their} pocket. They selected a potion and continued on their quest...`,
+            adult: `${userName} reached forward to collect a concoction and continued on ${pronoun_their} quest...`,
+            child: `As ${userName} reached forward to collect a concoction, the chocolate wrapper fell from ${pronoun_their} pocket. ${pronoun_they} selected a potion and continued on ${pronoun_their} quest...`,
         };
         this.collectReturn = {
             adult: ` It was pressed a little too tightly against ${pronoun_their} body, ${pronoun_they} heard a rib crack under the extra pressure. Oh well...`,
@@ -86,8 +86,8 @@ class Story {
         }; //1
         // user inputs name
         this.page2 = {
-            avatar: `${userName} hunched down. Staring into a murky puddle, their reflection can just about be seen...\n
-          What did they see?`,
+            avatar: `${userName} hunched down. Staring into a murky puddle, their reflection can just about be seen...\nWhat did they see?\n
+            Select your character image`,
         }; //2
         // user inputs avatar
         this.page3 = {
@@ -106,7 +106,7 @@ class Story {
             twirl: `${userName} clambered over some old barrels toward a slightly open door. A tatty heart-shaped box lay on the floor. It appeared to have a Twirl inside it, the purple wrapper just sticking out. No need for more chocolate!`,
         }; //5
         this.east3 = {
-            brambles: `Thick brambles grew into the door frame, ${userName} pried it open with a loud creak. Inside, down a dark and eery corridor, ${userName} came to a dimly lit room.`,
+            brambles: `Thick brambles grew into the door frame, ${userName} pried it open with a loud creak. Inside, down a dark and eerie corridor, ${userName} came to a dimly lit room.`,
         }; //6
         this.east4 = {
             flasks: `Rotten pumpkins sat in the corner, rats nibbling at the remains. On a table in the middle of the room, there stood three pristine glass flasks...`,
@@ -133,7 +133,7 @@ class Story {
         }; //10
         this.blueDrink = {
             drink: `${userName} slowly picked up the gleaming blue brew. ${pronoun_their} hand trembled as ${pronoun_they} brought it to ${pronoun_their} mouth. Slowly, ${userName} began to sip from the flask.`,
-            result: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again...${userName} was cured! ${ageInserts.blueDrinkResult[age]}${userName} knew ${pronoun_they} were human once again!`,
+            result: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again... ${userName} was cured! ${ageInserts.blueDrinkResult[age]}${userName} knew ${pronoun_they} were human once again!`,
             // win...but not fully
         }; //11
         // collect
@@ -166,7 +166,7 @@ class Story {
         // don't feed
         this.noFeed = {
             noFeed1: `Using what was left of ${pronoun_their} logic, ${userName} decided it best not to take on a 10ft snowman zombie and greeted Brian instead.`,
-            noFeed2: `'Hello, I am ${userName},' ${userName} called out, 'I mean you no harm, can you help me?'. An eery howl was heard in the distance. Brian trundled toward ${pronoun_them}.`,
+            noFeed2: `'Hello, I am ${userName},' ${userName} called out, 'I mean you no harm, can you help me?'. An eerie howl was heard in the distance. Brian trundled toward ${pronoun_them}.`,
             noFeed3: `'You look pale,' Brian groaned, 'You must be one of Toby's creeps... He is the king of all zombies!! I hear he is looking for the cure, perhaps you can help him.'.`,
             noFeed4: `The giant snowman waved an arm vaguely to the south, 'Head that way, you will find him soon enough.'`,
         }; //15
@@ -178,7 +178,7 @@ class Story {
             // dead
         }; //16
         this.south = {
-            south1: `${userName} headed toward the south. The trees seemed to be more twisted now. An owl sat up high, hooting. A dull and rhythmic thudding grew louder as ${userName} stomped toward a cave.`,
+            south1: `${userName} headed south. The trees seemed to be more twisted now. An owl sat up high, hooting. A dull and rhythmic thudding grew louder as ${userName} stomped toward a cave.`,
             south2: `The glow of a firey torch illuminated the cave entrance. A horde of zombies marched mindlessly in circles. A couple of zombies sat off to one side, boiling something in a pan.${ageInserts.southSouth2[age]}`,
             toby: `'Welcome, ${userName}, I am Toby... King of the Zombies!' a loud and powerful voice echoed, 'I am fed up with these imbeciles, look at those two trying to make rice! What use is that to our kind? Especially when it's so burnt?!'`,
             toby2: `${userName} saw a grand-looking figure gesturing to the couple by the cave entrance. His eyes were piercing ice white, his stocky frame looked less squidgy than the other zombies. A regal necklace surrounded his collar and a jewelled crown sat atop his head.`,
