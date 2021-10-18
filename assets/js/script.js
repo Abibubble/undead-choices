@@ -31,5 +31,5 @@ function moveSpider() {
     setTimeout(function () {
         spiderWeb.style.backgroundColor = "#faebd700";
 
-    }, 10000);
+    }, 4500);
 }
