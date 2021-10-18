@@ -141,9 +141,9 @@ Once we had changed the designs for the site, we re-made the wireframes for our 
 
 ### Future Features
 
-* A different image for every paragraph, depicting what's happening in the story.
 * Full sound effects linked to each page.
 * Randomised spider animation for going up and down its web.
+* Capital letter at the start of a sentence where the user's pronoun starts the sentence.
 
 ### Audio
 
@@ -228,6 +228,14 @@ Google DevTools was used to help me find what code correlated to what feature.
 #### DeepStory AI
 
 [DeepStory AI](https://www.deepstory.ai/#!/) was used to help with creating the storyline.
+
+#### Online Convert
+
+[Online Convert](https://image.online-convert.com/convert-to-webp) was used to convert our images to webp format.
+
+#### Compressor
+
+[Compressor.io](https://compressor.io/) was used to compress our images.
 
 [Back to Top](#title)
 
@@ -441,7 +449,6 @@ Friends, family members, and other developers were asked to review the site and 
 ### Known Bugs
 
 * The pronoun updates aren't working for the age inserts currently.
-* The characters walk off the screen after the user chooses a character, then reappear and are dragged off.
 * The spider comes down the web, but doesn't go back up.
 
 ### Lighthouse
