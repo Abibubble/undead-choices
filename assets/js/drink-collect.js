@@ -84,32 +84,17 @@ function consumeBlue() {
 function collectRed() {
   hideInputs();
   hasDrink = true;
-  if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13);
-  } else {
-    drinkColor = "red";
-    goToPage(19);
-  }
+  drinkColor = "red";
 }
 
 function collectPurple() {
   hideInputs();
   hasDrink = true;
-  if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13);
-  } else {
-    drinkColor = "purple";
-    goToPage(19);
-  }
+  drinkColor = "purple";
 }
 
 function collectBlue() {
   hideInputs();
   hasDrink = true;
-  if (zombieKingVisited === "kingNotSeen") {
-    goToPage(13);
-  } else {
-    drinkColor = "blue";
-    goToPage(19);
-  }
+  drinkColor = "blue";
 }

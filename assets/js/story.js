@@ -303,30 +303,28 @@ function nextPage() {
         pageNumber++;
         paraNumber = 1;
         runStory();
-        // if (!storyEnd) {
         flipPage(background[pageNumber]);
         checkButtons();
         populateStoryText();
     }
-    // } else {
-    // showError();
-    // }
-    // updateProgress();
 }
 
 function goToPage(destinationPageNumber) {
     pageNumber = destinationPageNumber;
     paraNumber = 1;
     runStory();
-    // if (!storyEnd) {
     flipPage(background[pageNumber]);
     checkButtons();
     populateStoryText();
-    // } else {
-    // showError();
-    // }
 }
 
+// function assignOutro() {
+//     pageBtn.addEventListener("click", )
+// }
+
+// function unassignOutro() {
+
+// }
 
 function hideInputs() {
     // name input
@@ -339,11 +337,7 @@ function hideInputs() {
     hideFeedNoFeed();
     hideContinueOrFlee();
     hideHelpOrNot();
-
-    // for (let i = 0; i < containerArray.length; i ++) {
-    //     let cont = containerObj[containerArray[i]];
-    //     cont.classList.add("hide");
-    // }
+    // unassignOutro();
 }
 
 function showNameInput() {
@@ -427,6 +421,7 @@ function runStory() {
                     updateProgressBar(100);
                     userInputRequired = true;
                     storyEnd = true;
+                    // assignOutro();
                     // showRedDeath();
                     break;
                 default:
@@ -463,12 +458,21 @@ function runStory() {
         case 12:
             switch (paraNumber) {
                 case 1:
+                    userInputRequired = true;
                     if (zombieKingVisited === "kingNotSeen") {
                         updateProgressBar(52);
                     } else {
                         updateProgressBar(84);
                     }
                     showDrinks(collectDrink);
+                    break;
+                case 3:                    
+                    userInputRequired = false;
+                    if (zombieKingVisited === "kingNotSeen") {
+                        goToPage(13);
+                    } else {
+                        goToPage(19);
+                    }
                     break;
                 default:
                     userInputRequired = false;
@@ -671,22 +675,3 @@ function flipPage(background) {
 
 populateStoryText();
 checkButtons();
-
-// for (let i = 0; i < pages.length; i++) {
-//     const paras = Array.from(Object.keys(story[pages[i]]));
-//     console.log(paras);
-//     for (let p = 0; p < paras.length; p++) {
-//         console.log(story[pages[i]][paras[p]]);
-//     }
-// }
-
-/* rough logic for storybook
-- for each page, maintain background. loop through paragraphs. (allow <--/-->)
-- increase paragraph number until length is met, turn page. (change icon?)
-- statements to check which page to go to next (ie, west/east)
-- progress bar to update depending on variables set and page met
-- each paragraph has a new image?
-- each page has a new background?
-- age is set at start
-- avatar determines pronoun choice
-*/
