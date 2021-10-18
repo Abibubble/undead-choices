@@ -453,7 +453,7 @@ function runStory() {
                         updateProgressBar(25)
                     }
                     userInputRequired = true;
-                    showFeedOrNot();
+                    showFeedNoFeed();
                     break;
                 default:
                     userInputRequired = false;
