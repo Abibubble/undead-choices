@@ -14,13 +14,13 @@
         <meta property="og:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King"/>
         <meta property="og:url" content="https://abibubble.github.io/undead-choices/"/>
         <meta property="og:site_name" content="Undead Choices"/>
-        <meta property="og:image" name="image" content="docs/img/finalsite.png"/>
+        <meta property="og:image" name="image" content="assets/docs/finalsite.png"/>
         <meta property="og:image:alt" content="The Undead Choices site on a variety of devices">
         <!-- Twitter -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Undead Choices">
         <meta name="twitter:description" content="A choose your own adventure story, based on a zombie's journey to meet the Zombie King">
-        <meta name="twitter:image" content="docs/img/finalsite.png">
+        <meta name="twitter:image" content="assets/docs/finalsite.png">
         <meta name="twitter:image:alt" content="The Undead Choices site on a variety of devices">
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -31,8 +31,6 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/98131a9f62.js" crossorigin="anonymous"></script>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <title>Undead Choices</title>
     </head>
 
@@ -44,7 +42,7 @@
         </header>
 
         <main>
-            <section id="age-modal">
+            <aside id="age-modal">
                 <div class="overlay"></div>
                 <div class="modal-grid">
                     <div class="modal-text">
@@ -60,9 +58,9 @@
                         Psshhh, I'm the bravest around!
                     </button>
                 </div>
-            </section>
+            </aside>
 
-            <section id="brian-modal" class="hide">
+            <aside id="brian-modal" class="hide">
                 <div class="overlay"></div>
                 <div class="modal-grid">
                     <div class="modal-text">
@@ -80,127 +78,124 @@
                         No thanks, I like zombies!
                     </button>
                 </div>
-            </section>
+            </aside>
 
-            <section>
-                <section class="page current">
-                    <div class="image-holder">
-                        <div id="content-image"></div>
-                        <div class="static-image">
-                            <div class="avatars girl hide" id="girl"></div>
-                            <div class="avatars boy hide" id="boy"></div>
-                            <div class="avatars man hide" id="man"></div>
-                            <div class="avatars woman hide" id="woman"></div>
-                            <div class="avatars candy hide" id="candy"></div>
-                        </div>
-                        <!-- Girl -->
-                        <img src="assets/img/girl_walk.gif" alt="A walking zombie girl" id="girl_walk" class="walking-zombie hide">
-                        <!-- Boy -->
-                        <img src="assets/img/boy_walk.gif" alt="A jumping zombie boy" id="boy_walk" class="walking-zombie hide">
-                        <!-- Woman -->
-                        <img src="assets/img/woman_walk.gif" alt="A walking zombie woman" id="woman_walk" class="walking-zombie hide">
-                        <!-- Man -->
-                        <img src="assets/img/man_walk.gif" alt="A walking zombie man" id="man_walk" class="walking-zombie hide">
+            <div class="page current">
+                <div class="image-holder">
+                    <div id="content-image"></div>
+                    <div class="static-image">
+                        <div class="avatars girl hide" id="girl"></div>
+                        <div class="avatars boy hide" id="boy"></div>
+                        <div class="avatars man hide" id="man"></div>
+                        <div class="avatars woman hide" id="woman"></div>
+                        <div class="avatars candy hide" id="candy"></div>
                     </div>
-
-                    <div class="user-name-input-grid" id="user-name-input-section">
-                        <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
-                        <button id="username-btn" class="username-btn btn hide">Click</button>
-                    </div>
-
-                    <div id="paragraph-container">
-                        <div class="paragraph-holder">
-                            <p id="story-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
-                                laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
-                                dicta asperiores accusantium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="next-prev-button-container">
-                        <button id="previous-btn" class="btn page-btn"><i class="fas fa-lg fa-hand-point-left"></i> Previous</button>
-                        <button id="next-btn" class="btn page-btn">Next <i class="fas fa-lg fa-hand-point-right"></i></button>
-                        <button id="next-page" class="btn page-btn">Next Page <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    </div>
-                </section>
-                <div class="page waiting"></div>
-
-                <!-- East / West -->
-                <div class="choice-container hide" id="east-west-container">
-                    <button id="east-btn" class="btn page-btn right-choice">East <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="west-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> West</button>
+                    <!-- Girl -->
+                    <img src="assets/img/girl_walk.gif" alt="A walking zombie girl" id="girl_walk" class="walking-zombie hide">
+                    <!-- Boy -->
+                    <img src="assets/img/boy_walk.gif" alt="A jumping zombie boy" id="boy_walk" class="walking-zombie hide">
+                    <!-- Woman -->
+                    <img src="assets/img/woman_walk.gif" alt="A walking zombie woman" id="woman_walk" class="walking-zombie hide">
+                    <!-- Man -->
+                    <img src="assets/img/man_walk.gif" alt="A walking zombie man" id="man_walk" class="walking-zombie hide">
                 </div>
 
-                <!-- Consume / Collect -->
-                <div class="choice-container hide" id="consume-collect-container">
-                    <button id="consume-btn" class="btn page-btn right-choice">Consume <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="collect-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Collect</button>
+                <div class="user-name-input-grid" id="user-name-input-section">
+                    <input type="text" id="username-input" class="username-input hide" placeholder="Enter your name">
+                    <button id="username-btn" class="username-btn btn hide">Click</button>
                 </div>
 
-                <!-- Red / Purple / Blue -->
-                <div class="choice-container hide" id="red-purple-blue-container">
-                    <button id="red-btn" class="btn page-btn right-choice">
-                        <img src="assets/img/red-potion.png" alt="A red potion">
-                        <br>
-                        <span>Red Potion</span>
-                    </button>
-                    <button id="purple-btn" class="btn page-btn center-choice">
-                        <img src="assets/img/purple-potion.png" alt="A purple potion">
-                        <br>
-                        <span>Purple Potion</span>
-                    </button>
-                    <button id="blue-btn" class="btn page-btn left-choice">
-                        <img src="assets/img/blue-potion.png" alt="A blue potion">
-                        <br>
-                        <span>Blue Potion</span>
-                    </button>
-                </div>
-
-                <!-- Feed / Don't Feed -->
-                <div class="choice-container hide" id="feed-no-feed-container">
-                    <button id="feed-btn" class="btn page-btn right-choice">Feed <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="no-feed-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Don't Feed</button>
-                </div>
-
-                <!-- Continue / Flee -->
-                <div class="choice-container hide" id="continue-flee-container">
-                    <button id="continue-btn" class="btn page-btn right-choice">Continue <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="flee-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Flee</button>
-                </div>
-
-                <!-- Help / Don't Help -->
-                <div class="choice-container hide" id="help-no-help-container">
-                    <button id="help-btn" class="btn page-btn right-choice">Help Toby <i class="fas fa-lg fa-hand-point-right"></i></button>
-                    <button id="no-help-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Don't Help</button>
-                </div>
-
-                <div class="audio-container">
-                    <button class="btn audio-btn" id="audio-btn">
-                        <i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio
-                    </button>
-                </div>
-
-                <div id="progress-container">
-                    <div id="progress">
-                        <div id="progress-bar">
-                            <img src="assets/img/hand.gif" alt="An animated severed hand crawling along the progress bar" id="progress-image"> <!-- 0 - 90%-->
-                        </div>
-                        <div class="win-loose">
-                            <img id="gravestone" class="hide" src="assets/img/gravestone.png" alt="A gravestone with dirty and a single daisy growing from it">
-                            <img id="heart" class="hide" src="assets/img/heart.png" alt="A zombie-looking broken heart">
-                            <img id="potion" class="hide" src="assets/img/blue-potion.png" alt="A blue potion bottle">
-                        </div>
+                <div id="paragraph-container">
+                    <div class="paragraph-holder">
+                        <p id="story-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod assumenda animi, reprehenderit vel,
+                            laudantium cum temporibus id nobis dolor aspernatur molestiae vero accusantium suscipit? Repudiandae rem
+                            dicta asperiores accusantium.
+                        </p>
                     </div>
                 </div>
+                <div class="next-prev-button-container">
+                    <button id="previous-btn" class="btn page-btn"><i class="fas fa-lg fa-hand-point-left"></i> Previous</button>
+                    <button id="next-btn" class="btn page-btn">Next <i class="fas fa-lg fa-hand-point-right"></i></button>
+                    <button id="next-page" class="btn page-btn">Next Page <i class="fas fa-lg fa-hand-point-right"></i></button>
+                </div>
+            </div>
+            <div class="page waiting"></div>
 
-                <div class="little-spider">
-                    <div class="spider-web" id="spider-web"></div>
-                    <div class="spider-container">
-                        <img id="spider" src="assets/img/enemy_spider.png" alt="An animated spider dropping down from the top of the screen on a strand of web">
+            <!-- East / West -->
+            <div class="choice-container hide" id="east-west-container">
+                <button id="east-btn" class="btn page-btn right-choice">East <i class="fas fa-lg fa-hand-point-right"></i></button>
+                <button id="west-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> West</button>
+            </div>
+
+            <!-- Consume / Collect -->
+            <div class="choice-container hide" id="consume-collect-container">
+                <button id="consume-btn" class="btn page-btn right-choice">Consume <i class="fas fa-lg fa-hand-point-right"></i></button>
+                <button id="collect-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Collect</button>
+            </div>
+
+            <!-- Red / Purple / Blue -->
+            <div class="choice-container hide" id="red-purple-blue-container">
+                <button id="red-btn" class="btn page-btn right-choice">
+                    <img src="assets/img/red-potion.png" alt="A red potion">
+                    <br>
+                    <span>Red Potion</span>
+                </button>
+                <button id="purple-btn" class="btn page-btn center-choice">
+                    <img src="assets/img/purple-potion.png" alt="A purple potion">
+                    <br>
+                    <span>Purple Potion</span>
+                </button>
+                <button id="blue-btn" class="btn page-btn left-choice">
+                    <img src="assets/img/blue-potion.png" alt="A blue potion">
+                    <br>
+                    <span>Blue Potion</span>
+                </button>
+            </div>
+
+            <!-- Feed / Don't Feed -->
+            <div class="choice-container hide" id="feed-no-feed-container">
+                <button id="feed-btn" class="btn page-btn right-choice">Feed <i class="fas fa-lg fa-hand-point-right"></i></button>
+                <button id="no-feed-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Don't Feed</button>
+            </div>
+
+            <!-- Continue / Flee -->
+            <div class="choice-container hide" id="continue-flee-container">
+                <button id="continue-btn" class="btn page-btn right-choice">Continue <i class="fas fa-lg fa-hand-point-right"></i></button>
+                <button id="flee-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Flee</button>
+            </div>
+
+            <!-- Help / Don't Help -->
+            <div class="choice-container hide" id="help-no-help-container">
+                <button id="help-btn" class="btn page-btn right-choice">Help Toby <i class="fas fa-lg fa-hand-point-right"></i></button>
+                <button id="no-help-btn" class="btn page-btn left-choice"><i class="fas fa-lg fa-hand-point-left"></i> Don't Help</button>
+            </div>
+
+            <div class="audio-container">
+                <button class="btn audio-btn" id="audio-btn">
+                    <i class="fas fa-volume-off"></i><br><span class="toggle">Toggle </span>Audio
+                </button>
+            </div>
+
+            <div id="progress-container">
+                <div id="progress">
+                    <div id="progress-bar">
+                        <img src="assets/img/hand.gif" alt="An animated severed hand crawling along the progress bar" id="progress-image"> <!-- 0 - 90%-->
+                    </div>
+                    <div class="win-loose">
+                        <img id="gravestone" class="hide" src="assets/img/gravestone.png" alt="A gravestone with dirty and a single daisy growing from it">
+                        <img id="heart" class="hide" src="assets/img/heart.png" alt="A zombie-looking broken heart">
+                        <img id="potion" class="hide" src="assets/img/blue-potion.png" alt="A blue potion bottle">
                     </div>
                 </div>
+            </div>
 
-            </section>
+            <div class="little-spider">
+                <div class="spider-web" id="spider-web"></div>
+                <div class="spider-container">
+                    <img id="spider" src="assets/img/enemy_spider.png" alt="An animated spider dropping down from the top of the screen on a strand of web">
+                </div>
+            </div>
         </main>
 
     <footer>
