@@ -133,7 +133,7 @@ class Story {
         }; //10
         this.blueDrink = {
             drink: `${userName} slowly picked up the gleaming blue brew. ${pronoun_their} hand trembled as ${pronoun_they} brought it to ${pronoun_their} mouth. Slowly, ${userName} began to sip from the flask.`,
-            result: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again... ${userName} was cured! ${ageInserts.blueDrinkResult[age]}${userName} knew ${pronoun_they} were human once again!`,
+            result: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again... ${userName} was cured! ${ageInserts.blueDrinkResult[age]}${userName} knew they were human once again!`,
             // win...but not fully
         }; //11
         // collect
@@ -158,7 +158,7 @@ class Story {
         // feed
         this.feed = {
             feed1: `Stood on the edge of the clearing, ${userName} beckoned the snowman over to ${pronoun_them}. Brian rolled forward toward ${userName}. Its lower body section seemingly separate, like a wheel, allowing him to stay upright.`,
-            feed2: `As he slowed to a stop, ${userName} clambered up the nearest tree. Crawling along a branch, when Brian stood just below, ${userName} dropped onto his head. As ${userName} tried to take a bite into the snowman's head, ${pronoun_they} were very glad ${pronoun_their} sense of taste had failed.`,
+            feed2: `As he slowed to a stop, ${userName} clambered up the nearest tree. Crawling along a branch, when Brian stood just below, ${userName} dropped onto his head. As ${userName} tried to take a bite into the snowman's head, they were very glad ${pronoun_their} sense of taste had failed.`,
             feed3: `Brian roared in anger! He flung ${userName} to the ground, and leaned over ${pronoun_them}.`,
             feed4: `${ageInserts.feedFeed4[age]}`,
             // dead
@@ -215,7 +215,7 @@ class Story {
         this.purple = {
             purple1: `Knowing there was no other choice, no way to avoid this fate, ${userName} raised the glowing liquid, gazing at its beautiful colour. Closing ${pronoun_their} eyes, ${userName} tilted ${pronoun_their} head back and downed the strange concoction in one large gulp.`,
             purple2: `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${userName} didn't care.`,
-            purple3: `${pronoun_they} were absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
+            purple3: `${userName} was absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
             purple4: `The torchlight eventually dimmed, the sound of zombies stomping around and around finally silenced, and ${userName} was never seen again.`,
             // end ... yay??
         }; //22
