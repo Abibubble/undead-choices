@@ -550,7 +550,6 @@ function runStory() {
                     } else {
                         updateProgressBar(39)
                     }
-                    userInputRequired = true;
                     break;
                 default:
                     userInputRequired = false;
