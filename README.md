@@ -141,9 +141,9 @@ Once we had changed the designs for the site, we re-made the wireframes for our 
 
 ### Future Features
 
-* A different image for every paragraph, depicting what's happening in the story.
 * Full sound effects linked to each page.
 * Randomised spider animation for going up and down its web.
+* Capital letter at the start of a sentence where the user's pronoun starts the sentence.
 
 ### Audio
 
@@ -449,7 +449,6 @@ Friends, family members, and other developers were asked to review the site and 
 ### Known Bugs
 
 * The pronoun updates aren't working for the age inserts currently.
-* The characters walk off the screen after the user chooses a character, then reappear and are dragged off.
 * The spider comes down the web, but doesn't go back up.
 
 ### Lighthouse
