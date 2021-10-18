@@ -14,4 +14,7 @@ function reset() {
   paraNumber = 1;
   nextPage();
   updateProgressBar(4);
+  gravestone.classList.add("hide");
+  heart.classList.add("hide");
+  potion.classList.add("hide");
 }
