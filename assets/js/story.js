@@ -64,6 +64,7 @@ const womanWalk = document.getElementById("woman_walk");
 
 girl.addEventListener("click", function () {
     character = "girl";
+    checkAvatar(character);
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
@@ -73,6 +74,7 @@ girl.addEventListener("click", function () {
 
 boy.addEventListener("click", function () {
     character = "boy";
+    checkAvatar(character);
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
@@ -82,6 +84,7 @@ boy.addEventListener("click", function () {
 
 man.addEventListener("click", function () {
     character = "man";
+    checkAvatar(character);
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
@@ -91,6 +94,7 @@ man.addEventListener("click", function () {
 
 woman.addEventListener("click", function () {
     character = "woman";
+    checkAvatar(character);
     animateWalkingOff(character);
     story = new Story();
     ageInserts = new AgeInserts();
@@ -100,6 +104,7 @@ woman.addEventListener("click", function () {
 
 candy.addEventListener("click", function () {
     character = "candy";
+    checkAvatar(character);
     animateWalkingOff();
     story = new Story();
     ageInserts = new AgeInserts();
@@ -125,6 +130,10 @@ function hideCharacter() {
     candy.classList.add("hide");
     man.classList.add("hide");
     woman.classList.add("hide");
+    womanWalk.classList.add("hide");
+    manWalk.classList.add("hide");
+    boyWalk.classList.add("hide");
+    girlWalk.classList.add("hide");
 }
 
 function animateWalkingOff(name) {
@@ -178,7 +187,6 @@ function animateWalkingOff(name) {
         manWalk.style.animationName = "walkoff";
         playSoundEffect("puddle");
     }
-    checkAvatar(name);
     moveSpider();
 }
 
