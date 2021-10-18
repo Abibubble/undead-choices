@@ -144,6 +144,7 @@ Once we had changed the designs for the site, we re-made the wireframes for our 
 * Full sound effects linked to each page.
 * Randomised spider animation for going up and down its web.
 * Capital letter at the start of a sentence where the user's pronoun starts the sentence.
+* Different ending page for each type of game over.
 
 ### Audio
 
