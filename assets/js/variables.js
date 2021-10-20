@@ -5,12 +5,23 @@ let pronoun_them = "them";
 let pronoun_they = "they";
 let zombieKingVisited = "kingNotSeen"; // kingSeen
 let age = "child";
-let userName = "Zebedee";
+let userName = "Zebedee"; // easy error recognition. Should not be seen
 let storyEnd = false;
 let drinkColor = "";
 let collectDrink = false;
 let hasDrink = false;
 let userInputRequired = false;
+
+// -----------------------------------------------------------Global Functions
+
+/**
+ * @param {string} userName name input
+ * @returns capitalised version of userName
+ */
+ function capitalise(string) {
+  string.toLowerCase();
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 // ---------------------------------------------------------------- Page control
 
