@@ -180,7 +180,9 @@ function animateWalkingOff(name) {
 // ---------------------------------------------------------------- Story control
 
 const pages = Array.from(Object.keys(story));
+let paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
 const pageImages = Array.from(Object.keys(contImage));
+let paraImages = Array.from(Object.keys(contImage[pageImages[pageNumber - 1]]));
 
 // paragraph control
 const storyText = document.getElementById("story-text");
@@ -199,11 +201,13 @@ const potion = document.getElementById("potion");
  * @returns Array of paragraphs
  */
 function getParas() {
-    return paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+    paras = Array.from(Object.keys(story[pages[pageNumber - 1]]));
+    return paras;
 }
 
 function getContImage() {
-    return paraImages = Array.from(Object.keys(contImage[pageImages[pageNumber - 1]]));
+    paraImages = Array.from(Object.keys(contImage[pageImages[pageNumber - 1]]));
+    return paraImages;
 }
 
 /** Modifies story text */
