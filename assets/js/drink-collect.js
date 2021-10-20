@@ -41,12 +41,12 @@ function chooseCollect() {
   goToPage(12);
 }
 
-function showDrinks(collectedDrink) {
+function showDrinks() {
   containerObj.redPurpleBlue.classList.remove("hide");
-  if (collectedDrink) {
+  if (collectDrink) {
     choiceButtonsObj.red.addEventListener("click", collectRed);
-    choiceButtonsObj.purple.addEventListener("click", collectRed);
-    choiceButtonsObj.blue.addEventListener("click", collectRed);
+    choiceButtonsObj.purple.addEventListener("click", collectPurple);
+    choiceButtonsObj.blue.addEventListener("click", collectBlue);
   } else {
     choiceButtonsObj.red.addEventListener("click", consumeRed);
     choiceButtonsObj.purple.addEventListener("click", consumePurple);
@@ -85,16 +85,22 @@ function collectRed() {
   hideInputs();
   hasDrink = true;
   drinkColor = "red";
+  statImg.src = "assets/img/content-images/chem-in-hand.webp";
+  staticImage.appendChild(statImg);
 }
 
 function collectPurple() {
   hideInputs();
   hasDrink = true;
   drinkColor = "purple";
+  statImg.src = "assets/img/content-images/chem-in-hand.webp";
+  staticImage.appendChild(statImg);
 }
 
 function collectBlue() {
   hideInputs();
   hasDrink = true;
   drinkColor = "blue";
+  statImg.src = "assets/img/content-images/chem-in-hand.webp";
+  staticImage.appendChild(statImg);
 }
