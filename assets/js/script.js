@@ -53,3 +53,5 @@ function resetSpider (){
         spider.classList.remove("hide");
     }, 1500);
 }
+
+//TODO: create spider to run to the side once its clicked
