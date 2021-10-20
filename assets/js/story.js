@@ -426,7 +426,7 @@ function runStory() {
                         updateProgressBar(94);
                     }
                     userInputRequired = true;
-                    showDrinks(collectDrink);
+                    setTimeout(showDrinks, 2500);
                     break;
                 default:
                     userInputRequired = false;
@@ -487,7 +487,7 @@ function runStory() {
                     } else {
                         updateProgressBar(84);
                     }
-                    showDrinks(collectDrink);
+                    setTimeout(showDrinks, 2500);
                     break;
                 case 3:
                     userInputRequired = false;

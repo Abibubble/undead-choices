@@ -46,7 +46,7 @@ const contImage = {
     2: "assets/img/content-images/human-hands.webp",
   },
   12: {
-    1: "assets/img/content-images/chem-in-hand.webp",
+    1: "assets/img/content-images/blank.png",
     2: "assets/img/content-images/green-chem.webp",
     3: "assets/img/content-images/trudge.webp",
   },
