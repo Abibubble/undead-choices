@@ -33,3 +33,23 @@ function moveSpider() {
 
     }, 4500);
 }
+
+function resetSpider (){
+    spider.classList.add("hide");
+    spider.style.height = `0vh`;
+    const rndInt = Math.floor(Math.random() * 86) + 1  // get random number to offset spider
+    spider.style.right = rndInt + "%"
+    //remove animation class
+    spider.classList.remove("spider-animation");
+    spiderWeb.classList.remove("spider-web-animation");
+    // to reset animation
+     void spider.offsetWidth;
+     void spiderWeb.offsetWidth;
+     // and re-adding the class
+    spider.classList.add("spider-animation");
+    spiderWeb.classList.add("spider-web-animation");
+    spiderWeb.style.backgroundColor = "#faebd7";
+    setTimeout(function () {
+        spider.classList.remove("hide");
+    }, 1500);
+}

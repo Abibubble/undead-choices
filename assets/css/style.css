@@ -588,8 +588,10 @@ main {
     flex-direction: column;
     align-items: center;
     height: 0.1vh;
-    transition: all 4.2s;
     z-index: 3;
+}
+.spider-animation{
+    transition: all 4.2s;
 }
 
 .spider-web {
@@ -598,8 +600,11 @@ main {
     height: 6rem;
     background-color: #faebd7;
     flex-grow: 2;
-    transition: background-color 1s;
     z-index: 3;
+}
+
+.spider-web-animation {
+    transition: background-color 1s;
 }
 
 .spider-container {
