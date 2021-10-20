@@ -37,7 +37,7 @@ function moveSpider() {
 function resetSpider (){
     spider.classList.add("hide");
     spider.style.height = `0vh`;
-    const rndInt = Math.floor(Math.random() * 86) + 1  // get random number to offset spider
+    const rndInt = Math.floor(Math.random() * (86 - 11 + 1)) + 11 // get random number to offset spider between 86% and 11% from the right edge
     spider.style.right = rndInt + "%"
     //remove animation class
     spider.classList.remove("spider-animation");
