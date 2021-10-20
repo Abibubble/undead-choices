@@ -21,7 +21,7 @@ class AgeInserts {
             child: "",
         };
         this.drinkSelectDrink = {
-            adult: `${pronoun_they} reached forward, and`,
+            adult: `${capitalise(pronoun_they)} reached forward, and`,
             child: `As ${pronoun_they} reached forward, the chocolate bar wrapper fell from ${pronoun_their} pocket as ${pronoun_they}`,
         };
         this.redDrinkSmell = {
@@ -29,7 +29,7 @@ class AgeInserts {
             child: `${pronoun_they} would have fainted from the foul smell.`,
         };
         this.redDrinkResult = {
-            adult: `${userName} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${pronoun_their} stomach churned, heat exploded within ${pronoun_them}, and then... BANG. ${userName}'s gooey insides exploded all over the ${choicesMade.redDrinkresult[zombieKingVisited]}!`,
+            adult: `${userName} wretched as the liquid bubbled ferociously, ${pronoun_their} insides burned. It was a mistake. ${capitalise(pronoun_their)} stomach churned, heat exploded within ${pronoun_them}, and then... BANG. ${userName}'s gooey insides exploded all over the ${choicesMade.redDrinkresult[zombieKingVisited]}!`,
             child: `It gurgled as it reached ${pronoun_their} stomach. ${userName} was overcome with drowsiness, ${pronoun_their} eyes grew heavy and ${pronoun_they} slumped to the floor...`,
         };
         this.blueDrinkResult = {
@@ -38,7 +38,7 @@ class AgeInserts {
         };
         this.collectDrink = {
             adult: `${userName} reached forward to collect a concoction and continued on ${pronoun_their} quest...`,
-            child: `As ${userName} reached forward to collect a concoction, the chocolate wrapper fell from ${pronoun_their} pocket. ${pronoun_they} selected a potion and continued on ${pronoun_their} quest...`,
+            child: `As ${userName} reached forward to collect a concoction, the chocolate wrapper fell from ${pronoun_their} pocket. ${capitalise(pronoun_they)} selected a potion and continued on ${pronoun_their} quest...`,
         };
         this.collectReturn = {
             adult: ` It was pressed a little too tightly against ${pronoun_their} body, ${pronoun_they} heard a rib crack under the extra pressure. Oh well...`,
@@ -69,7 +69,7 @@ class AgeInserts {
             child: `The zombies stopped their circles and closed in around ${userName}.`,
         };
         this.dontHelpdontHelp3 = {
-            adult: `The zombies stopped ${pronoun_their} circles and grabbed hold of ${userName}, carrying ${pronoun_them} to the bath. ${pronoun_they} threw ${pronoun_them} in and jeered and groaned as ${userName}'s mushy body melted in the hot coffee pot.`,
+            adult: `The zombies stopped ${pronoun_their} circles and grabbed hold of ${userName}, carrying ${pronoun_them} to the bath. ${capitalise(pronoun_they)} threw ${pronoun_them} in and jeered and groaned as ${userName}'s mushy body melted in the hot coffee pot.`,
             child: `The zombies trapped ${userName}, ${pronoun_they} couldn't move. They picked ${pronoun_them} up and carried ${pronoun_them} to the back of the cave, never to be seen again...`,
         };
     }
@@ -98,7 +98,7 @@ class Story {
         // choose east or west
         // east
         this.east1 = {
-            east: `${userName} headed East, ambling through the forest, ${pronoun_their} feet heavy and clumsy. ${pronoun_they} stepped heavily on a branch, breaking it with a loud CRACK.`,
+            east: `${userName} headed East, ambling through the forest, ${pronoun_their} feet heavy and clumsy. ${capitalise(pronoun_they)} stepped heavily on a branch, breaking it with a loud CRACK.`,
             maltesers: `${ageInserts.eastOneMalteasers[age]}${userName} looked down to see a packet of Maltesers too, obliterated in their red packaging. They wouldn't be any good. Undeterred, ${userName} continued.`,
         }; //4
         this.east2 = {
@@ -132,7 +132,7 @@ class Story {
             // end
         }; //10
         this.blueDrink = {
-            drink: `${userName} slowly picked up the gleaming blue brew. ${pronoun_their} hand trembled as ${pronoun_they} brought it to ${pronoun_their} mouth. Slowly, ${userName} began to sip from the flask.`,
+            drink: `${userName} slowly picked up the gleaming blue brew. ${capitalise(pronoun_their)} hand trembled as ${pronoun_they} brought it to ${pronoun_their} mouth. Slowly, ${userName} began to sip from the flask.`,
             result: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again... ${userName} was cured! ${ageInserts.blueDrinkResult[age]}${userName} knew they were human once again!`,
             // win...but not fully
         }; //11
@@ -142,7 +142,7 @@ class Story {
             drink: `${ageInserts.collectDrink[age]}`,
             // save color of drink
             // has drink boolean true
-            return: `${userName} headed back toward the entrance of the laboratory. ${pronoun_they} stowed the flask inside a pocket of ${pronoun_their} jacket for safekeeping.${ageInserts.collectReturn[age]}`,
+            return: `${userName} headed back toward the entrance of the laboratory. ${capitalise(pronoun_they)} stowed the flask inside a pocket of ${pronoun_their} jacket for safekeeping.${ageInserts.collectReturn[age]}`,
             back: `${userName} trudged slowly back into the forest, ${choicesMade.collectDrink[[zombieKingVisited]]}`,
             // west
             // if zombieKingSeen --> story.yes.potions1
@@ -172,7 +172,7 @@ class Story {
         }; //15
         // search for the king or not (south or north)
         this.north = {
-            north1: `${userName} didn't like the sound of a zombie king. ${pronoun_they} took ${pronoun_their} chances and turned to the trees and walked on... and on... and on...`,
+            north1: `${userName} didn't like the sound of a zombie king. ${capitalise(pronoun_they)} took ${pronoun_their} chances and turned to the trees and walked on... and on... and on...`,
             north2: `${ageInserts.northNorth2[age]}`,
             north3: `${ageInserts.northNorth3[age]}`,
             // dead
@@ -201,7 +201,7 @@ class Story {
         this.blue = {
             blue1: `Knowing there was no other choice, no way to avoid this fate, ${userName} raised the flask to ${pronoun_their} lips, closed ${pronoun_their} eyes, and swigged a mouthful.`,
             blue2: `A cool sensation flowed down ${pronoun_their} throat, into ${pronoun_their} belly, and beyond. Followed by a tingling and warmth. The hunger began to fade, ${pronoun_their} hands felt human again...${userName} was cured!`,
-            blue3: `${pronoun_they} passed the drink to Toby and waited for him to drink to his health. The warm blood rushed to Toby's cheeks as he shared the cure around the others.`,
+            blue3: `${capitalise(pronoun_they)} passed the drink to Toby and waited for him to drink to his health. The warm blood rushed to Toby's cheeks as he shared the cure around the others.`,
             blue4: `${userName} and Toby left the cave, leading the other former zombies out into the light, clear-headed and focused, they found their way back to civilisation. Back to humanity.`,
             // win - yay!
         }; //20
@@ -214,8 +214,8 @@ class Story {
         }; //21
         this.purple = {
             purple1: `Knowing there was no other choice, no way to avoid this fate, ${userName} raised the glowing liquid, gazing at its beautiful colour. Closing ${pronoun_their} eyes, ${userName} tilted ${pronoun_their} head back and downed the strange concoction in one large gulp.`,
-            purple2: `A warmth flooded through ${pronoun_them}. ${pronoun_they} drank the entire potion. Toby cried out in anger... but ${userName} didn't care.`,
-            purple3: `${userName} was absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${pronoun_they} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
+            purple2: `A warmth flooded through ${pronoun_them}. ${capitalise(pronoun_they)} drank the entire potion. Toby cried out in anger... but ${userName} didn't care.`,
+            purple3: `${userName} was absolutely overcome with love for Toby. Toby was perfect to ${pronoun_them}, in every way. ${capitalise(pronoun_they)} sat down next to Toby and told him everything would be OK, ${pronoun_they} had each other... and love was all that mattered.`,
             purple4: `The torchlight eventually dimmed, the sound of zombies stomping around and around finally silenced, and ${userName} was never seen again.`,
             // end ... yay??
         }; //22

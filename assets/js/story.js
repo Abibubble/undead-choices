@@ -1,14 +1,5 @@
 // ----------------------------------------------------------------  User name / Brian modal
 
-/**
- * @param {string} userName name input
- * @returns capitalised version of userName
- */
-function capitalise(string) {
-    string.toLowerCase();
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 const userNameInput = document.getElementById("user-name-input-section");
 document.getElementById("username-btn").addEventListener("click", function () {
     userName = document.getElementById("username-input").value;
