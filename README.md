@@ -293,6 +293,8 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 
 ## Testing
 
+[Click here to view the full testing steps completed on this project](TESTING.md).
+
 ### W3C Validator
 
 The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the project to ensure there were no syntax errors within the site.
