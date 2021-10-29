@@ -54,7 +54,7 @@ function playSoundEffect(which) {
                 audioFile.zombie.bite.play();
                 break;
             case 'hiss':
-                audioFile.zombie.bite.play();
+                audioFile.zombie.hiss.play();
                 break;
             case 'moan':
                 audioFile.zombie.moan.play();
@@ -122,6 +122,7 @@ audioButton.addEventListener("click", function () {
     } else {
         audioButton.innerHTML = `<i class="fas fa-volume-up"></i><br><span class="toggle">Toggle </span>Audio`;
         audioFile.background.play();
+        audioFile.background.loop = true;
     }
     music = !music;
 });
