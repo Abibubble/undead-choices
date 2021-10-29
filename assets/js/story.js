@@ -553,8 +553,9 @@ function runStory() {
             switch (paraNumber) {
                 case 3:
                     updateProgressBar(100);
-                    userInputRequired = true;
-                    stroyEnd = true;
+                    userInputRequired = false;
+                    storyEnd = true;
+
                     gravestone.classList.remove("hide");
                     // showRunDeath();
                     break;
