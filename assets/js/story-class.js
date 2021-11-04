@@ -150,7 +150,7 @@ class Story {
         // west
         this.west1 = {
             west: `Lumbering on through the tall trees to the West, ${userName} felt a chill as ${pronoun_they} approached a clearing. Stood in the middle, 10ft tall, a snowman leered toward ${userName}.`,
-            brian: `'Mmmrrroohahg' it groaned, 'Mmmmrrr I am Brian... zombie o'greedy!'. As the snowman murmured his introduction, ${userName} could see this was no ordinary snowman.`,
+            brian: `'Mmmrrroohahg' it groaned, 'Mmmmrrr I am Brian... zombie O'Greedy!'. As the snowman murmured his introduction, ${userName} could see this was no ordinary snowman.`,
             brian2: `Beneath a dark pair of sunglasses, glowing red eyes could be seen. ${ageInserts.westOneBrian2[age]}`,
             brian3: `This was a zombie snowman! Should ${userName} try and feed on this creature's brains?`,
         }; //13
