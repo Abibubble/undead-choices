@@ -74,6 +74,12 @@
     grid-row-gap: 10px;
 }
 
+.team-grid a,
+.jim-grid a {
+    color: #fff;
+    text-decoration: none;
+}
+
 #boss {
     grid-area: boss;
 }
