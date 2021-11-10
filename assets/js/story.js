@@ -1,22 +1,33 @@
 // ----------------------------------------------------------------  User name / Brian modal
 
 const userNameInput = document.getElementById("user-name-input-section");
-document.getElementById("username-btn").addEventListener("click", function () {
+
+function updateStoryWithName() {
     userName = document.getElementById("username-input").value;
     userName = capitalise(userName);
     if (userName === "Brian") {
         document.getElementById("brian-modal").classList.remove("hide");
     }
-
+    
     if (userName === "" || userName === " ") {
         userName = "Jimmy";
     }
-
+    
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     story = new Story(); // generate story with new name
     ageInserts = new AgeInserts();
     nextPage();
+}
+
+document.getElementById("username-btn").addEventListener("click", function () {
+    updateStoryWithName();
+});
+
+document.getElementById("username-input").addEventListener("keyup", function (e) {
+    if (e.key === 'Enter' || e.code == 13) {
+        updateStoryWithName();
+    }
 });
 
 document.getElementById("close-brian-modal").addEventListener("click", function () {
