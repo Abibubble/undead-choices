@@ -22,7 +22,7 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 * [Design](#design)
   * [Color Scheme](#color-scheme)
   * [Typography](#typography)
-  * [Imagery](#imagery)
+  * [Imagery](#imagery) 
   * [Wireframes](#wireframes)
   * [Features](#features)
   * [Audio](#audio)
