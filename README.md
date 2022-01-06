@@ -22,7 +22,7 @@ This project was created for the Code Institute Halloween Hackathon in October 2
 * [Design](#design)
   * [Color Scheme](#color-scheme)
   * [Typography](#typography)
-  * [Imagery](#imagery)
+  * [Imagery](#imagery) 
   * [Wireframes](#wireframes)
   * [Features](#features)
   * [Audio](#audio)
@@ -295,7 +295,7 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 
 ### Acknowledgements
 
-* Our facilitator, Jim Morel, at [Code Institute](https://codeinstitute.net/), for his helpful feedback and support.
+* Our facilitator, [Jim Morel](https://www.linkedin.com/in/jim-morel/), at [Code Institute](https://codeinstitute.net/), for his helpful feedback and support.
 * The team at [Code Institute](https://codeinstitute.net/), for teaching us the necessary skills to create this site.
 * All team members of team Blood, Sweat, and Brains:
   * [Abi Harrison](https://github.com/Abibubble)
