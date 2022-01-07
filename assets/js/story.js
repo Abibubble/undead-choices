@@ -12,7 +12,9 @@ function updateStoryWithName() {
     if (userName === "" || userName === " ") {
         userName = "Jimmy";
     }
-    
+
+    //hiding userNameInput causes reposition of paragraph container
+    //children hidden instead
     userNameInput.children[0].classList.add("hide");
     userNameInput.children[1].classList.add("hide");
     story = new Story(); // generate story with new name
